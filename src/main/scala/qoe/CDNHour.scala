@@ -76,10 +76,6 @@ object CDNHour {
       "where s.tag=i.server_tag and substr(s.time,1,10)=" + hourid +
       " group by s.tag, substr(s.time,1,10), substr(s.time,1,8)")
 
-    //hiveContext.sql("use default")
-    //hiveContext.sql("select tag_node,time,capacity,count_in_flow,count_out_flow,live_in_flow,live_out_flow,vod_in_flow,vod_out_flow,tag_parent_live,tag_parent_vod " +
-    //  ", vod_in_flow/n.server_flow, vod_out_flow/n.server_flow  from cdnnode partition(" + dayid + ") n, nodeinfo i where n.tag_node = i.tag_node")
-
 
   }
 
