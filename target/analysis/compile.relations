@@ -1,4 +1,26 @@
 products:
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$1.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$2.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$3.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$4.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$typecreator1$1.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$typecreator2$1.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/cdnnodeinfo$.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/cdnnodeinfo.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/cdnserverinfo$.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/cdnserverinfo.class
+   src/main/scala/redis/RedisTest.scala -> target/classes/redis/RedisTest$.class
+   src/main/scala/redis/RedisTest.scala -> target/classes/redis/RedisTest.class
+   src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anon$1.class
+   src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anonfun$1.class
+   src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$.class
+   src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient.class
+   src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties$$anonfun$getRedis$1$$anonfun$1.class
+   src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties$$anonfun$getRedis$1.class
+   src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties$.class
+   src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$1.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$10.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$11.class
@@ -44,6 +66,22 @@ products:
    src/main/scala/wlw/testHiveDynamicPartition.scala -> target/classes/wlw/testHiveDynamicPartition$.class
    src/main/scala/wlw/testHiveDynamicPartition.scala -> target/classes/wlw/testHiveDynamicPartition.class
 binary dependencies:
+   src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/redis/clients/jedis/2.8.2/jedis-2.8.2.jar
+   src/main/scala/qoe/CDNHour.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/redis/RedisTest.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/redis/RedisTest.scala -> /home/slview/.m2/repository/redis/clients/jedis/2.8.2/jedis-2.8.2.jar
+   src/main/scala/redis/RedisTest.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar
+   src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/redis/clients/jedis/2.8.2/jedis-2.8.2.jar
+   src/main/scala/utils/RedisClient.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/RedisProperties.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/RedisProperties.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -75,8 +113,33 @@ binary dependencies:
    src/main/scala/wlw/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/testHiveDynamicPartition.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
 source dependencies:
+   src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/RedisProperties.scala
+   src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisClient.scala
+   src/main/scala/utils/RedisClient.scala -> src/main/scala/utils/RedisProperties.scala
 external dependencies:
 class names:
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$1
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$2
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$3
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$4
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$typecreator1$1
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$typecreator2$1
+   src/main/scala/qoe/CDNHour.scala -> qoe.cdnnodeinfo
+   src/main/scala/qoe/CDNHour.scala -> qoe.cdnnodeinfo$
+   src/main/scala/qoe/CDNHour.scala -> qoe.cdnserverinfo
+   src/main/scala/qoe/CDNHour.scala -> qoe.cdnserverinfo$
+   src/main/scala/redis/RedisTest.scala -> redis.RedisTest
+   src/main/scala/redis/RedisTest.scala -> redis.RedisTest$
+   src/main/scala/utils/RedisClient.scala -> utils.RedisClient
+   src/main/scala/utils/RedisClient.scala -> utils.RedisClient$
+   src/main/scala/utils/RedisClient.scala -> utils.RedisClient$$anon$1
+   src/main/scala/utils/RedisClient.scala -> utils.RedisClient$$anonfun$1
+   src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties
+   src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties$
+   src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties$$anonfun$getRedis$1
+   src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties$$anonfun$getRedis$1$$anonfun$1
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$1
