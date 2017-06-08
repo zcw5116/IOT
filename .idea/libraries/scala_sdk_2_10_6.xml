@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="scala-sdk-2.10.6" type="Scala">
+    <properties>
+      <option name="languageLevel" value="Scala_2_10" />
+      <compiler-classpath>
+        <root url="file://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar" />
+        <root url="file://$MAVEN_REPOSITORY$/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6.jar" />
+        <root url="file://$MAVEN_REPOSITORY$/org/scala-lang/scala-compiler/2.10.6/scala-compiler-2.10.6.jar" />
+      </compiler-classpath>
+    </properties>
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-actors/2.10.6/scala-actors-2.10.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="http://www.scala-lang.org/api/2.10.6/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
