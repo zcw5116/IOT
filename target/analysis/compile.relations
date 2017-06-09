@@ -1,4 +1,9 @@
 products:
+   src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$$anonfun$main$1.class
+   src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$.class
+   src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog.class
+   src/main/scala/iot/cdr/CDRLog.scala -> target/classes/iot/cdr/CDRLog$.class
+   src/main/scala/iot/cdr/CDRLog.scala -> target/classes/iot/cdr/CDRLog.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$2.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$3.class
@@ -66,6 +71,16 @@ products:
    src/main/scala/wlw/testHiveDynamicPartition.scala -> target/classes/wlw/testHiveDynamicPartition$.class
    src/main/scala/wlw/testHiveDynamicPartition.scala -> target/classes/wlw/testHiveDynamicPartition.class
 binary dependencies:
+   src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/auth/AuthLog.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/cdr/CDRLog.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -118,6 +133,11 @@ source dependencies:
    src/main/scala/utils/RedisClient.scala -> src/main/scala/utils/RedisProperties.scala
 external dependencies:
 class names:
+   src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog
+   src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$
+   src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$$anonfun$main$1
+   src/main/scala/iot/cdr/CDRLog.scala -> iot.cdr.CDRLog
+   src/main/scala/iot/cdr/CDRLog.scala -> iot.cdr.CDRLog$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$1

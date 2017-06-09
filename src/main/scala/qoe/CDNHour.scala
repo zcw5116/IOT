@@ -21,7 +21,7 @@ object CDNHour {
     var now: Date = new Date()
     var dateFormat: SimpleDateFormat = new SimpleDateFormat("yyyyMMdd")
     var dayid = dateFormat.format(now)
-    return dayid
+    dayid
   }
 
   def main(args: Array[String]): Unit = {
@@ -39,13 +39,13 @@ object CDNHour {
     val hiveContext = new HiveContext(sc)
     import hiveContext.implicits._
     val jedis = new Jedis(RedisProperties.REDIS_SERVER, RedisProperties.REDIS_PORT)
-    val cdnfile = jedis.hget("qoe::cdn::location", "cdn");
+    val cdnfile = jedis.hget("qoe::cdn::location", "cdn")
     val serverfile = jedis.hget("qoe::cdn::location", "server")
     println(cdnfile)
     println(serverfile)
 
-    val cdnnoderdd = sc.textFile("hdfs://cdh-nn1:8020" + cdnfile).map(_.split(",")).map(n => cdnnodeinfo(n(0), n(1), n(2), n(3).toLong, n(4).toLong))
-    val cdnserverrdd = sc.textFile("hdfs://cdh-nn1:8020" + serverfile).map(_.split(",")).map(s => cdnserverinfo(s(0), s(1), s(2), s(3), s(4).toLong, s(5).toLong))
+    val cdnnoderdd = sc.textFile("hdfs://cdh-nn1:8020" + cdnfile).map( _.split("\\|\\|")).map(n => cdnnodeinfo(n(0), n(1), n(2), n(3).toLong, n(4).toLong))
+    val cdnserverrdd = sc.textFile("hdfs://cdh-nn1:8020" + serverfile).map(_.split("\\|\\|")).map(s => cdnserverinfo(s(0), s(1), s(2), s(3), s(4).toLong, s(5).toLong))
     cdnnoderdd.toDF().registerTempTable("cdnnodeinfo")
     cdnserverrdd.toDF().registerTempTable("cdnserverinfo")
     hiveContext.sql("use default")

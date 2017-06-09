@@ -21,7 +21,7 @@ Class-Path: eigenbase-properties-1.1.5.jar json4s-jackson_2.10-3.2.10.
  4.jar objenesis-1.2.jar stax-api-1.0-2.jar commons-lang-2.6.jar api-a
  sn1-api-1.0.0-M20.jar jaxb-impl-2.2.3-1.jar commons-math3-3.1.1.jar s
  cala-library-2.10.6.jar scala-actors-2.10.6.jar scala-reflect-2.10.6.
- jar javax.inject-1.jar hadoop-auth-2.6.0-cdh5.7.0.jar spark-sql_2.10-
+ jar javax.inject-1.jar hadoop-iot.auth-2.6.0-cdh5.7.0.jar spark-sql_2.10-
  1.6.0-cdh5.7.0.jar hadoop-mapreduce-client-app-2.6.0-cdh5.7.0.jar sca
  la-library-2.10.5.jar commons-compress-1.4.1.jar reflectasm-1.07-shad
  ed.jar jedis-2.8.2.jar guice-servlet-3.0.jar avro-mapred-1.7.6-cdh5.7

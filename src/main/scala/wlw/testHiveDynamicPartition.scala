@@ -8,13 +8,13 @@ import org.apache.spark.sql.hive.HiveContext
   */
 object testHiveDynamicPartition {
   def main(args: Array[String]): Unit = {
-    val sparkConf = new SparkConf().setAppName("testHiveDynamicPartition").setMaster("local[4]")
+    val sparkConf = new SparkConf().setAppName("testHiveDynamicPartition")
     val sc = new SparkContext(sparkConf)
     val hiveContext = new HiveContext(sc)
     import hiveContext.implicits._
-    hiveContext.sql("use default")
+    hiveContext.sql("use qoehive")
     hiveContext.sql("set hive.exec.dynamic.partition.mode=nonstrict")
-    hiveContext.sql("insert into part_test partition(dayid) select 2, 'name', '20170605' from part_cdr_haccg_ticket limit 1")
+    hiveContext.sql("insert into part_test partition(dayid) select 2, 'name', '20170605' from t limit 1")
     hiveContext.sql("from part_test  select count(*)").collect().foreach(println)
     sc.stop()
   }
