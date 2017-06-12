@@ -12,9 +12,9 @@ object testHiveDynamicPartition {
     val sc = new SparkContext(sparkConf)
     val hiveContext = new HiveContext(sc)
     import hiveContext.implicits._
-    hiveContext.sql("use qoehive")
+    hiveContext.sql("use yuemeqoe_hive")
     hiveContext.sql("set hive.exec.dynamic.partition.mode=nonstrict")
-    hiveContext.sql("insert into part_test partition(dayid) select 2, 'name', '20170605' from t limit 1")
+    hiveContext.sql("insert into part_test partition(dayid) select 2, 'name', '20170605' from test limit 1")
     hiveContext.sql("from part_test  select count(*)").collect().foreach(println)
     sc.stop()
   }

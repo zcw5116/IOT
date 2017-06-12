@@ -3,10 +3,13 @@ package qoe
 import java.text.SimpleDateFormat
 import java.util.Date
 
+import org.apache.hadoop.fs.Path
 import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.{SparkConf, SparkContext}
 import redis.clients.jedis.Jedis
 import utils.{RedisClient, RedisProperties}
+
+
 
 case class cdnnodeinfo(tag_node: String, node: String, node_addr: String, node_capacity: Long, node_flow: Long)
 
@@ -16,6 +19,14 @@ case class cdnserverinfo(tag_node: String, server_ip: String, server_tag: String
   * Created by slview on 17-6-6.
   */
 object CDNHour {
+
+  val filterF = new Function[Path, Boolean] {
+    def apply(x: Path): Boolean = {
+      val flag = if(x.toString.split(".").last.toString.endsWith("uploading")) true else false
+      println("uploading")
+      return flag
+    }
+  }
 
   def getNowDayid(): String = {
     var now: Date = new Date()
