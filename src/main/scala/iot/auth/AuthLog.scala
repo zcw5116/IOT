@@ -42,7 +42,7 @@ object AuthLog {
 
     authvpdn4gdf.registerTempTable("authvpdn4gaaa")
     authvpdn4gdf.printSchema()
-    hiveContext.sql("insert into iot_userauth_vpdn4gaaa partition(dayid) select auth_result, auth_time, device, entname, imsicdma, imsilte, lnsip, mdn, nai_sercode, pdsnip, substr(regexp_replace(auth_time,'-',''),1,8) as dayid from authvpdn4gaaa")
+    hiveContext.sql("insert into iot_userauth_vpdn4gaaa partition(dayid) cauthvpdn4gaaa")
     hiveContext.sql("from iot_userauth_vpdn4gaaa select count(*)").collect().foreach(println)
   }
 }

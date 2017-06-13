@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>wlw</groupId>
-  <artifactId>wlw</artifactId>
+  <groupId>iotgroup</groupId>
+  <artifactId>iot</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>wlw</name>
+  <name>iot</name>
   <url>http://maven.apache.org</url>
     <repositories>
         <repository>

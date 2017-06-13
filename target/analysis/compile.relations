@@ -5,14 +5,23 @@ products:
    src/main/scala/iot/cdr/CDRLog.scala -> target/classes/iot/cdr/CDRLog$$anonfun$transfer$1.class
    src/main/scala/iot/cdr/CDRLog.scala -> target/classes/iot/cdr/CDRLog$.class
    src/main/scala/iot/cdr/CDRLog.scala -> target/classes/iot/cdr/CDRLog.class
-   src/main/scala/iot/cdr/test.scala -> target/classes/iot/cdr/test$$anon$1.class
-   src/main/scala/iot/cdr/test.scala -> target/classes/iot/cdr/test$$anonfun$1.class
-   src/main/scala/iot/cdr/test.scala -> target/classes/iot/cdr/test$$anonfun$2.class
-   src/main/scala/iot/cdr/test.scala -> target/classes/iot/cdr/test$$anonfun$3.class
-   src/main/scala/iot/cdr/test.scala -> target/classes/iot/cdr/test$$anonfun$4.class
-   src/main/scala/iot/cdr/test.scala -> target/classes/iot/cdr/test$$anonfun$5.class
-   src/main/scala/iot/cdr/test.scala -> target/classes/iot/cdr/test$.class
-   src/main/scala/iot/cdr/test.scala -> target/classes/iot/cdr/test.class
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$$anon$1.class
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$$anonfun$1.class
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$$anonfun$2.class
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$$anonfun$3.class
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$$anonfun$4.class
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$$anonfun$5.class
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$.class
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming.class
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$1.class
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$2.class
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$main$1.class
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$.class
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming.class
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/SQLContextSingleton$.class
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/SQLContextSingleton.class
+   src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo$.class
+   src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anon$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$2.class
@@ -93,12 +102,25 @@ binary dependencies:
    src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/cdr/CDRLog.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/cdr/test.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/cdr/test.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/cdr/test.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/cdr/test.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/cdr/test.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/cdr/test.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/users/UsersInfo.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
@@ -158,14 +180,23 @@ class names:
    src/main/scala/iot/cdr/CDRLog.scala -> iot.cdr.CDRLog
    src/main/scala/iot/cdr/CDRLog.scala -> iot.cdr.CDRLog$
    src/main/scala/iot/cdr/CDRLog.scala -> iot.cdr.CDRLog$$anonfun$transfer$1
-   src/main/scala/iot/cdr/test.scala -> iot.cdr.test
-   src/main/scala/iot/cdr/test.scala -> iot.cdr.test$
-   src/main/scala/iot/cdr/test.scala -> iot.cdr.test$$anon$1
-   src/main/scala/iot/cdr/test.scala -> iot.cdr.test$$anonfun$1
-   src/main/scala/iot/cdr/test.scala -> iot.cdr.test$$anonfun$2
-   src/main/scala/iot/cdr/test.scala -> iot.cdr.test$$anonfun$3
-   src/main/scala/iot/cdr/test.scala -> iot.cdr.test$$anonfun$4
-   src/main/scala/iot/cdr/test.scala -> iot.cdr.test$$anonfun$5
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anon$1
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$1
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$2
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$3
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$4
+   src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$5
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming$
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming$$anonfun$1
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming$$anonfun$2
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming$$anonfun$main$1
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.SQLContextSingleton
+   src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.SQLContextSingleton$
+   src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo
+   src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anon$1
