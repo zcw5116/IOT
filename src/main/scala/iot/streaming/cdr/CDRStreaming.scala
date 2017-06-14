@@ -76,10 +76,10 @@ object CDRStreaming {
     val inputDirectory = args(1)
 
     val sparkConf = new SparkConf().setAppName("CDRStreaming")
-    val ssc = new StreamingContext(sparkConf, Seconds(300))
+    val ssc = new StreamingContext(sparkConf, Seconds(30))
 
     // 监控目录过滤以.uploading结尾的文件
-    def uploadingFilter(path: Path): Boolean = !path.getName().endsWith("._COPYING_") && path.getName().endsWith(".uploading")
+    def uploadingFilter(path: Path): Boolean = !path.getName().endsWith("._COPYING_") && !path.getName().endsWith(".uploading")
 
     val lines = ssc.fileStream[LongWritable, Text, TextInputFormat](inputDirectory,uploadingFilter(_), true).map(p => new String(p._2.getBytes, 0, p._2.getLength, "GBK"))
     lines.foreachRDD(toHiveTable(_, cdrtype))

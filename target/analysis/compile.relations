@@ -13,6 +13,11 @@ products:
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$$anonfun$5.class
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$.class
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming.class
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$1.class
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$2.class
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$main$1.class
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$.class
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming.class
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$1.class
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$2.class
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$main$1.class
@@ -45,6 +50,8 @@ products:
    src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties$$anonfun$getRedis$1.class
    src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties$.class
    src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties.class
+   src/main/scala/utils/SQLContextSingleton.scala -> target/classes/utils/SQLContextSingleton$.class
+   src/main/scala/utils/SQLContextSingleton.scala -> target/classes/utils/SQLContextSingleton.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$1.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$10.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$11.class
@@ -108,6 +115,13 @@ binary dependencies:
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
@@ -138,6 +152,10 @@ binary dependencies:
    src/main/scala/utils/RedisClient.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/RedisProperties.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/RedisProperties.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/SQLContextSingleton.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/utils/SQLContextSingleton.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/utils/SQLContextSingleton.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/SQLContextSingleton.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -169,6 +187,7 @@ binary dependencies:
    src/main/scala/wlw/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/testHiveDynamicPartition.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
 source dependencies:
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisClient.scala
    src/main/scala/utils/RedisClient.scala -> src/main/scala/utils/RedisProperties.scala
@@ -188,6 +207,11 @@ class names:
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$3
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$4
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$5
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$$anonfun$1
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$$anonfun$2
+   src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$$anonfun$main$1
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming$
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming$$anonfun$1
@@ -220,6 +244,8 @@ class names:
    src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties$
    src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties$$anonfun$getRedis$1
    src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties$$anonfun$getRedis$1$$anonfun$1
+   src/main/scala/utils/SQLContextSingleton.scala -> utils.SQLContextSingleton
+   src/main/scala/utils/SQLContextSingleton.scala -> utils.SQLContextSingleton$
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$1

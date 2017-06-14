@@ -13,12 +13,10 @@ import utils.SQLContextSingleton
   */
 object AuthLogStreaming {
   def toHiveTable(rdd:RDD[String], cdrtype:String): Unit ={
-    println("out")
     if(!rdd.isEmpty()){
-      println("in")
       var tableName=""
       var insertSql=""
-      if(cdrtype.equals("3g")){
+      if(cdrtype.equals("auth3gaaa")){
         tableName = "iot_userauth_3gaaa"
         insertSql = "insert into " + tableName + " partition(dayid) select auth_result, auth_time, device, imsicdma, " +
           "imsilte, mdn, nai_sercode, nasport, nasportid, nasporttype, pcfip, srcip, " +
@@ -69,16 +67,14 @@ object AuthLogStreaming {
 
     // 话单类型
     val cdrtype = args(0)
-    println(cdrtype)
-    // 监控目录a
+    // 监控目录
     val inputDirectory = args(1)
-    println(inputDirectory)
 
-    val sparkConf = new SparkConf().setAppName("AuthStreaming").setMaster("local[4]")
+    val sparkConf = new SparkConf().setAppName("AuthStreaming")
     val ssc = new StreamingContext(sparkConf, Seconds(20))
 
     // 监控目录过滤以.uploading结尾的文件
-    def uploadingFilter(path: Path): Boolean = !path.getName().endsWith("._COPYING_") && path.getName().endsWith(".uploading")
+    def uploadingFilter(path: Path): Boolean = !path.getName().endsWith("._COPYING_") && !path.getName().endsWith(".uploading")
 
     val lines = ssc.fileStream[LongWritable, Text, TextInputFormat](inputDirectory,uploadingFilter(_), false).map(p => new String(p._2.getBytes, 0, p._2.getLength, "GBK"))
     lines.foreachRDD(toHiveTable(_, cdrtype))
