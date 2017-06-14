@@ -190,6 +190,7 @@ source dependencies:
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisClient.scala
+   src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/utils/RedisClient.scala -> src/main/scala/utils/RedisProperties.scala
 external dependencies:
 class names:

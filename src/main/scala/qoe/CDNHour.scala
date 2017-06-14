@@ -50,13 +50,15 @@ object CDNHour {
     val hiveContext = new HiveContext(sc)
     import hiveContext.implicits._
     val jedis = new Jedis(RedisProperties.REDIS_SERVER, RedisProperties.REDIS_PORT)
+    jedis.auth(RedisProperties.REDIS_PASSWORD)
     val cdnfile = jedis.hget("qoe::cdn::location", "cdn")
     val serverfile = jedis.hget("qoe::cdn::location", "server")
     println(cdnfile)
     println(serverfile)
 
-    val cdnnoderdd = sc.textFile("hdfs://cdh-nn1:8020" + cdnfile).map( _.split("\\|\\|")).map(n => cdnnodeinfo(n(0), n(1), n(2), n(3).toLong, n(4).toLong))
-    val cdnserverrdd = sc.textFile("hdfs://cdh-nn1:8020" + serverfile).map(_.split("\\|\\|")).map(s => cdnserverinfo(s(0), s(1), s(2), s(3), s(4).toLong, s(5).toLong))
+
+    val cdnnoderdd = sc.textFile("hdfs://nameservice1" + cdnfile).map( _.split("\\|\\|")).map(n => cdnnodeinfo(n(0), n(1), n(2), n(3).toLong, n(4).toLong))
+    val cdnserverrdd = sc.textFile("hdfs://nameservice1" + serverfile).map(_.split("\\|\\|")).map(s => cdnserverinfo(s(0), s(1), s(2), s(3), s(4).toLong, s(5).toLong))
     cdnnoderdd.toDF().registerTempTable("cdnnodeinfo")
     cdnserverrdd.toDF().registerTempTable("cdnserverinfo")
     hiveContext.sql("use default")
