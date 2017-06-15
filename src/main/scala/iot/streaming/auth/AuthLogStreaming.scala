@@ -28,12 +28,12 @@ object AuthLogStreaming {
           "imsilte, mdn, nai_sercode, nasport, nasportid, nasporttype, pcfip, " +
           "substr(regexp_replace(auth_time,'-',''),1,8) as dayid from " + tableName + "_tmp"
       } else if(cdrtype.equals("vpdn3gaaa")){
-        tableName = "iot_userauth_vpdn3gaaa"
+        tableName = "iot_userauth_vpdn"
         insertSql = "insert into " + tableName + " partition(dayid) select auth_result, auth_time, device, entname, " +
           "imsicdma, imsilte, lnsip, mdn, nai_sercode, pdsnip, " +
           "substr(regexp_replace(auth_time,'-',''),1,8) as dayid from " + tableName + "_tmp"
       }else if(cdrtype.equals("vpdn4gaaa")){
-        tableName = "iot_userauth_vpdn4gaaa"
+        tableName = "iot_userauth_vpdn"
         insertSql = "insert into " + tableName + " partition(dayid) select auth_result, auth_time, device, entname," +
           " imsicdma, imsilte, lnsip, mdn, nai_sercode, pdsnip, substr(regexp_replace(auth_time,'-',''),1,8) as dayid " +
           "from " + tableName + "_tmp"
