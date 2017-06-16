@@ -49,6 +49,14 @@ products:
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/cdnserverinfo.class
    src/main/scala/redis/RedisTest.scala -> target/classes/redis/RedisTest$.class
    src/main/scala/redis/RedisTest.scala -> target/classes/redis/RedisTest.class
+   src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$$anonfun$1.class
+   src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$$anonfun$2$$anonfun$apply$1.class
+   src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$$anonfun$2.class
+   src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$$anonfun$main$1.class
+   src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$$anonfun$main$2.class
+   src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$$anonfun$main$3.class
+   src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$.class
+   src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anon$1.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anonfun$1.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$.class
@@ -159,6 +167,8 @@ binary dependencies:
    src/main/scala/redis/RedisTest.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/redis/RedisTest.scala -> /home/slview/.m2/repository/redis/clients/jedis/2.8.2/jedis-2.8.2.jar
    src/main/scala/redis/RedisTest.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/scalaCase/Currying.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/scalaCase/Currying.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/redis/clients/jedis/2.8.2/jedis-2.8.2.jar
@@ -257,6 +267,14 @@ class names:
    src/main/scala/qoe/CDNHour.scala -> qoe.cdnserverinfo$
    src/main/scala/redis/RedisTest.scala -> redis.RedisTest
    src/main/scala/redis/RedisTest.scala -> redis.RedisTest$
+   src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying
+   src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$
+   src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$1
+   src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$2
+   src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$2$$anonfun$apply$1
+   src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$main$1
+   src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$main$2
+   src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$main$3
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient$
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient$$anon$1
