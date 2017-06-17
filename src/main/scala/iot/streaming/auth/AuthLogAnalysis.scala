@@ -24,6 +24,7 @@ object AuthLogAnalysis {
 
 
   def main(args: Array[String]): Unit = {
+
     val sparkConf = new SparkConf().setAppName("IOTCDRSparkSQL").setMaster("local[4]")
     val sc = new SparkContext(sparkConf)
     val hiveContext = new HiveContext(sc)

@@ -10,7 +10,6 @@ import redis.clients.jedis.Jedis
 import utils.{RedisClient, RedisProperties}
 
 
-
 case class cdnnodeinfo(tag_node: String, node: String, node_addr: String, node_capacity: Long, node_flow: Long)
 
 case class cdnserverinfo(tag_node: String, server_ip: String, server_tag: String, server_info: String, server_capacity: Long, server_flow: Long)

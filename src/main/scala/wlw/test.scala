@@ -15,15 +15,22 @@ object test {
     hehe
   }
 
+  //根据起始时间和间隔， 计算出下个时间到字符串，精确到秒
+  def getPreviousDay(currentdayid:String)={
+    var df:SimpleDateFormat=new SimpleDateFormat("yyyyMMdd")
+    var previous:Date=df.parse(currentdayid)
+    var previoustime:Long = previous.getTime() - 24*3600*1000
+    var previousdayid:String = df.format(new Date((previoustime)))
+    previousdayid
+  }
+
+
   def main(args: Array[String]): Unit = {
     println("Hello, Scala ")
     println(getNowDate())
 
-
-    // 根据开始时间获取300秒后的时间字符串
-    val endtimestr = "2017-05-23 09:15:00"
-    val endtimeid = endtimestr.replaceAll("[-: ]","")
-    println(endtimeid)
+   val dayid = "20170506"
+    println(getPreviousDay(dayid))
 
   }
 

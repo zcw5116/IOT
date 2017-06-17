@@ -13,6 +13,10 @@ products:
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$$anonfun$5.class
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming$.class
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> target/classes/iot/cdr/TestSparkStreaming.class
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> target/classes/iot/operalog/OperalogAnalysis$.class
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> target/classes/iot/operalog/OperalogAnalysis.class
+   src/main/scala/iot/operalog/OperalogETL.scala -> target/classes/iot/operalog/OperalogETL$.class
+   src/main/scala/iot/operalog/OperalogETL.scala -> target/classes/iot/operalog/OperalogETL.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> target/classes/iot/streaming/auth/AuthLogAnalysis$.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> target/classes/iot/streaming/auth/AuthLogAnalysis.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$1.class
@@ -27,13 +31,19 @@ products:
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming.class
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/SQLContextSingleton$.class
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/SQLContextSingleton.class
-   src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo$$anonfun$1.class
-   src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo$$anonfun$2.class
-   src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo$$typecreator1$1.class
-   src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo$.class
-   src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo$companyinfo$.class
-   src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo$companyinfo.class
    src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$anonfun$1.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$anonfun$2.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$typecreator1$1.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter$$anonfun$tryGetBoolean$extension$1.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter$$anonfun$tryGetInt$extension$1.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter$$anonfun$tryGetString$extension$1.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter$.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$companyinfo$.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$companyinfo.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anon$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$2.class
@@ -57,6 +67,9 @@ products:
    src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$$anonfun$main$3.class
    src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying$.class
    src/main/scala/scalaCase/Currying.scala -> target/classes/scalaCase/Currying.class
+   src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion$$anonfun$transfer$1.class
+   src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion$.class
+   src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anon$1.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anonfun$1.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$.class
@@ -67,6 +80,7 @@ products:
    src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties.class
    src/main/scala/utils/SQLContextSingleton.scala -> target/classes/utils/SQLContextSingleton$.class
    src/main/scala/utils/SQLContextSingleton.scala -> target/classes/utils/SQLContextSingleton.class
+   src/main/scala/wlw/AirTraffic.scala -> target/classes/wlw/AirTraffic.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$1.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$10.class
    src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$11.class
@@ -99,6 +113,30 @@ products:
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$word$.class
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$word.class
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$1.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$1.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$10.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$11.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$12.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$13.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$14.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$15.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$16.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$17.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$18.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$2.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$3.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$4.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$5.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$6.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$7.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$8.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$9.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$main$1.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$typecreator1$1.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$.class
+   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField.class
    src/main/scala/wlw/WordCount.scala -> target/classes/wlw/WordCount$$anonfun$1.class
    src/main/scala/wlw/WordCount.scala -> target/classes/wlw/WordCount$$anonfun$2.class
    src/main/scala/wlw/WordCount.scala -> target/classes/wlw/WordCount$$anonfun$3.class
@@ -130,6 +168,13 @@ binary dependencies:
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/operalog/OperalogETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/operalog/OperalogETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/operalog/OperalogETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/operalog/OperalogETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/operalog/OperalogETL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -150,12 +195,14 @@ binary dependencies:
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/users/UsersInfo.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
    src/main/scala/iot/users/UsersInfo.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/iot/users/UsersInfoETL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
@@ -169,6 +216,11 @@ binary dependencies:
    src/main/scala/redis/RedisTest.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/scalaCase/Currying.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/scalaCase/Currying.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/CharacterEncodeConversion.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/utils/CharacterEncodeConversion.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/utils/CharacterEncodeConversion.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/utils/CharacterEncodeConversion.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/CharacterEncodeConversion.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/redis/clients/jedis/2.8.2/jedis-2.8.2.jar
@@ -179,6 +231,8 @@ binary dependencies:
    src/main/scala/utils/SQLContextSingleton.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/utils/SQLContextSingleton.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/SQLContextSingleton.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/AirTraffic.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/AirTraffic.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -193,6 +247,12 @@ binary dependencies:
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/wlw/TestCaseClassField.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/WordCount.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/WordCount.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/WordCount.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
@@ -210,11 +270,14 @@ binary dependencies:
    src/main/scala/wlw/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/testHiveDynamicPartition.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
 source dependencies:
+   src/main/scala/iot/operalog/OperalogETL.scala -> src/main/scala/utils/CharacterEncodeConversion.scala
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
+   src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/iot/users/UsersInfo.scala
    src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisClient.scala
    src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/utils/RedisClient.scala -> src/main/scala/utils/RedisProperties.scala
+   src/main/scala/wlw/TestCaseClassField.scala -> src/main/scala/wlw/AirTraffic.scala
 external dependencies:
 class names:
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog
@@ -231,6 +294,10 @@ class names:
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$3
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$4
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> iot.cdr.TestSparkStreaming$$anonfun$5
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> iot.operalog.OperalogAnalysis
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> iot.operalog.OperalogAnalysis$
+   src/main/scala/iot/operalog/OperalogETL.scala -> iot.operalog.OperalogETL
+   src/main/scala/iot/operalog/OperalogETL.scala -> iot.operalog.OperalogETL$
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> iot.streaming.auth.AuthLogAnalysis
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> iot.streaming.auth.AuthLogAnalysis$
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming
@@ -246,12 +313,18 @@ class names:
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.SQLContextSingleton
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.SQLContextSingleton$
    src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo
-   src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo$
-   src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo$$anonfun$1
-   src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo$$anonfun$2
-   src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo$$typecreator1$1
-   src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo$companyinfo
-   src/main/scala/iot/users/UsersInfo.scala -> iot.users.UsersInfo$companyinfo$
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$anonfun$1
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$anonfun$2
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$typecreator1$1
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$$anonfun$tryGetBoolean$extension$1
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$$anonfun$tryGetInt$extension$1
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$$anonfun$tryGetString$extension$1
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$companyinfo
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$companyinfo$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anon$1
@@ -275,6 +348,9 @@ class names:
    src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$main$1
    src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$main$2
    src/main/scala/scalaCase/Currying.scala -> scalaCase.Currying$$anonfun$main$3
+   src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion
+   src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion$
+   src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion$$anonfun$transfer$1
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient$
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient$$anon$1
@@ -285,6 +361,7 @@ class names:
    src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties$$anonfun$getRedis$1$$anonfun$1
    src/main/scala/utils/SQLContextSingleton.scala -> utils.SQLContextSingleton
    src/main/scala/utils/SQLContextSingleton.scala -> utils.SQLContextSingleton$
+   src/main/scala/wlw/AirTraffic.scala -> wlw.AirTraffic
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$
    src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$1
@@ -317,6 +394,30 @@ class names:
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$$typecreator1$1
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$word
    src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$word$
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$1
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$1
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$10
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$11
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$12
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$13
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$14
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$15
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$16
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$17
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$18
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$2
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$3
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$4
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$5
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$6
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$7
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$8
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$9
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$main$1
+   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$typecreator1$1
    src/main/scala/wlw/WordCount.scala -> wlw.WordCount
    src/main/scala/wlw/WordCount.scala -> wlw.WordCount$
    src/main/scala/wlw/WordCount.scala -> wlw.WordCount$$anonfun$1
