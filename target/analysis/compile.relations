@@ -1,4 +1,34 @@
 products:
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$1.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$10.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$11.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$12.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$2.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$3.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$4.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$5.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$6.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$7.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$8.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$9.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$anonfun$transfer$1.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$typecreator1$1.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$typecreator2$1.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$typecreator3$1.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile$$typecreator4$1.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/DealSourceFile.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/GetBlackBandFile$$anonfun$13.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/GetBlackBandFile$.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/GetBlackBandFile$delayedInit$body.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/GetBlackBandFile.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/localIlleCase$.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/localIlleCase.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/onetonCase$.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/onetonCase.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/pgtableCase$.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/pgtableCase.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/topnCase$.class
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/topnCase.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$$anonfun$main$1.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog.class
@@ -19,6 +49,14 @@ products:
    src/main/scala/iot/operalog/OperalogETL.scala -> target/classes/iot/operalog/OperalogETL.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> target/classes/iot/streaming/auth/AuthLogAnalysis$.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> target/classes/iot/streaming/auth/AuthLogAnalysis.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$$anonfun$1.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$$anonfun$2.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$$anonfun$1.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$$anonfun$2.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$1.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$2.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$main$1.class
@@ -34,6 +72,7 @@ products:
    src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$anonfun$1.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$anonfun$2.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$anonfun$3.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$typecreator1$1.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter$$anonfun$tryGetBoolean$extension$1.class
@@ -44,11 +83,12 @@ products:
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$companyinfo$.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$companyinfo.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL.class
-   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anon$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$2.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$3.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$4.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$5.class
+   src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$6.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$typecreator1$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$typecreator2$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$.class
@@ -70,6 +110,8 @@ products:
    src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion$$anonfun$transfer$1.class
    src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion$.class
    src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion.class
+   src/main/scala/utils/HiveProperties.scala -> target/classes/utils/HiveProperties$.class
+   src/main/scala/utils/HiveProperties.scala -> target/classes/utils/HiveProperties.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anon$1.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anonfun$1.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$.class
@@ -80,76 +122,102 @@ products:
    src/main/scala/utils/RedisProperties.scala -> target/classes/utils/RedisProperties.class
    src/main/scala/utils/SQLContextSingleton.scala -> target/classes/utils/SQLContextSingleton$.class
    src/main/scala/utils/SQLContextSingleton.scala -> target/classes/utils/SQLContextSingleton.class
-   src/main/scala/wlw/AirTraffic.scala -> target/classes/wlw/AirTraffic.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$1.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$10.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$11.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$2.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$3.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$4.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$5.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$6.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$7.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$8.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$9.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$main$1.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$anonfun$main$2.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$typecreator1$1.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$$typecreator2$1.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$Balance$.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$Balance.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$Trade$.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL$Trade.class
-   src/main/scala/wlw/MySparkSQL.scala -> target/classes/wlw/MySparkSQL.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$$anonfun$1.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$$anonfun$2.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$$anonfun$3.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$$anonfun$insertHive$1.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$$anonfun$insertHive$2.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$$anonfun$ls$1.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$$typecreator1$1.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$word$.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample$word.class
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> target/classes/wlw/SparkSQLSimpleExample.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$1.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$1.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$10.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$11.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$12.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$13.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$14.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$15.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$16.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$17.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$18.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$2.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$3.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$4.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$5.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$6.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$7.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$8.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2$$anonfun$apply$9.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$2.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$anonfun$main$1.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$$typecreator1$1.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField$.class
-   src/main/scala/wlw/TestCaseClassField.scala -> target/classes/wlw/TestCaseClassField.class
-   src/main/scala/wlw/WordCount.scala -> target/classes/wlw/WordCount$$anonfun$1.class
-   src/main/scala/wlw/WordCount.scala -> target/classes/wlw/WordCount$$anonfun$2.class
-   src/main/scala/wlw/WordCount.scala -> target/classes/wlw/WordCount$$anonfun$3.class
-   src/main/scala/wlw/WordCount.scala -> target/classes/wlw/WordCount$.class
-   src/main/scala/wlw/WordCount.scala -> target/classes/wlw/WordCount.class
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> target/classes/utils/hbase/HBaseNewAPI$$anonfun$main$1.class
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> target/classes/utils/hbase/HBaseNewAPI$.class
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> target/classes/utils/hbase/HBaseNewAPI.class
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> target/classes/SparkOnHBase$$anonfun$1.class
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> target/classes/SparkOnHBase$$anonfun$main$1.class
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> target/classes/SparkOnHBase$.class
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> target/classes/SparkOnHBase.class
    src/main/scala/wlw/cdr/CDRTicket.scala -> target/classes/wlw/cdr/CDRTicket$.class
    src/main/scala/wlw/cdr/CDRTicket.scala -> target/classes/wlw/cdr/CDRTicket.class
-   src/main/scala/wlw/test.scala -> target/classes/wlw/test$.class
-   src/main/scala/wlw/test.scala -> target/classes/wlw/test.class
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> target/classes/wlw/testHiveDynamicPartition$$anonfun$main$1.class
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> target/classes/wlw/testHiveDynamicPartition$.class
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> target/classes/wlw/testHiveDynamicPartition.class
+   src/main/scala/wlw/test/AirTraffic.scala -> target/classes/wlw/test/AirTraffic.class
+   src/main/scala/wlw/test/HbaseTest.scala -> target/classes/wlw/test/HbaseTest$$anonfun$1.class
+   src/main/scala/wlw/test/HbaseTest.scala -> target/classes/wlw/test/HbaseTest$.class
+   src/main/scala/wlw/test/HbaseTest.scala -> target/classes/wlw/test/HbaseTest.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$1.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$10.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$11.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$2.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$3.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$4.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$5.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$6.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$7.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$8.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$9.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$main$1.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$anonfun$main$2.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$typecreator1$1.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$$typecreator2$1.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$Balance$.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$Balance.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$Trade$.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL$Trade.class
+   src/main/scala/wlw/test/MySparkSQL.scala -> target/classes/wlw/test/MySparkSQL.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$$anonfun$1.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$$anonfun$2.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$$anonfun$3.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$$anonfun$insertHive$1.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$$anonfun$insertHive$2.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$$anonfun$ls$1.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$$typecreator1$1.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$word$.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample$word.class
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> target/classes/wlw/test/SparkSQLSimpleExample.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$1.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$1.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$10.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$11.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$12.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$13.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$14.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$15.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$16.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$17.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$18.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$2.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$3.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$4.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$5.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$6.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$7.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$8.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2$$anonfun$apply$9.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$2.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$anonfun$main$1.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$typecreator1$1.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$.class
+   src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField.class
+   src/main/scala/wlw/test/TestHbase.scala -> target/classes/wlw/test/TestHbase$$anonfun$1.class
+   src/main/scala/wlw/test/TestHbase.scala -> target/classes/wlw/test/TestHbase$$anonfun$2.class
+   src/main/scala/wlw/test/TestHbase.scala -> target/classes/wlw/test/TestHbase$.class
+   src/main/scala/wlw/test/TestHbase.scala -> target/classes/wlw/test/TestHbase.class
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> target/classes/wlw/test/TestSQLtoHbase$$anonfun$1.class
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> target/classes/wlw/test/TestSQLtoHbase$$anonfun$2.class
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> target/classes/wlw/test/TestSQLtoHbase$.class
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> target/classes/wlw/test/TestSQLtoHbase.class
+   src/main/scala/wlw/test/WordCount.scala -> target/classes/wlw/test/WordCount$$anonfun$1.class
+   src/main/scala/wlw/test/WordCount.scala -> target/classes/wlw/test/WordCount$$anonfun$2.class
+   src/main/scala/wlw/test/WordCount.scala -> target/classes/wlw/test/WordCount$$anonfun$3.class
+   src/main/scala/wlw/test/WordCount.scala -> target/classes/wlw/test/WordCount$.class
+   src/main/scala/wlw/test/WordCount.scala -> target/classes/wlw/test/WordCount.class
+   src/main/scala/wlw/test/test.scala -> target/classes/wlw/test/test$.class
+   src/main/scala/wlw/test/test.scala -> target/classes/wlw/test/test.class
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> target/classes/wlw/test/testHiveDynamicPartition$$anonfun$main$1.class
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> target/classes/wlw/test/testHiveDynamicPartition$.class
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> target/classes/wlw/test/testHiveDynamicPartition.class
 binary dependencies:
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -168,6 +236,9 @@ binary dependencies:
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/cdr/TestSparkStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/operalog/OperalogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/operalog/OperalogAnalysis.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/operalog/OperalogAnalysis.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/operalog/OperalogETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
@@ -180,6 +251,28 @@ binary dependencies:
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
@@ -203,7 +296,6 @@ binary dependencies:
    src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
    src/main/scala/iot/users/UsersInfoETL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -221,6 +313,8 @@ binary dependencies:
    src/main/scala/utils/CharacterEncodeConversion.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/utils/CharacterEncodeConversion.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/CharacterEncodeConversion.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/HiveProperties.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/HiveProperties.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/redis/clients/jedis/2.8.2/jedis-2.8.2.jar
@@ -231,55 +325,128 @@ binary dependencies:
    src/main/scala/utils/SQLContextSingleton.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/utils/SQLContextSingleton.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/SQLContextSingleton.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/wlw/AirTraffic.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/wlw/AirTraffic.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/wlw/MySparkSQL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
-   src/main/scala/wlw/MySparkSQL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/wlw/TestCaseClassField.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
-   src/main/scala/wlw/TestCaseClassField.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/wlw/WordCount.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/WordCount.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/WordCount.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/wlw/WordCount.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/cdr/CDRTicket.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/cdr/CDRTicket.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/cdr/CDRTicket.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/cdr/CDRTicket.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/cdr/CDRTicket.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/wlw/test.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/wlw/test.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/AirTraffic.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/AirTraffic.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/HbaseTest.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/HbaseTest.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/HbaseTest.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/HbaseTest.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/HbaseTest.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/HbaseTest.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/HbaseTest.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/HbaseTest.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/MySparkSQL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/MySparkSQL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/MySparkSQL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/wlw/test/MySparkSQL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestCaseClassField.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestCaseClassField.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/TestCaseClassField.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/wlw/test/TestCaseClassField.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/TestHbase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/WordCount.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/WordCount.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/WordCount.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/WordCount.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/test.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/test.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
 source dependencies:
    src/main/scala/iot/operalog/OperalogETL.scala -> src/main/scala/utils/CharacterEncodeConversion.scala
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/iot/users/UsersInfo.scala
+   src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/utils/HiveProperties.scala
+   src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/HiveProperties.scala
    src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/RedisProperties.scala
-   src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisClient.scala
    src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/utils/RedisClient.scala -> src/main/scala/utils/RedisProperties.scala
-   src/main/scala/wlw/TestCaseClassField.scala -> src/main/scala/wlw/AirTraffic.scala
+   src/main/scala/wlw/test/TestCaseClassField.scala -> src/main/scala/wlw/test/AirTraffic.scala
 external dependencies:
 class names:
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$1
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$10
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$11
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$12
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$2
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$3
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$4
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$5
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$6
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$7
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$8
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$9
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$anonfun$transfer$1
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$typecreator1$1
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$typecreator2$1
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$typecreator3$1
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile$$typecreator4$1
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.GetBlackBandFile
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.GetBlackBandFile$
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.GetBlackBandFile$$anonfun$13
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.GetBlackBandFile$delayedInit$body
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.localIlleCase
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.localIlleCase$
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.onetonCase
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.onetonCase$
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.pgtableCase
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.pgtableCase$
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.topnCase
+   src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.topnCase$
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$$anonfun$main$1
@@ -300,6 +467,14 @@ class names:
    src/main/scala/iot/operalog/OperalogETL.scala -> iot.operalog.OperalogETL$
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> iot.streaming.auth.AuthLogAnalysis
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> iot.streaming.auth.AuthLogAnalysis$
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$$anonfun$1
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$$anonfun$2
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew$
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew$$anonfun$1
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew$$anonfun$2
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$$anonfun$1
@@ -317,6 +492,7 @@ class names:
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$anonfun$1
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$anonfun$2
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$anonfun$3
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$typecreator1$1
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$
@@ -327,11 +503,12 @@ class names:
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$companyinfo$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$
-   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anon$1
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$1
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$2
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$3
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$4
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$5
+   src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$6
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$typecreator1$1
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$typecreator2$1
    src/main/scala/qoe/CDNHour.scala -> qoe.cdnnodeinfo
@@ -351,6 +528,8 @@ class names:
    src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion
    src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion$
    src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion$$anonfun$transfer$1
+   src/main/scala/utils/HiveProperties.scala -> utils.HiveProperties
+   src/main/scala/utils/HiveProperties.scala -> utils.HiveProperties$
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient$
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient$$anon$1
@@ -361,72 +540,90 @@ class names:
    src/main/scala/utils/RedisProperties.scala -> utils.RedisProperties$$anonfun$getRedis$1$$anonfun$1
    src/main/scala/utils/SQLContextSingleton.scala -> utils.SQLContextSingleton
    src/main/scala/utils/SQLContextSingleton.scala -> utils.SQLContextSingleton$
-   src/main/scala/wlw/AirTraffic.scala -> wlw.AirTraffic
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$1
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$10
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$11
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$2
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$3
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$4
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$5
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$6
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$7
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$8
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$9
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$main$1
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$anonfun$main$2
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$typecreator1$1
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$$typecreator2$1
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$Balance
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$Balance$
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$Trade
-   src/main/scala/wlw/MySparkSQL.scala -> wlw.MySparkSQL$Trade$
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$$anonfun$1
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$$anonfun$2
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$$anonfun$3
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$$anonfun$insertHive$1
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$$anonfun$insertHive$2
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$$anonfun$ls$1
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$$typecreator1$1
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$word
-   src/main/scala/wlw/SparkSQLSimpleExample.scala -> wlw.SparkSQLSimpleExample$word$
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$1
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$1
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$10
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$11
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$12
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$13
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$14
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$15
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$16
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$17
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$18
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$2
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$3
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$4
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$5
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$6
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$7
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$8
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$2$$anonfun$apply$9
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$anonfun$main$1
-   src/main/scala/wlw/TestCaseClassField.scala -> wlw.TestCaseClassField$$typecreator1$1
-   src/main/scala/wlw/WordCount.scala -> wlw.WordCount
-   src/main/scala/wlw/WordCount.scala -> wlw.WordCount$
-   src/main/scala/wlw/WordCount.scala -> wlw.WordCount$$anonfun$1
-   src/main/scala/wlw/WordCount.scala -> wlw.WordCount$$anonfun$2
-   src/main/scala/wlw/WordCount.scala -> wlw.WordCount$$anonfun$3
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> utils.hbase.HBaseNewAPI
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> utils.hbase.HBaseNewAPI$
+   src/main/scala/utils/hbase/HBaseNewAP.scala -> utils.hbase.HBaseNewAPI$$anonfun$main$1
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> SparkOnHBase
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> SparkOnHBase$
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> SparkOnHBase$$anonfun$1
+   src/main/scala/utils/hbase/SparkOnHBase.scala -> SparkOnHBase$$anonfun$main$1
    src/main/scala/wlw/cdr/CDRTicket.scala -> wlw.cdr.CDRTicket
    src/main/scala/wlw/cdr/CDRTicket.scala -> wlw.cdr.CDRTicket$
-   src/main/scala/wlw/test.scala -> wlw.test
-   src/main/scala/wlw/test.scala -> wlw.test$
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> wlw.testHiveDynamicPartition
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> wlw.testHiveDynamicPartition$
-   src/main/scala/wlw/testHiveDynamicPartition.scala -> wlw.testHiveDynamicPartition$$anonfun$main$1
+   src/main/scala/wlw/test/AirTraffic.scala -> wlw.test.AirTraffic
+   src/main/scala/wlw/test/HbaseTest.scala -> wlw.test.HbaseTest
+   src/main/scala/wlw/test/HbaseTest.scala -> wlw.test.HbaseTest$
+   src/main/scala/wlw/test/HbaseTest.scala -> wlw.test.HbaseTest$$anonfun$1
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$1
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$10
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$11
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$2
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$3
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$4
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$5
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$6
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$7
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$8
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$9
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$main$1
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$anonfun$main$2
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$typecreator1$1
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$$typecreator2$1
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$Balance
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$Balance$
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$Trade
+   src/main/scala/wlw/test/MySparkSQL.scala -> wlw.test.MySparkSQL$Trade$
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$$anonfun$1
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$$anonfun$2
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$$anonfun$3
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$$anonfun$insertHive$1
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$$anonfun$insertHive$2
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$$anonfun$ls$1
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$$typecreator1$1
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$word
+   src/main/scala/wlw/test/SparkSQLSimpleExample.scala -> wlw.test.SparkSQLSimpleExample$word$
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$1
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$1
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$10
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$11
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$12
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$13
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$14
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$15
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$16
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$17
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$18
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$2
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$3
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$4
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$5
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$6
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$7
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$8
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$9
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$main$1
+   src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$typecreator1$1
+   src/main/scala/wlw/test/TestHbase.scala -> wlw.test.TestHbase
+   src/main/scala/wlw/test/TestHbase.scala -> wlw.test.TestHbase$
+   src/main/scala/wlw/test/TestHbase.scala -> wlw.test.TestHbase$$anonfun$1
+   src/main/scala/wlw/test/TestHbase.scala -> wlw.test.TestHbase$$anonfun$2
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> wlw.test.TestSQLtoHbase
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> wlw.test.TestSQLtoHbase$
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> wlw.test.TestSQLtoHbase$$anonfun$1
+   src/main/scala/wlw/test/TestSQLtoHbase.scala -> wlw.test.TestSQLtoHbase$$anonfun$2
+   src/main/scala/wlw/test/WordCount.scala -> wlw.test.WordCount
+   src/main/scala/wlw/test/WordCount.scala -> wlw.test.WordCount$
+   src/main/scala/wlw/test/WordCount.scala -> wlw.test.WordCount$$anonfun$1
+   src/main/scala/wlw/test/WordCount.scala -> wlw.test.WordCount$$anonfun$2
+   src/main/scala/wlw/test/WordCount.scala -> wlw.test.WordCount$$anonfun$3
+   src/main/scala/wlw/test/test.scala -> wlw.test.test
+   src/main/scala/wlw/test/test.scala -> wlw.test.test$
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> wlw.test.testHiveDynamicPartition
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> wlw.test.testHiveDynamicPartition$
+   src/main/scala/wlw/test/testHiveDynamicPartition.scala -> wlw.test.testHiveDynamicPartition$$anonfun$main$1

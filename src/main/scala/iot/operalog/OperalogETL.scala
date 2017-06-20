@@ -95,5 +95,7 @@ object OperalogETL {
         println("hlroperalog failed. " + ex.getMessage)
       }
     }
+
+    sc.stop()
   }
 }

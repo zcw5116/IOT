@@ -5,6 +5,7 @@ import java.util.Date
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.hive.HiveContext
+import utils.HiveProperties
 
 import scala.util.Try
 
@@ -42,24 +43,29 @@ object UsersInfoETL {
     }
     val dayid = args(0)
 
+    val hiveDatabase = HiveProperties.HIVE_DATABASE
+
     val sparkConf = new SparkConf().setAppName("UserInfoGenerate")//.setMaster("local[4]")
     val sc = new SparkContext(sparkConf)
-    val hiveContext = new HiveContext(sc)
-    import hiveContext.implicits._
+    val sqlContext = new HiveContext(sc)
+    import sqlContext.implicits._
 
     val tmpTable = "tmpuserinfo"
-    val userDF = sc.textFile("hdfs:/hadoop/IOT/ANALY_PLATFORM/BasicData/UserInfo/").map(_.split("\\|"))
+    val userDF = sc.textFile("hdfs:/hadoop/IOT/ANALY_PLATFORM/BasicData/UserInfo/").map(_.split("\\|",18)).filter(_.length == 18)
     .map(u => new UsersInfo(u(0).tryGetString,u(1).tryGetString,u(2).tryGetString,u(3).tryGetString,
       u(4).tryGetString,u(5).tryGetString,u(6).tryGetString,u(7).tryGetString,u(8).tryGetString,
-      u(9).tryGetString,u(10).tryGetString )).toDF().repartition(4)
+      u(9).tryGetString,u(10).tryGetString,u(11).tryGetString,u(12).tryGetString,u(13).tryGetString,
+      u(14).tryGetString,u(15).tryGetString,u(16).tryGetString,u(17).tryGetString )).toDF().repartition(4)
     userDF.registerTempTable(tmpTable)
 
     // hiveContext.sql("select * from "+tmpTable+" limit 11").collect().foreach(println)
 
-    hiveContext.sql("use iot")
+    sqlContext.sql("use " + hiveDatabase)
     // hiveContext.sql("set hive.exec.dynamic.partition.mode=nonstrict")
-    hiveContext.sql("ALTER TABLE iot_user_basic_info DROP IF EXISTS PARTITION (dayid="+ dayid +")")
-    hiveContext.sql("insert into iot_user_basic_info partition(dayid=" + dayid + ") select mdn, imsicdma, imsilte, imei, vpdncompanycode, nettype, vpdndomain, isvpdn, subscribetimepcrf, atrbprovince, userprovince " +
+    sqlContext.sql("ALTER TABLE iot_user_basic_info DROP IF EXISTS PARTITION (dayid="+ dayid +")")
+    sqlContext.sql("insert into iot_user_basic_info partition(dayid=" + dayid + ")  " +
+      " select mdn,imsicdma,imsilte,iccid,imei,company,vpdncompanycode,nettype,vpdndomain,isvpdn,subscribetimeaaa," +
+      " subscribetimehlr,subscribetimehss,subscribetimepcrf,firstactivetime,userstatus,atrbprovince,userprovince " +
       " from " + tmpTable + "  where mdn is not null")
 
     /*hiveContext.sql("use iot")

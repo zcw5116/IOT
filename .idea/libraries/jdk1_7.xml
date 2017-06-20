@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="jdk1.7">
-    <CLASSES />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/data/hbase-spark-2.0.0-20160316.173537-2.jar!/" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file:///usr/local/java/jdk1.7.0_79" />
