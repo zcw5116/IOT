@@ -49,10 +49,20 @@ products:
    src/main/scala/iot/operalog/OperalogETL.scala -> target/classes/iot/operalog/OperalogETL.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> target/classes/iot/streaming/auth/AuthLogAnalysis$.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> target/classes/iot/streaming/auth/AuthLogAnalysis.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$1.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$2.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$3.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$4.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$$anonfun$1.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$$anonfun$2.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseCommon$$anonfun$main$1$$anonfun$apply$1.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseCommon$$anonfun$main$1.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseCommon$.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$$anonfun$1.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$$anonfun$2.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$.class
@@ -251,6 +261,17 @@ binary dependencies:
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
@@ -262,6 +283,15 @@ binary dependencies:
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
@@ -467,10 +497,20 @@ class names:
    src/main/scala/iot/operalog/OperalogETL.scala -> iot.operalog.OperalogETL$
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> iot.streaming.auth.AuthLogAnalysis
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> iot.streaming.auth.AuthLogAnalysis$
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$1
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$2
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$3
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$4
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$$anonfun$1
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$$anonfun$2
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseCommon
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseCommon$
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseCommon$$anonfun$main$1
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseCommon$$anonfun$main$1$$anonfun$apply$1
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew$
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew$$anonfun$1
