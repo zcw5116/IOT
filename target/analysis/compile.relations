@@ -53,6 +53,7 @@ products:
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$2.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$3.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$4.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$5.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$$anonfun$1.class
@@ -120,6 +121,8 @@ products:
    src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion$$anonfun$transfer$1.class
    src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion$.class
    src/main/scala/utils/CharacterEncodeConversion.scala -> target/classes/utils/CharacterEncodeConversion.class
+   src/main/scala/utils/ConfigProperties.scala -> target/classes/utils/ConfigProperties$.class
+   src/main/scala/utils/ConfigProperties.scala -> target/classes/utils/ConfigProperties.class
    src/main/scala/utils/HiveProperties.scala -> target/classes/utils/HiveProperties$.class
    src/main/scala/utils/HiveProperties.scala -> target/classes/utils/HiveProperties.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anon$1.class
@@ -135,6 +138,11 @@ products:
    src/main/scala/utils/hbase/HBaseNewAP.scala -> target/classes/utils/hbase/HBaseNewAPI$$anonfun$main$1.class
    src/main/scala/utils/hbase/HBaseNewAP.scala -> target/classes/utils/hbase/HBaseNewAPI$.class
    src/main/scala/utils/hbase/HBaseNewAP.scala -> target/classes/utils/hbase/HBaseNewAPI.class
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> target/classes/utils/hbase/HBaseSpark$$anonfun$1.class
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> target/classes/utils/hbase/HBaseSpark$$anonfun$main$1.class
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> target/classes/utils/hbase/HBaseSpark$$typecreator1$1.class
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> target/classes/utils/hbase/HBaseSpark$.class
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> target/classes/utils/hbase/HBaseSpark.class
    src/main/scala/utils/hbase/SparkOnHBase.scala -> target/classes/SparkOnHBase$$anonfun$1.class
    src/main/scala/utils/hbase/SparkOnHBase.scala -> target/classes/SparkOnHBase$$anonfun$main$1.class
    src/main/scala/utils/hbase/SparkOnHBase.scala -> target/classes/SparkOnHBase$.class
@@ -343,6 +351,8 @@ binary dependencies:
    src/main/scala/utils/CharacterEncodeConversion.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/utils/CharacterEncodeConversion.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/CharacterEncodeConversion.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/ConfigProperties.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/ConfigProperties.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/HiveProperties.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/HiveProperties.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar
@@ -361,6 +371,15 @@ binary dependencies:
    src/main/scala/utils/hbase/HBaseNewAP.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/utils/hbase/HBaseNewAP.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/hbase/HBaseNewAP.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar
    src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/utils/hbase/SparkOnHBase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
@@ -437,6 +456,7 @@ binary dependencies:
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
 source dependencies:
    src/main/scala/iot/operalog/OperalogETL.scala -> src/main/scala/utils/CharacterEncodeConversion.scala
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/iot/users/UsersInfo.scala
    src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/utils/HiveProperties.scala
@@ -503,6 +523,7 @@ class names:
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$2
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$3
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$4
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$5
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$
    src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$$anonfun$1
@@ -568,6 +589,8 @@ class names:
    src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion
    src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion$
    src/main/scala/utils/CharacterEncodeConversion.scala -> utils.CharacterEncodeConversion$$anonfun$transfer$1
+   src/main/scala/utils/ConfigProperties.scala -> utils.ConfigProperties
+   src/main/scala/utils/ConfigProperties.scala -> utils.ConfigProperties$
    src/main/scala/utils/HiveProperties.scala -> utils.HiveProperties
    src/main/scala/utils/HiveProperties.scala -> utils.HiveProperties$
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient
@@ -583,6 +606,11 @@ class names:
    src/main/scala/utils/hbase/HBaseNewAP.scala -> utils.hbase.HBaseNewAPI
    src/main/scala/utils/hbase/HBaseNewAP.scala -> utils.hbase.HBaseNewAPI$
    src/main/scala/utils/hbase/HBaseNewAP.scala -> utils.hbase.HBaseNewAPI$$anonfun$main$1
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> utils.hbase.HBaseSpark
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> utils.hbase.HBaseSpark$
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> utils.hbase.HBaseSpark$$anonfun$1
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> utils.hbase.HBaseSpark$$anonfun$main$1
+   src/main/scala/utils/hbase/HbaseToSpark.scala -> utils.hbase.HBaseSpark$$typecreator1$1
    src/main/scala/utils/hbase/SparkOnHBase.scala -> SparkOnHBase
    src/main/scala/utils/hbase/SparkOnHBase.scala -> SparkOnHBase$
    src/main/scala/utils/hbase/SparkOnHBase.scala -> SparkOnHBase$$anonfun$1
