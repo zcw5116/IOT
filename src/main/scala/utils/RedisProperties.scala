@@ -6,7 +6,6 @@ import scala.xml.XML
   * Created by slview on 17-6-7.
   */
 object RedisProperties {
-
   val REDIS_SERVER: String = getRedis._1
   val REDIS_PORT: Int = getRedis._2
   val REDIS_PASSWORD: String = getRedis._3

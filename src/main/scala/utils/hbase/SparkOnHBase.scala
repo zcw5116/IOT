@@ -36,7 +36,7 @@ object SparkOnHBase {
     // step 1: JobConf setup
     val jobConf = new JobConf(conf,this.getClass)
     jobConf.setOutputFormat(classOf[TableOutputFormat])
-    jobConf.set(TableOutputFormat.OUTPUT_TABLE,"kaizi")
+    jobConf.set(TableOutputFormat.OUTPUT_TABLE,"kaizi2")
 
 
     // step 2: rdd mapping to table
@@ -67,7 +67,7 @@ object SparkOnHBase {
     //直接从 HBase 中读取数据并转成 Spark 能直接操作的 RDD[K,V]
 
     //设置查询的表名
-    conf.set(TableInputFormat.INPUT_TABLE, "kaizi")
+    conf.set(TableInputFormat.INPUT_TABLE, "kaizi2")
 
     //添加过滤条件，年龄大于 18 岁
     val scan = new Scan()

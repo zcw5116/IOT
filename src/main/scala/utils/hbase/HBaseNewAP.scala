@@ -29,7 +29,7 @@ object HBaseNewAPI {
     val admin = conn.getAdmin
 
     //本例将操作的表名
-    val userTable = TableName.valueOf("kaizi")
+    val userTable = TableName.valueOf("kaizi2")
 
     //创建 user 表
     val tableDescr = new HTableDescriptor(userTable)

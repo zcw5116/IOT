@@ -35,7 +35,8 @@ object CDNHour {
     }
 
     val hourid = args(0)
-    val dayid = hourid.substring(1,8)
+    val dayid = hourid.substring(0,8)
+    val monthid = hourid.substring(0,6)
     val qoedatabase = HiveProperties.HIVE_QOE_DATABASE
 
     val sparkConf = new SparkConf().setAppName("QoeCDNFlowHour")//.setMaster("local[4]")
@@ -56,32 +57,39 @@ object CDNHour {
     cdnnoderdd.toDF().registerTempTable("cdnnodeinfo")
     cdnserverrdd.toDF().registerTempTable("cdnserverinfo")
     sqlContext.sql("use " + qoedatabase)
-    sqlContext.sql("set hive.exec.dynamic.partition.mode=nonstrict")
+    // sqlContext.sql("set hive.exec.dynamic.partition.mode=nonstrict")
 
-    sqlContext.sql("insert into cdnfluxh partition(monthid) " +
-      "select tag_parent_live as livefathercdnnode, tag_parent_vod as vodfathercdnnode, n.tag_node as cdnnode, substr(n.time,1,10) as fluxtime, " +
+    // 将CDN节点流量执行结果注册成DF的表
+    sqlContext.sql("select tag_parent_live as livefathercdnnode, tag_parent_vod as vodfathercdnnode, n.tag_node as cdnnode, substr(n.time,1,10) as fluxtime, " +
       "avg(n.capacity) as capacity, avg(count_in_flow) as totalinavgvec, avg(count_out_flow) as totaloutavgvec,  " +
       "avg(live_in_flow) as liveinavgvec, avg(live_out_flow) as liveoutavgvec," +
       "avg(vod_in_flow) as vodinavgvec, avg(vod_out_flow)  as vodoutavgvec," +
       "avg(n.capacity/c1.node_capacity) as capacityratio, " +
       "avg(n.count_out_flow/c1.node_flow) as totaloutavgratio," +
       "avg(n.count_in_flow/c2.node_flow)  as totalinavgratio," +
-      " '' as liveinavgratio, '' as liveoutavgratio, '' as vodoutavgratio, '' as vodinavgratio," +
-      " substr(n.time,1,6) as dayid" +
+      " '' as liveinavgratio, '' as liveoutavgratio, '' as vodoutavgratio, '' as vodinavgratio  " +
       "  from cdnnode n, cdnnodeinfo c1, cdnnodeinfo c2 " +
-      "where n.tag_node=c1.tag_node and n.tag_parent_live=c2.tag_node and c1.node_flow>0 and c2.node_flow>0 and substr(n.time,1,10)=" + hourid +
-      " group by tag_parent_live, tag_parent_vod, n.tag_node, substr(n.time,1,10), substr(n.time,1,6)")
+      "where n.dayid=" + dayid + " and n.tag_node=c1.tag_node and n.tag_parent_live=c2.tag_node and c1.node_flow>0 and c2.node_flow>0 and substr(n.time,1,10)=" + hourid +
+      " group by tag_parent_live, tag_parent_vod, n.tag_node, substr(n.time,1,10) ").repartition(1).registerTempTable("tmpcdnfluxh")
+
+    // 将执行结果插入分区表
+    sqlContext.sql("insert into cdnfluxh partition(dayid="+dayid+") " + " " +
+      " select livefathercdnnode, vodfathercdnnode, cdnnode, fluxtime, capacity, totalinavgvec, totaloutavgvec, liveinavgvec, liveoutavgvec, " +
+      "vodinavgvec, vodoutavgvec, capacityratio, totaloutavgratio, totalinavgratio, liveinavgratio, liveoutavgratio, " +
+      "vodoutavgratio, vodinavgratio from tmpcdnfluxh" )
 
 
-    sqlContext.sql("insert into cdnserverfluxh partition(dayid) " +
-      "select s.tag as servertag, substr(s.time,1,10) as fluxtime, " +
+    // 将CDN服务器节点流量执行结果注册成DF的表
+    sqlContext.sql("select s.tag as servertag, substr(s.time,1,10) as fluxtime, " +
       "avg(s.capacity) as capacity , avg(s.capacity/i.server_capacity) as capacityratio," +
       "avg(s.count_in_flow) as inavgvec, '' as inavgratio, avg(s.count_out_flow) as outavgvec, " +
-      "avg(s.count_out_flow/i.server_flow) as outavgratio," +
-      "substr(s.time,1,8) as dayid " +
+      "avg(s.count_out_flow/i.server_flow) as outavgratio " +
       "from cdnserver s, cdnserverinfo i " +
-      "where s.tag=i.server_tag and substr(s.time,1,10)=" + hourid +
-      " group by s.tag, substr(s.time,1,10), substr(s.time,1,8)")
+      "where s.dayid=" + dayid + " and s.tag=i.server_tag and substr(s.time,1,10)=" + hourid +
+      " group by s.tag, substr(s.time,1,10), substr(s.time,1,8)").repartition(1).registerTempTable("tmpcdnserver")
+
+    sqlContext.sql("insert into cdnserverfluxh partition(dayid="+dayid+")  " +
+      " select servertag, fluxtime, capacity, capacityratio, inavgvec, inavgratio, outavgvec, outavgratio from tmpcdnserver " )
 
     sc.stop()
   }

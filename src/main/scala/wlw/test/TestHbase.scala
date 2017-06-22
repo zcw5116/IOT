@@ -40,6 +40,7 @@ object TestHbase {
       val put = new Put(Bytes.toBytes(arr(0).toInt))
       put.addColumn(Bytes.toBytes("basicxiaohe"),Bytes.toBytes("name"),Bytes.toBytes(arr(1)))
       put.addColumn(Bytes.toBytes("basicxiaohe"),Bytes.toBytes("age"),Bytes.toBytes(arr(2).toInt))
+
       //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
       (new ImmutableBytesWritable, put)
     }}
