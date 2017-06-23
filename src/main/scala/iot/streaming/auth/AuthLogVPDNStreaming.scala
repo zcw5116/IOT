@@ -11,7 +11,7 @@ import utils.SQLContextSingleton
 /**
   * Created by slview on 17-6-13.
   */
-object AuthLogStreaming {
+object AuthLogVPDNStreaming {
   def toHiveTable(rdd:RDD[String], cdrtype:String): Unit ={
     if(!rdd.isEmpty()){
       var tableName=""
@@ -46,7 +46,6 @@ object AuthLogStreaming {
 
   def insert(rdd:RDD[String], tableName:String, insertSQL:String) = {
     val sqlContext = SQLContextSingleton.getInstance(rdd.sparkContext)
-    import sqlContext.implicits._
     sqlContext.sql("use iot")
     sqlContext.sql("set hive.exec.dynamic.partition.mode=nonstrict")
 
@@ -60,18 +59,18 @@ object AuthLogStreaming {
 
   def main(args: Array[String]): Unit = {
     // 参数接收监控到目录
-    if (args.length < 2) {
+    if (args.length < 1) {
       System.err.println("Usage: <cdr-type>  <log-dir>")
       System.exit(1)
     }
 
     // 话单类型
-    val cdrtype = args(0)
+    val cdrtype = "vpdn"
     // 监控目录
-    val inputDirectory = args(1)
+    val inputDirectory = args(0)
 
-    val sparkConf = new SparkConf().setAppName("AuthStreaming")
-    val ssc = new StreamingContext(sparkConf, Seconds(20))
+    val sparkConf = new SparkConf().setAppName("AuthLogVPDNStreaming")
+    val ssc = new StreamingContext(sparkConf, Seconds(30))
 
     // 监控目录过滤以.uploading结尾的文件
     def uploadingFilter(path: Path): Boolean = !path.getName().endsWith("._COPYING_") && !path.getName().endsWith(".uploading")

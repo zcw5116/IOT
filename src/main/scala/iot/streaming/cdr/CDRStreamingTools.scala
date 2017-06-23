@@ -8,12 +8,12 @@ import org.apache.spark.sql.SQLContext
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.streaming.{Seconds, StreamingContext}
-import utils.ConfigProperties
+import utils.{ConfigProperties, SQLContextSingleton}
 
 /**
   * Created by slview on 17-6-13.
   */
-object CDRStreaming {
+object CDRStreamingTools {
 
   def toHiveTable(rdd:RDD[String], cdrtype:String): Unit ={
     if(!rdd.isEmpty()){
@@ -40,7 +40,7 @@ object CDRStreaming {
           "T14, T15, T16, T18, T19, T2, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T3, T30, T31, T32, T33, T34, T35, " +
           "T36, T37, T38, T39, T4, T40, T41, T42, T43, T44, T45, T46, T47, T48, T49, T5, T50, T51, T52, T53, T54, T55, T56, " +
           "T57, T6, T7, T8, T800, T801, T802, T804, T805, T806, T807, T809, T9,  " +
-          "substr(regexp_replace(T37,'-',''),1,8) as dayid from " + tableName + "_tmp"
+          "substr(regexp_replace(T46,'-',''),1,8) as dayid from " + tableName + "_tmp"
       }
 
       insert(rdd, tableName, insertSql)
@@ -62,42 +62,4 @@ object CDRStreaming {
     sqlContext.sql(insertSQL)
   }
 
-  def main(args: Array[String]): Unit = {
-
-    // 参数接收监控到目录
-    if (args.length < 2) {
-      System.err.println("Usage: <cdr-type>  <log-dir>")
-      System.exit(1)
-    }
-
-    // 话单类型
-    val cdrtype = args(0)
-    // 监控目录a
-    val inputDirectory = args(1)
-
-    val sparkConf = new SparkConf().setAppName("CDRStreaming " + cdrtype)
-    val ssc = new StreamingContext(sparkConf, Seconds(30))
-
-    // 监控目录过滤以.uploading结尾的文件
-    def uploadingFilter(path: Path): Boolean = !path.getName().endsWith("._COPYING_") && !path.getName().endsWith(".uploading")
-
-    val lines = ssc.fileStream[LongWritable, Text, TextInputFormat](inputDirectory,uploadingFilter(_), true).map(p => new String(p._2.getBytes, 0, p._2.getLength, "GBK"))
-    lines.foreachRDD(toHiveTable(_, cdrtype))
-    // lines.print()
-
-    ssc.start()
-    ssc.awaitTermination()
-
-  }
-}
-
-// 通过单例模式获取sqlContext
-object SQLContextSingleton {
-  @transient  private var instance: HiveContext = _
-  def getInstance(sparkContext: SparkContext): HiveContext = {
-    if (instance == null) {
-      instance = new HiveContext(sparkContext)
-    }
-    instance
-  }
 }

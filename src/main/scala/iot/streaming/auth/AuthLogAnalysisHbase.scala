@@ -65,7 +65,7 @@ object AuthLogAnalysisHbase {
 
 
     val authtmpsql = "create table if not exists " + tmp_table + " as " +
-      "select '3g' type, nvl(u.vpdncompanycode,'C999999999') as vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt, " +
+      "select '3g' type, nvl(u.vpdncompanycode,'N999999999') as vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt, " +
       "sum(case when a.auth_result=0 then 1 else 0 end) as authsucess, " +
       "sum(case when a.auth_result=0 then 0 else 1 end) as authfails  " +
       "from iot_userauth_3gaaa a, iot_user_basic_info u  " +
@@ -73,7 +73,7 @@ object AuthLogAnalysisHbase {
       "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "   " +
       "group by u.vpdncompanycode,u.mdn, a.auth_result  " +
       "union all  " +
-      "select '4g' type, nvl(u.vpdncompanycode,'C999999999') as vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt,  " +
+      "select '4g' type, nvl(u.vpdncompanycode,'N999999999') as vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt,  " +
       "sum(case when a.auth_result=0 then 1 else 0 end) as authsucess,  " +
       "sum(case when a.auth_result=0 then 0 else 1 end) as authfails  " +
       "from iot_userauth_4gaaa a, iot_user_basic_info u   " +
@@ -81,7 +81,7 @@ object AuthLogAnalysisHbase {
       "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "   " +
       "group by u.vpdncompanycode, u.mdn, a.auth_result  " +
       "union all  " +
-      "select 'vpdn' type, nvl(u.vpdncompanycode,'C999999999') as vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt,  " +
+      "select 'vpdn' type, nvl(u.vpdncompanycode,'N999999999') as vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt,  " +
       "sum(case when a.auth_result=0 then 1 else 0 end) as authsucess,  " +
       "sum(case when a.auth_result=0 then 0 else 1 end) as authfails   " +
       "from iot_userauth_vpdn a, iot_user_basic_info u   " +
@@ -134,6 +134,8 @@ object AuthLogAnalysisHbase {
       (new ImmutableBytesWritable, currentPut)
     }
     }
+
+    authcurrentrdd.saveAsHadoopDataset(authJobConf)
 
     val authnextrdd = hbaserdd.map { arr => {
       /*一个Put对象就是一行记录，在构造方法中指定主键
@@ -201,6 +203,6 @@ object AuthLogAnalysisHbase {
     }
     }
     rdd.saveAsHadoopDataset(authJobConf)
-
+   sc.stop()
   }
 }
