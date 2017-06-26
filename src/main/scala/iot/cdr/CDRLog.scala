@@ -3,6 +3,7 @@ package iot.cdr
 import org.apache.hadoop.io.{LongWritable, Text}
 import org.apache.hadoop.mapred.TextInputFormat
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.SQLContext
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.hive.HiveContext
 
@@ -18,7 +19,7 @@ object CDRLog {
       .map(p => new String(p._2.getBytes, 0, p._2.getLength, "GBK"))
   }
 
-  def insertTable(sc:SparkContext, hiveContext: HiveContext, filepath:String, dftable:String, sqlString:String) = {
+  def insertTable(sc:SparkContext, hiveContext: SQLContext, filepath:String, dftable:String, sqlString:String) = {
     //通过封装后的方法读取GBK文件, 并且每一行数据以字符串格式返回(RDD[String])
     val rddcdr = transfer(sc,filepath)
     val dfcdr = hiveContext.read.json(rddcdr)

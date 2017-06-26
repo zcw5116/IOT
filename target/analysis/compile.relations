@@ -37,6 +37,9 @@ products:
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$$anonfun$main$1.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog.class
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> target/classes/iot/cdr/CDRDataToHiveByDay$$anonfun$transfer$1.class
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> target/classes/iot/cdr/CDRDataToHiveByDay$.class
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> target/classes/iot/cdr/CDRDataToHiveByDay.class
    src/main/scala/iot/cdr/CDRLog.scala -> target/classes/iot/cdr/CDRLog$$anonfun$transfer$1.class
    src/main/scala/iot/cdr/CDRLog.scala -> target/classes/iot/cdr/CDRLog$.class
    src/main/scala/iot/cdr/CDRLog.scala -> target/classes/iot/cdr/CDRLog.class
@@ -124,6 +127,19 @@ products:
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$companyinfo$.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$companyinfo.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$$anonfun$1.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$$anonfun$2.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$$anonfun$3.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$$typecreator1$1.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter$$anonfun$tryGetBoolean$extension$1.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter$$anonfun$tryGetInt$extension$1.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter$$anonfun$tryGetString$extension$1.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter$.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$companyinfo$.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$companyinfo.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$1.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$2.class
    src/main/scala/qoe/CDNHour.scala -> target/classes/qoe/CDNHour$$anonfun$3.class
@@ -282,6 +298,13 @@ binary dependencies:
    src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/auth/AuthLog.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/cdr/CDRLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
@@ -410,6 +433,13 @@ binary dependencies:
    src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/users/UsersInfoETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
    src/main/scala/iot/users/UsersInfoETL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/qoe/CDNHour.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -545,7 +575,9 @@ source dependencies:
    src/main/scala/iot/streaming/cdr/CDRStreamingTools.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/streaming/cdr/CDRStreamingTools.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/iot/users/UsersInfo.scala
-   src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/utils/HiveProperties.scala
+   src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/utils/ConfigProperties.scala
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> src/main/scala/iot/users/UsersInfo.scala
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> src/main/scala/utils/HiveProperties.scala
    src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/HiveProperties.scala
    src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/redis/RedisTest.scala -> src/main/scala/utils/RedisProperties.scala
@@ -591,6 +623,9 @@ class names:
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$$anonfun$main$1
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> iot.cdr.CDRDataToHiveByDay
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> iot.cdr.CDRDataToHiveByDay$
+   src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> iot.cdr.CDRDataToHiveByDay$$anonfun$transfer$1
    src/main/scala/iot/cdr/CDRLog.scala -> iot.cdr.CDRLog
    src/main/scala/iot/cdr/CDRLog.scala -> iot.cdr.CDRLog$
    src/main/scala/iot/cdr/CDRLog.scala -> iot.cdr.CDRLog$$anonfun$transfer$1
@@ -678,6 +713,19 @@ class names:
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$$anonfun$tryGetString$extension$1
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$companyinfo
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$companyinfo$
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$$anonfun$1
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$$anonfun$2
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$$anonfun$3
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$$typecreator1$1
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter$
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter$$anonfun$tryGetBoolean$extension$1
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter$$anonfun$tryGetInt$extension$1
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter$$anonfun$tryGetString$extension$1
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$companyinfo
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$companyinfo$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour$$anonfun$1

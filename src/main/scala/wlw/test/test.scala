@@ -1,7 +1,7 @@
 package wlw.test
 
 import java.text.SimpleDateFormat
-import java.util.Date
+import java.util.{Calendar, Date}
 
 
 /**
@@ -25,12 +25,26 @@ object test {
   }
 
 
-  def main(args: Array[String]): Unit = {
-    println("Hello, Scala ")
-    println(getNowDate())
+  //根据起始时间和间隔， 计算出下个时间到字符串，精确到秒
+  def getNextTimeStr(start_time: String, stepSeconds: Long) = {
+    var df: SimpleDateFormat = new SimpleDateFormat("yyyyMMdd")
+    var begin: Date = df.parse(start_time)
+    var endstr: Long = begin.getTime() + stepSeconds * 1000
+    var sdf: SimpleDateFormat = new SimpleDateFormat("yyyyMMdd")
+    var nextTimeStr: String = sdf.format(new Date((endstr)))
+    nextTimeStr
+  }
 
-   val dayid = "20170506"
-    println(dayid.substring(0,6))
+  def getDayidViaStep(step:Int):String = {
+    var  dateFormat:SimpleDateFormat = new SimpleDateFormat("yyyyMMdd")
+    var cal:Calendar=Calendar.getInstance()
+    cal.add(Calendar.DATE, step)
+    var dayid=dateFormat.format(cal.getTime())
+    dayid
+  }
+
+  def main(args: Array[String]): Unit = {
+    println(getNextTimeStr("20170617", -24*60*60))
 
   }
 

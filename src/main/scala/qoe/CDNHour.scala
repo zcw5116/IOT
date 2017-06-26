@@ -73,8 +73,13 @@ object CDNHour {
       " group by tag_parent_live, tag_parent_vod, n.tag_node, substr(n.time,1,10) ").repartition(1).registerTempTable("tmpcdnfluxh")
 
     // 将执行结果插入分区表
-    sqlContext.sql("insert into cdnfluxh partition(dayid="+dayid+") " + " " +
+/*    sqlContext.sql("insert into cdnfluxh partition(dayid="+dayid+") " + " " +
       " select livefathercdnnode, vodfathercdnnode, cdnnode, fluxtime, capacity, totalinavgvec, totaloutavgvec, liveinavgvec, liveoutavgvec, " +
+      "vodinavgvec, vodoutavgvec, capacityratio, totaloutavgratio, totalinavgratio, liveinavgratio, liveoutavgratio, " +
+      "vodoutavgratio, vodinavgratio from tmpcdnfluxh" )*/
+
+    sqlContext.sql("insert into cdnfluxh partition(dayid="+dayid+") " + " " +
+      " select cdnnode, fluxtime, livefathercdnnode, vodfathercdnnode, capacity, totalinavgvec, totaloutavgvec, liveinavgvec, liveoutavgvec, " +
       "vodinavgvec, vodoutavgvec, capacityratio, totaloutavgratio, totalinavgratio, liveinavgratio, liveoutavgratio, " +
       "vodoutavgratio, vodinavgratio from tmpcdnfluxh" )
 
