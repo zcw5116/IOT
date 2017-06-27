@@ -32,7 +32,7 @@ object CDRDataToHiveByDay {
   }
 
   def main(args: Array[String]): Unit = {
-    val sparkConf = new SparkConf().setAppName("IOTCDRLog").setMaster("local[4]")
+    val sparkConf = new SparkConf().setAppName("IOTCDRLog")//.setMaster("local[4]")
     val sc = new SparkContext(sparkConf)
     val sqlContext = new HiveContext(sc)
 

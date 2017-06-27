@@ -109,7 +109,7 @@ object UsersInfoIncETL {
         "t.atrbprovince, t.userprovince, t.crt_time  " +
         "from " + userPartTable + " u, " + tmpIncrTable + " t where u.mdn=t.mdn and u.dayid=" + yesterday + "  " +
         "union all  " +
-        "select o.mdn, o.imsicdma, o.imsilte, o.iccid, o.imei, o.company, o.vpdncompanycode, o.nettype, o.vpdndomain, o.isvpdn, " +
+        "select distinct o.mdn, o.imsicdma, o.imsilte, o.iccid, o.imei, o.company, o.vpdncompanycode, o.nettype, o.vpdndomain, o.isvpdn, " +
         "o.subscribetimeaaa, o.subscribetimehlr, o.subscribetimehss, o.subscribetimepcrf, o.firstactivetime, o.userstatus, " +
         "o.atrbprovince, o.userprovince, o.crt_time  " +
         "from  ( " +
@@ -117,7 +117,7 @@ object UsersInfoIncETL {
         "    u.isvpdn, u.subscribetimeaaa, u.subscribetimehlr, u.subscribetimehss, u.subscribetimepcrf, u.firstactivetime, " +
         "    u.userstatus, u.atrbprovince, u.userprovince, u.crt_time, t.mdn as newmdn " +
         "    from " + userPartTable + " u left join " + tmpIncrTable + " t on(u.mdn=t.mdn) where u.dayid=" + yesterday + " " +
-        "     ) o"
+        "     ) o where o.newmdn is null"
 
       sqlContext.sql(resultSql)
 

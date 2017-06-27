@@ -37,6 +37,9 @@ products:
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$$anonfun$main$1.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog.class
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> target/classes/iot/auth/AuthlogDayETL$$anonfun$1.class
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> target/classes/iot/auth/AuthlogDayETL$.class
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> target/classes/iot/auth/AuthlogDayETL.class
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> target/classes/iot/cdr/CDRDataToHiveByDay$$anonfun$transfer$1.class
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> target/classes/iot/cdr/CDRDataToHiveByDay$.class
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> target/classes/iot/cdr/CDRDataToHiveByDay.class
@@ -298,6 +301,13 @@ binary dependencies:
    src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthLog.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/auth/AuthLog.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
@@ -563,6 +573,7 @@ binary dependencies:
 source dependencies:
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> src/main/scala/utils/ConfigProperties.scala
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/operalog/OperalogETL.scala -> src/main/scala/utils/CharacterEncodeConversion.scala
    src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
@@ -623,6 +634,9 @@ class names:
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$$anonfun$main$1
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> iot.auth.AuthlogDayETL
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> iot.auth.AuthlogDayETL$
+   src/main/scala/iot/auth/AuthlogDayETL.scala -> iot.auth.AuthlogDayETL$$anonfun$1
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> iot.cdr.CDRDataToHiveByDay
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> iot.cdr.CDRDataToHiveByDay$
    src/main/scala/iot/cdr/CDRDataToHiveByDay.scala -> iot.cdr.CDRDataToHiveByDay$$anonfun$transfer$1

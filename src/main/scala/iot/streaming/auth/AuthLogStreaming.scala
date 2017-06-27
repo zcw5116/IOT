@@ -18,24 +18,19 @@ object AuthLogStreaming {
       var insertSql=""
       if(cdrtype.equals("auth3gaaa")){
         tableName = "iot_userauth_3gaaa"
-        insertSql = "insert into " + tableName + " partition(dayid) select auth_result, auth_time, device, imsicdma, " +
+        insertSql = "insert into " + tableName + " partition(dayid,hourid) select auth_result, auth_time, device, imsicdma, " +
           "imsilte, mdn, nai_sercode, nasport, nasportid, nasporttype, pcfip, srcip, " +
-          "substr(regexp_replace(auth_time,'-',''),1,8) as dayid from " + tableName + "_tmp"
+          "substr(regexp_replace(auth_time,'-',''),1,8) as dayid, substr(auth_time,12,2) as hourid from " + tableName + "_tmp"
       }
       else if(cdrtype.equals("auth4gaaa")){
         tableName = "iot_userauth_4gaaa"
-        insertSql = "insert into " + tableName + " partition(dayid) select auth_result, auth_time, device, imsicdma, " +
+        insertSql = "insert into " + tableName + " partition(dayid,hourid) select auth_result, auth_time, device, imsicdma, " +
           "imsilte, mdn, nai_sercode, nasport, nasportid, nasporttype, pcfip, " +
-          "substr(regexp_replace(auth_time,'-',''),1,8) as dayid from " + tableName + "_tmp"
-      } else if(cdrtype.equals("vpdn3gaaa")){
+          "substr(regexp_replace(auth_time,'-',''),1,8) as dayid, substr(auth_time,12,2) as hourid from " + tableName + "_tmp"
+      } else if(cdrtype.equals("vpdn")){
         tableName = "iot_userauth_vpdn"
-        insertSql = "insert into " + tableName + " partition(dayid) select auth_result, auth_time, device, entname, " +
-          "imsicdma, imsilte, lnsip, mdn, nai_sercode, pdsnip, " +
-          "substr(regexp_replace(auth_time,'-',''),1,8) as dayid from " + tableName + "_tmp"
-      }else if(cdrtype.equals("vpdn")){
-        tableName = "iot_userauth_vpdn"
-        insertSql = "insert into " + tableName + " partition(dayid) select auth_result, auth_time, device, entname," +
-          " imsicdma, imsilte, lnsip, mdn, nai_sercode, pdsnip, substr(regexp_replace(auth_time,'-',''),1,8) as dayid " +
+        insertSql = "insert into " + tableName + " partition(dayid,hourid) select auth_result, auth_time, device, entname," +
+          " imsicdma, imsilte, lnsip, mdn, nai_sercode, pdsnip, substr(regexp_replace(auth_time,'-',''),1,8) as dayid, substr(auth_time,12,2) as hourid " +
           "from " + tableName + "_tmp"
       }
 
@@ -70,8 +65,8 @@ object AuthLogStreaming {
     // 监控目录
     val inputDirectory = args(1)
 
-    val sparkConf = new SparkConf().setAppName("AuthStreaming")
-    val ssc = new StreamingContext(sparkConf, Seconds(20))
+    val sparkConf = new SparkConf()
+    val ssc = new StreamingContext(sparkConf, Seconds(30))
 
     // 监控目录过滤以.uploading结尾的文件
     def uploadingFilter(path: Path): Boolean = !path.getName().endsWith("._COPYING_") && !path.getName().endsWith(".uploading")
