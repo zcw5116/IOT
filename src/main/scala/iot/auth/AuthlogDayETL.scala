@@ -32,7 +32,7 @@ object AuthlogDayETL {
 
     val filepath = authlogDir + "/" + "*" + dayid + "*.log"
     val conf = sc.hadoopConfiguration
-    conf.set("mapreduce.input.fileinputformat.split.maxsize","256MB")
+    conf.set("mapreduce.input.fileinputformat.split.minsize","10000000")
     // val frdd = sc.newAPIHadoopFile(filepath, "org.apache.hadoop.mapreduce.lib.input.CombineTextInputFormat", "org.apache.hadoop.io.LongWritable", "org.apache.hadoop.io.Text")
     val frdd = sc.newAPIHadoopFile(filepath, classOf[CombineTextInputFormat],classOf[LongWritable], classOf[Text], conf).map(x=>x._2.toString)
     val authlogDF = sqlContext.read.json(frdd)

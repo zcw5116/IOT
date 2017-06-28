@@ -15,6 +15,13 @@ object test {
     hehe
   }
 
+  def getNowTime():String={
+    var now:Date = new Date()
+    var  dateFormat:SimpleDateFormat = new SimpleDateFormat("yyyyMMddHHmms")
+    var timeid = dateFormat.format( now )
+    timeid
+  }
+
   //根据起始时间和间隔， 计算出下个时间到字符串，精确到秒
   def getPreviousDay(currentdayid:String)={
     var df:SimpleDateFormat=new SimpleDateFormat("yyyyMMdd")
@@ -44,7 +51,9 @@ object test {
   }
 
   def main(args: Array[String]): Unit = {
-    println(getNextTimeStr("20170617", -24*60*60))
+    val starttimeid = "20170523091500"
+    val parthourid = starttimeid.substring(8,12)
+    println(parthourid)
 
   }
 

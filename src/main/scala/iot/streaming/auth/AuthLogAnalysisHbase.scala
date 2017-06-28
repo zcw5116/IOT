@@ -11,7 +11,8 @@ import org.apache.hadoop.hbase.util.Bytes
 import org.apache.hadoop.mapred.JobConf
 import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.{SparkConf, SparkContext}
-import utils.ConfigProperties
+import utils.DateUtil.getNextTime
+import utils.{ConfigProperties, DateUtil}
 
 /**
   * Created by zhoucw on 17-6-14.
@@ -28,13 +29,20 @@ object AuthLogAnalysisHbase {
     nextTimeStr
   }
 
+  // 获取当前时间
 
   def main(args: Array[String]): Unit = {
 
-    val starttimeid = args(0)
+    if (args.length < 1) {
+      System.err.println("Usage: <yyyyMMddHH>")
+      System.exit(1)
+    }
+
+    val starttimeid = args(0) + "00"
     val partitiondayid = starttimeid.substring(0, 8)
     println(partitiondayid)
     //val starttimeid = "20170523091500"
+    val parthourid = starttimeid.substring(8, 10)
 
     // 将时间格式20170523091500转换为2017-05-23 09:15:00
     val starttimestr = getNextTimeStr(starttimeid, 0)
@@ -44,8 +52,13 @@ object AuthLogAnalysisHbase {
     val endtimeid = endtimestr.replaceAll("[-: ]", "")
     println(endtimestr)
 
+    //val nextdayid = endtimeid.substring(0, 8)
+    val nextdayid = getNextTime(starttimeid,60*60*24,"yyyyMMdd")
 
-    val sparkConf = new SparkConf().setAppName("AuthLogAnalysisHbase")
+    val curtimeid = DateUtil.getNowTime()
+
+
+    val sparkConf = new SparkConf()//.setAppName("AuthLogAnalysisHbase")
     //.setMaster("local[4]")
     val sc = new SparkContext(sparkConf)
     val sqlContext = new HiveContext(sc)
@@ -70,7 +83,7 @@ object AuthLogAnalysisHbase {
       "sum(case when a.auth_result=0 then 0 else 1 end) as authfails  " +
       "from iot_userauth_3gaaa a, iot_user_basic_info u  " +
       "where a.imsicdma = u.imsicdma  and a.auth_time>='" + starttimestr + "'  " +
-      "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "   " +
+      "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "  and a.hourid="+ parthourid + "  " +
       "group by u.vpdncompanycode,u.mdn, a.auth_result  " +
       "union all  " +
       "select '4g' type, nvl(u.vpdncompanycode,'N999999999') as vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt,  " +
@@ -78,7 +91,7 @@ object AuthLogAnalysisHbase {
       "sum(case when a.auth_result=0 then 0 else 1 end) as authfails  " +
       "from iot_userauth_4gaaa a, iot_user_basic_info u   " +
       "where a.mdn = u.mdn  and a.auth_time>='" + starttimestr + "'  " +
-      "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "   " +
+      "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "  and a.hourid="+ parthourid + "  " +
       "group by u.vpdncompanycode, u.mdn, a.auth_result  " +
       "union all  " +
       "select 'vpdn' type, nvl(u.vpdncompanycode,'N999999999') as vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt,  " +
@@ -86,7 +99,7 @@ object AuthLogAnalysisHbase {
       "sum(case when a.auth_result=0 then 0 else 1 end) as authfails   " +
       "from iot_userauth_vpdn a, iot_user_basic_info u   " +
       "where a.mdn = u.mdn  and a.auth_time>='" + starttimestr + "'  " +
-      "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "  " +
+      "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "  and a.hourid="+ parthourid + "  " +
       "group by u.vpdncompanycode, u.mdn, a.auth_result "
 
     println(authtmpsql)
@@ -100,7 +113,7 @@ object AuthLogAnalysisHbase {
     val authSql = "select a.type, a.vpdncompanycode, " +
       " sum(a.authcnt) as authcnt,sum(a.successcnt) as successcnt," +
       " sum(a.failedcnt) as failedcnt,count(*) as authmdnct," +
-      " sum(case when a.failedcnt=0 then 0 else 1 end) as authfaieldcnt, " + partitiondayid + " as dayid  " +
+      " sum(case when a.failedcnt=0 then 0 else 1 end) as mdnfaieldcnt, " + partitiondayid + " as dayid  " +
       "from (" +
       " select t.type, t.vpdncompanycode, t.mdn,sum(t.authcnt) authcnt, " +
       "  sum(case when t.auth_result=0 then t.authcnt else 0 end ) as successcnt, " +
@@ -114,7 +127,9 @@ object AuthLogAnalysisHbase {
 
     val authJobConf = new JobConf(conf, this.getClass)
     authJobConf.setOutputFormat(classOf[TableOutputFormat])
-    authJobConf.set(TableOutputFormat.OUTPUT_TABLE, "iot_userauth_day_20170617")
+    authJobConf.set(TableOutputFormat.OUTPUT_TABLE, "iot_userauth_day_" + partitiondayid)
+    val startminuteid = starttimeid.substring(8,12)
+    val endminuteid = endtimeid.substring(8,12)
 
     // type, vpdncompanycode, authcnt, successcnt, failedcnt, authmdnct, authfaieldcnt
     val hbaserdd = authdf.rdd.map(x => (x.getString(0), x.getString(1), x.getLong(2), x.getLong(3),
@@ -124,12 +139,21 @@ object AuthLogAnalysisHbase {
        * 所有插入的数据必须用org.apache.hadoop.hbase.util.Bytes.toBytes方法转换
        * Put.add方法接收三个参数：列族，列名，数据
        */
-      val currentPut = new Put(Bytes.toBytes(arr._2 + "-" + arr._1 + "-" + starttimeid.toString))
-      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("authcnt"), Bytes.toBytes(arr._3.toString))
-      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("successcnt"), Bytes.toBytes(arr._4.toString))
-      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("failedcnt"), Bytes.toBytes(arr._5.toString))
-      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("authmdnct"), Bytes.toBytes(arr._6.toString))
-      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("authfaieldcnt"), Bytes.toBytes(arr._7.toString))
+
+      val currentPut = new Put(Bytes.toBytes(arr._2 + "-" + startminuteid.toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("c_"+arr._1+"_auth_cnt" ), Bytes.toBytes(arr._3.toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("c_"+arr._1+"_success_cnt"), Bytes.toBytes(arr._4.toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("c_"+arr._1+"_failed_cnt"), Bytes.toBytes(arr._5.toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("c_"+arr._1+"_authmdn_cnt"), Bytes.toBytes(arr._6.toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("c_"+arr._1+"_mdnfaield_cnt"), Bytes.toBytes(arr._7.toString))
+
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_auth_cnt"), Bytes.toBytes(((arr._3-4)*(arr._3-4)/(arr._3+1)).toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_success_cnt"), Bytes.toBytes(((arr._4-4)*(arr._4+4)/(arr._4+1)).toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_failed_cnt"), Bytes.toBytes(((arr._5+2)*(arr._5-4)/(arr._5+1)).toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_authmdn_cnt"), Bytes.toBytes(((arr._6+1)*(arr._6-2)/(arr._6+1)).toString))
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_mdnfaield_cnt"), Bytes.toBytes(((arr._7+4)*(arr._7-6)/(arr._7+1)).toString))
+
+      currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("datatime"), Bytes.toBytes(curtimeid.toString))
       //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
       (new ImmutableBytesWritable, currentPut)
     }
@@ -137,22 +161,27 @@ object AuthLogAnalysisHbase {
 
     authcurrentrdd.saveAsHadoopDataset(authJobConf)
 
+
+
+    val nextJobConf = new JobConf(conf, this.getClass)
+    nextJobConf.setOutputFormat(classOf[TableOutputFormat])
+    nextJobConf.set(TableOutputFormat.OUTPUT_TABLE, "iot_userauth_day_" + nextdayid)
     val authnextrdd = hbaserdd.map { arr => {
       /*一个Put对象就是一行记录，在构造方法中指定主键
        * 所有插入的数据必须用org.apache.hadoop.hbase.util.Bytes.toBytes方法转换
        * Put.add方法接收三个参数：列族，列名，数据
        */
-      val nextPut = new Put(Bytes.toBytes(arr._2 + "-" + arr._1 + "-" + endtimeid.toString))
-      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("authcnt"), Bytes.toBytes(arr._3.toString))
-      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("successcnt"), Bytes.toBytes(arr._4.toString))
-      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("failedcnt"), Bytes.toBytes(arr._5.toString))
-      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("authmdnct"), Bytes.toBytes(arr._6.toString))
-      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("authfaieldcnt"), Bytes.toBytes(arr._7.toString))
+      val nextPut = new Put(Bytes.toBytes(arr._2 + "-" + endminuteid.toString))
+      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("p_"+arr._1+"_auth_cnt"), Bytes.toBytes(arr._3.toString))
+      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("p_"+arr._1+"_success_cnt"), Bytes.toBytes(arr._4.toString))
+      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("p_"+arr._1+"_failed_cnt"), Bytes.toBytes(arr._5.toString))
+      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("p_"+arr._1+"_authmdn_cnt"), Bytes.toBytes(arr._6.toString))
+      nextPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("p_"+arr._1+"_mdnfaield_cnt"), Bytes.toBytes(arr._7.toString))
       //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
       (new ImmutableBytesWritable, nextPut)
     }
     }
-    authnextrdd.saveAsHadoopDataset(authJobConf)
+    authnextrdd.saveAsHadoopDataset(nextJobConf)
 
 
     // val authFailedSql = "insert into auth_streaming_result_failed partition(dayid)  " +
@@ -174,35 +203,53 @@ object AuthLogAnalysisHbase {
       " from (" +
       "         select t.type, t.vpdncompanycode, t.auth_result, sum(t.authcnt) as authcnt " +
       "         from  " + tmp_table + " t " +
-      "         where t.auth_result=0  " +
+      "         where t.auth_result<>0  " +
       "         group by t.type, t.vpdncompanycode, t.auth_result" +
       " ) a"
 
-
-
     println(authFailedSql)
-    val authFailedJobConf = new JobConf(conf, this.getClass)
+ /*   val authFailedJobConf = new JobConf(conf, this.getClass)
     authFailedJobConf.setOutputFormat(classOf[TableOutputFormat])
-    authFailedJobConf.set(TableOutputFormat.OUTPUT_TABLE, "authfailed")
+    authFailedJobConf.set(TableOutputFormat.OUTPUT_TABLE, "authfailed")*/
+
 
     // type, vpdncompanycode, auth_result, authcnt, authrank
     val failedrdd = sqlContext.sql(authFailedSql).rdd.map(x => (x.getString(0),  x.getString(1), x.getInt(2), x.getLong(3),
       x.getInt(4)))
 
-    val rdd = failedrdd.map { arr => {
+    val curRdd = failedrdd.map { arr => {
       /*一个Put对象就是一行记录，在构造方法中指定主键
        * 所有插入的数据必须用org.apache.hadoop.hbase.util.Bytes.toBytes方法转换
        * Put.add方法接收三个参数：列族，列名，数据
        */
-      val currentPut = new Put(Bytes.toBytes(arr._2.toString + "-" + arr._1 + "-" + starttimeid.toString))
-      currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("failedtypecnt_" + arr._3.toString), Bytes.toBytes(arr._4.toString))
-      currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("failedtyperank_" + arr._3.toString), Bytes.toBytes(arr._5.toString))
+      val currentPut = new Put(Bytes.toBytes(arr._2.toString + "-" + startminuteid.toString))
+      currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("c_" + arr._1 + "_" + arr._3.toString + "_cnt" ), Bytes.toBytes(arr._4.toString))
+      //currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("rank_" + arr._1 + "_" + arr._3.toString), Bytes.toBytes(arr._5.toString))
+      currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("b_" + arr._1 + "_" + arr._3.toString + "_cnt"), Bytes.toBytes(((arr._4+5)*(arr._4-7)/(arr._4+1)).toString))
 
       //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
       (new ImmutableBytesWritable, currentPut)
     }
     }
-    rdd.saveAsHadoopDataset(authJobConf)
+    curRdd.saveAsHadoopDataset(authJobConf)
+
+
+    val nextRdd = failedrdd.map { arr => {
+      /*一个Put对象就是一行记录，在构造方法中指定主键
+       * 所有插入的数据必须用org.apache.hadoop.hbase.util.Bytes.toBytes方法转换
+       * Put.add方法接收三个参数：列族，列名，数据
+       */
+      val currentPut = new Put(Bytes.toBytes(arr._2.toString + "-" + endminuteid.toString))
+      currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("p_" + arr._1 + "_" + arr._3.toString + "_cnt"), Bytes.toBytes(arr._4.toString))
+      //currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("p_rank_" + arr._1 + "_" + arr._3.toString), Bytes.toBytes(arr._5.toString))
+
+      //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
+      (new ImmutableBytesWritable, currentPut)
+    }
+    }
+
+    nextRdd.saveAsHadoopDataset(nextJobConf)
+
    sc.stop()
   }
 }
