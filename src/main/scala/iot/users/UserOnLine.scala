@@ -3,7 +3,7 @@ package iot.users
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.hive.HiveContext
 import utils.ConfigProperties
-import utils.DateUtil.timeFormatConvert
+import utils.DateUtil.timeCalcWithFormatConvert
 
 /**
   * Created by slview on 17-6-28.
@@ -18,7 +18,7 @@ object UserOnLine {
     val dayid = args(0)
     val partdayid = dayid
     val parthourid = "00"
-    val curtimestr = timeFormatConvert(dayid+"000000","yyyyMMddHHmmss","yyyy-MM-dd HH:mm:ss")
+    val curtimestr = timeCalcWithFormatConvert(dayid+"000000","yyyyMMddHHmmss",0,"yyyy-MM-dd HH:mm:ss")
 
     val sparkConf = new SparkConf()
     val sc = new SparkContext(sparkConf)

@@ -31,10 +31,10 @@ object DateUtil {
     nextTimeStr
   }
 
-  def timeFormatConvert(sourcetime:String, sourceformat:String, targetformat:String):String = {
+  def timeCalcWithFormatConvert(sourcetime:String, sourceformat:String, stepseconds:Long, targetformat:String):String = {
     var sourceDF: SimpleDateFormat = new SimpleDateFormat(sourceformat)
     var sourceDate: Date = sourceDF.parse(sourcetime)
-    var sourceTime: Long = sourceDate.getTime() + 0
+    var sourceTime: Long = sourceDate.getTime() + stepseconds*1000
     var targetDF: SimpleDateFormat = new SimpleDateFormat(targetformat)
     var targettime: String = targetDF.format(new Date((sourceTime)))
     targettime
@@ -42,7 +42,11 @@ object DateUtil {
 
 
   def main(args: Array[String]): Unit = {
-    println(timeFormatConvert("20170628230500","yyyyMMddHHmmss","yyyy-MM-dd HH:mm:ss"))
+    println(timeCalcWithFormatConvert("20170628230500","yyyyMMddHHmmss",1,"yyyy-MM-dd HH:mm:ss"))
     println(getNextTime("20170628230500",1,"yyyy-MM-dd HH:mm:ss"))
+    val endtime= "201706271225"
+    val endminu = endtime.substring(8,12)
+    println(endminu)
+
   }
 }
