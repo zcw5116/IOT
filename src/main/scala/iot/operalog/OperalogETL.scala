@@ -45,12 +45,16 @@ object OperalogETL {
 
       val tmppcrf = "pcroperalog"
       val prcftable = "iot_user_opera_pcrf_log"
+      val tmp2pcrf = "tmppcroperalog"
       PcrfOperalog.registerTempTable(tmppcrf)
       PcrfOperalog.printSchema()
       sqlContext.sql("ALTER TABLE " + prcftable + " DROP IF EXISTS PARTITION(dayid='" + dayid + "')")
+      //sqlContext.sql("insert into " + prcftable + " partition(dayid='"+dayid+"') " +
+      sqlContext.sql("select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result  " +
+        " from " + tmppcrf + "  where substr(regexp_replace(opertime,'-',''),1,8)='"+dayid+"'").coalesce(1).registerTempTable(tmp2pcrf)
       sqlContext.sql("insert into " + prcftable + " partition(dayid='"+dayid+"') " +
-        "select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result  " +
-        " from " + tmppcrf + "  where substr(regexp_replace(opertime,'-',''),1,8)='"+dayid+"'")
+        "  select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result from " + tmp2pcrf )
+
     } catch {
       case ex: Exception => {
         println("pcroperalog failed. " + ex.getMessage)
@@ -65,12 +69,16 @@ object OperalogETL {
       val HssOperalog = sqlContext.read.json(CharacterEncodeConversion.transfer(sc, "/hadoop/IOT/ANALY_PLATFORM/OperaLog/HSS/*" + hssdayid + "*", "GBK")).coalesce(1)
       val tmphss = "hssoperalog"
       val hsstable = "iot_user_opera_hss_log"
+      val tmp2hss = "tmphssoperalog"
       HssOperalog.registerTempTable(tmphss)
       HssOperalog.printSchema()
       sqlContext.sql("ALTER TABLE " + hsstable + " DROP IF EXISTS PARTITION(dayid='" + dayid + "')")
+      //sqlContext.sql("insert into " + hsstable + " partition(dayid='"+dayid+"') " +
+      sqlContext.sql("select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result " +
+        " from " + tmphss + "  where substr(regexp_replace(opertime,'-',''),1,8)='"+dayid+"'").coalesce(1).registerTempTable(tmp2hss)
+
       sqlContext.sql("insert into " + hsstable + " partition(dayid='"+dayid+"') " +
-        "select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result " +
-        " from " + tmphss + "  where substr(regexp_replace(opertime,'-',''),1,8)='"+dayid+"'")
+        " select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result from " + tmp2hss)
     } catch {
       case ex: Exception => {
         println("hssoperalog failed. " + ex.getMessage)
@@ -84,12 +92,16 @@ object OperalogETL {
       val HlrOperalog = sqlContext.read.json(CharacterEncodeConversion.transfer(sc, "/hadoop/IOT/ANALY_PLATFORM/OperaLog/HLR/*" + hlrdayid + "*", "GBK")).repartition(1)
       val tmphlr = "hlroperalog"
       val hlrtable = "iot_user_opera_hlr_log"
+      val tmp2hrl = "tmphlroperalog"
       HlrOperalog.registerTempTable(tmphlr)
       HlrOperalog.printSchema()
       sqlContext.sql("ALTER TABLE " + hlrtable + " DROP IF EXISTS PARTITION(dayid='" + dayid + "')")
+      //sqlContext.sql("insert into " + hlrtable + " partition(dayid='"+dayid+"') " +
+      sqlContext.sql("select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result " +
+        " from " + tmphlr + "  where substr(regexp_replace(opertime,'-',''),1,8)='" + dayid + "'").coalesce(1).registerTempTable(tmp2hrl)
       sqlContext.sql("insert into " + hlrtable + " partition(dayid='"+dayid+"') " +
-        "select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result " +
-        " from " + tmphlr + "  where substr(regexp_replace(opertime,'-',''),1,8)='" + dayid + "'")
+        "  select detailinfo,errorinfo,imsicdma,imsilte,mdn,netype,node,operclass,opertime,opertype,oper_result from " + tmp2hrl)
+
     } catch {
       case ex: Exception => {
         println("hlroperalog failed. " + ex.getMessage)

@@ -14,6 +14,8 @@ object MySparkSQL {
     val conf = new SparkConf().setAppName("XX").setMaster("local")
     val sc = new SparkContext(conf)
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+
+
     val now = new java.util.Date()
     val today = now.getTime
     //注意 这边如果数字后面不加L会错误

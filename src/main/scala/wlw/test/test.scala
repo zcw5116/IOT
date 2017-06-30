@@ -3,6 +3,11 @@ package wlw.test
 import java.text.SimpleDateFormat
 import java.util.{Calendar, Date}
 
+import iot.users.UsersInfoIncETL.getNextTimeStr
+import org.apache.hadoop.hbase.{HBaseConfiguration, HColumnDescriptor, HTableDescriptor, TableName}
+import org.apache.hadoop.hbase.client.ConnectionFactory
+import org.apache.hadoop.hbase.client.Connection
+
 
 /**
   * Created by slview on 17-5-27.
@@ -50,10 +55,46 @@ object test {
     dayid
   }
 
+
+  //创建表
+  def createHTable(connection: Connection,tablename: String, familyarr:Array[String]): Unit=
+  {
+    //Hbase表模式管理器
+    val admin = connection.getAdmin
+    //本例将操作的表名
+    val tableName = TableName.valueOf(tablename)
+    //如果需要创建表
+    if (!admin.tableExists(tableName)) {
+      //创建Hbase表模式
+      val tableDescriptor = new HTableDescriptor(tableName)
+
+      familyarr.foreach(f => tableDescriptor.addFamily(new HColumnDescriptor(f.getBytes())))
+      //创建表
+      admin.createTable(tableDescriptor)
+      println("create done.")
+    }
+  }
+
+
   def main(args: Array[String]): Unit = {
     val starttimeid = "20170523091500"
     val parthourid = starttimeid.substring(8,12)
     println(parthourid)
+
+    val conf = HBaseConfiguration.create
+    val tablename = "blog"
+   // conf.set("hbase.zookeeper.quorum", "EPC-LOG-NM-15,EPC-LOG-NM-17,EPC-LOG-NM-16")
+    //conf.set("hbase.zookeeper.property.clientPort", "2181")
+    //val connection= ConnectionFactory.createConnection(conf)
+
+    val familys = new Array[String](3)
+    familys(0) = "test1"
+    familys(1) = "test2"
+    familys(2) = "test3"
+   // createHTable(connection, "blog2",familys)
+
+    val yesterday = getNextTimeStr("20170630", -24 * 60 * 60)
+    println(yesterday)
 
   }
 

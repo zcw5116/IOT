@@ -46,6 +46,9 @@ object UsersInfoIncETL {
     nextTimeStr
   }
 
+
+  case class IOTUserInfo(mdn:String, imsicdma:String, imsilte:String, iccid:String, imei:String, company:String, vpdncompanycode:String, nettype:String, vpdndomain:String, isvpdn:String, subscribetimeaaa:String, subscribetimehlr:String, subscribetimehss:String, subscribetimepcrf:String, firstactivetime:String, userstatus:String, atrbprovince:String, userprovince:String)
+
   def main(args: Array[String]): Unit = {
 
     // var dayid = getNowDayid()
@@ -62,7 +65,7 @@ object UsersInfoIncETL {
 
     val hiveDatabase = HiveProperties.HIVE_DATABASE
 
-    val sparkConf = new SparkConf().setAppName("UserInfoGenerate")
+    val sparkConf = new SparkConf()//.setAppName("UserInfoGenerate")
     //.setMaster("local[4]")
     val sc = new SparkContext(sparkConf)
     val sqlContext = new HiveContext(sc)
@@ -72,17 +75,25 @@ object UsersInfoIncETL {
     val tmpIncrTable = "iot_tmp_incr_users"
     val tmpPartTable = "iot_tmp_mid_users"
     val userPartTable = "iot_user_basic_info_part"
+    val userPartTmp = "iot_user_basic_info_tmp"
+
+
     val userTable = "iot_user_basic_info"
     val userRenameTo = "iot_user_basic_info_rename"
 
     sqlContext.sql("use " + hiveDatabase)
 
     try {
-      val userDF = sc.textFile(dirpath + "/incr*" + dayid + "*[0-9]").map(_.split("\\|", 18)).filter(_.length == 18)
+
+      /*val userDF = sc.textFile(dirpath + "/incr*" + dayid + "*[0-9]").map(_.split("\\|", 18)).filter(_.length == 18)
         .map(u => new UsersInfo(u(0).tryGetString, u(1).tryGetString, u(2).tryGetString, u(3).tryGetString,
           u(4).tryGetString, u(5).tryGetString, u(6).tryGetString, u(7).tryGetString, u(8).tryGetString,
           u(9).tryGetString, u(10).tryGetString, u(11).tryGetString, u(12).tryGetString, u(13).tryGetString,
-          u(14).tryGetString, u(15).tryGetString, u(16).tryGetString, u(17).tryGetString)).toDF().repartition(4)
+          u(14).tryGetString, u(15).tryGetString, u(16).tryGetString, u(17).tryGetString)).toDF().repartition(4)*/
+
+
+      val userDF = sc.textFile(dirpath + "/incr*" + dayid + "*[0-9]").map(_.split("\\|", 18)).filter(_.length == 18).map(u => IOTUserInfo(u(0), u(1), u(2), u(3),u(4), u(5), u(6), u(7), u(8),u(9), u(10), u(11), u(12), u(13),u(14), u(15), u(16), u(17))).toDF().repartition(4)
+
       userDF.registerTempTable(tmpTable)
 
       val droptmpincrsql = "drop table if exists " + tmpIncrTable
@@ -104,45 +115,74 @@ object UsersInfoIncETL {
         " from " + tmpTable + " t lateral view explode(split(t.vpdncompanycode,',')) c as companycode where mdn is not null")
 
 
-      val resultSql = "insert into " + tmpPartTable + " select u.mdn, t.imsicdma, t.imsilte, t.iccid, t.imei, t.company, t.vpdncompanycode, t.nettype, t.vpdndomain, " +
+      val  tmppartuser = "tmppartuser"
+      sqlContext.sql("select u.mdn, u.imsicdma, u.imsilte, u.iccid, u.imei, u.company, u.vpdncompanycode, u.nettype, u.vpdndomain, " +
+        "    u.isvpdn, u.subscribetimeaaa, u.subscribetimehlr, u.subscribetimehss, u.subscribetimepcrf, u.firstactivetime, " +
+        "    u.userstatus, u.atrbprovince, u.userprovince, u.crt_time " +
+        "    from  iot_user_basic_info_part u where u.dayid='20170629'").coalesce(2).registerTempTable(tmppartuser)
+
+
+
+
+    /*  val resultSql = " insert into "+tmpPartTable+"  select u.mdn, t.imsicdma, t.imsilte, t.iccid, t.imei, t.company, t.vpdncompanycode, t.nettype, t.vpdndomain, " +
         "t.isvpdn, t.subscribetimeaaa, t.subscribetimehlr, t.subscribetimehss, t.subscribetimepcrf, t.firstactivetime, t.userstatus, " +
         "t.atrbprovince, t.userprovince, t.crt_time  " +
-        "from " + userPartTable + " u, " + tmpIncrTable + " t where u.mdn=t.mdn and u.dayid=" + yesterday + "  " +
-        "union all  " +
-        "select distinct o.mdn, o.imsicdma, o.imsilte, o.iccid, o.imei, o.company, o.vpdncompanycode, o.nettype, o.vpdndomain, o.isvpdn, " +
+        "from " + userPartTmp + " u, " + tmpIncrTable + " t where u.mdn=t.mdn " +
+        " union all  " +
+        "select  o.mdn, o.imsicdma, o.imsilte, o.iccid, o.imei, o.company, o.vpdncompanycode, o.nettype, o.vpdndomain, o.isvpdn, " +
         "o.subscribetimeaaa, o.subscribetimehlr, o.subscribetimehss, o.subscribetimepcrf, o.firstactivetime, o.userstatus, " +
         "o.atrbprovince, o.userprovince, o.crt_time  " +
         "from  ( " +
         "    select u.mdn, u.imsicdma, u.imsilte, u.iccid, u.imei, u.company, u.vpdncompanycode, u.nettype, u.vpdndomain, " +
         "    u.isvpdn, u.subscribetimeaaa, u.subscribetimehlr, u.subscribetimehss, u.subscribetimepcrf, u.firstactivetime, " +
         "    u.userstatus, u.atrbprovince, u.userprovince, u.crt_time, t.mdn as newmdn " +
-        "    from " + userPartTable + " u left join " + tmpIncrTable + " t on(u.mdn=t.mdn) where u.dayid=" + yesterday + " " +
-        "     ) o where o.newmdn is null"
+        "    from " + userPartTmp + " u  join " + tmpIncrTable + " t on(u.mdn=t.mdn) " +
+        "     ) o where o.newmdn is null "
+      "  union all  " +
+        "select o.mdn, o.imsicdma, o.imsilte, o.iccid, o.imei, o.company, o.vpdncompanycode, o.nettype, o.vpdndomain, o.isvpdn, " +
+        "o.subscribetimeaaa, o.subscribetimehlr, o.subscribetimehss, o.subscribetimepcrf, o.firstactivetime, o.userstatus, " +
+        "o.atrbprovince, o.userprovince, o.crt_time  " +
+        "from  ( " +
+        "    select t.mdn, t.imsicdma, t.imsilte, t.iccid, t.imei, t.company, t.vpdncompanycode, t.nettype, t.vpdndomain, " +
+        "    t.isvpdn, t.subscribetimeaaa, t.subscribetimehlr, t.subscribetimehss, t.subscribetimepcrf, t.firstactivetime, " +
+        "    t.userstatus, t.atrbprovince, t.userprovince, t.crt_time, u.mdn as newmdn " +
+        "    from " + userPartTmp + " u right join " + tmpIncrTable + " t on(u.mdn=t.mdn) "  +
+        "     ) o where o.newmdn is null "*/
 
+     val resultTmpTable = "resultTmpTable"
+      sqlContext.sql("drop table if exists " + resultTmpTable)
+      val resultSql = "create table "+resultTmpTable+"  as select nvl(t.mdn, u.mdn) as mdn, if(t.mdn is null, u.imsicdma,t.imsicdma) as imsicdma,if(t.mdn is null, u.imsilte,t.imsilte) as imsilte," +
+        "if(t.mdn is null, u.iccid,t.iccid) as iccid, if(t.mdn is null, u.imei,t.imei) as imei,if(t.mdn is null, u.company,t.company) as company,if(t.mdn is null, u.vpdncompanycode,t.vpdncompanycode) as vpdncompanycode," +
+        "if(t.mdn is null, u.nettype,t.nettype) as nettype, if(t.mdn is null, u.vpdndomain,t.vpdndomain) as vpdndomain,if(t.mdn is null, u.isvpdn,t.isvpdn) as isvpdn," +
+        "if(t.mdn is null, u.subscribetimeaaa,t.subscribetimeaaa) as subscribetimeaaa,if(t.mdn is null, u.subscribetimehlr,t.subscribetimehlr) as subscribetimehlr," +
+        "if(t.mdn is null, u.subscribetimehss,t.subscribetimehss) as subscribetimehss,if(t.mdn is null, u.subscribetimepcrf,t.subscribetimepcrf) as subscribetimepcrf," +
+        "if(t.mdn is null, u.firstactivetime,t.firstactivetime) as firstactivetime,if(t.mdn is null, u.userstatus,t.userstatus) as userstatus," +
+        "if(t.mdn is null, u.atrbprovince,t.atrbprovince) as atrbprovince,if(t.mdn is null, u.userprovince,t.userprovince) as userprovince,if(t.mdn is null, u.crt_time,t.crt_time) as crt_time " +
+        "from "+tmppartuser+" u full outer join  "+tmpIncrTable+" t on(u.mdn=t.mdn)"
+
+
+      println(resultSql)
       sqlContext.sql(resultSql)
+
+
 
       sqlContext.sql("ALTER TABLE " + userPartTable + " DROP IF EXISTS PARTITION (dayid=" + dayid + ")")
       sqlContext.sql("insert into " + userPartTable + " partition(dayid=" + dayid + ")  " +
         " select mdn,imsicdma,imsilte,iccid,imei,company,vpdncompanycode,nettype,vpdndomain,isvpdn,subscribetimeaaa,subscribetimehlr,subscribetimehss,subscribetimepcrf,firstactivetime,userstatus,atrbprovince,userprovince, crt_time" +
-        "  from " + tmpPartTable)
+        "  from " + resultTmpTable)
 
       val userRenameToTmp = "alter table " + userTable + " RENAME TO " + userRenameTo
-      val tmpRenameToUser = "alter table " + tmpPartTable + " RENAME TO " + userTable
+      val tmpRenameToUser = "alter table " + resultTmpTable + " RENAME TO " + userTable
       sqlContext.sql(userRenameToTmp)
       sqlContext.sql(tmpRenameToUser)
 
     } catch {
       case e: InvalidInputException => {
-        println("Input Pattern  matches 0 files")
+        println(e.getMessage)
         System.exit(1)
       }
       case e: Exception => {
         println(e.getMessage)
-        println("Warn: table " + userPartTable + " partition " + dayid + " will be generated by partition data of yesterday.")
-        sqlContext.sql("ALTER TABLE " + userPartTable + " DROP IF EXISTS PARTITION (dayid=" + dayid + ")")
-        sqlContext.sql("insert into " + userPartTable + " partition(dayid=" + dayid + ")  " +
-          " select mdn,imsicdma,imsilte,iccid,imei,company,vpdncompanycode,nettype,vpdndomain,isvpdn,subscribetimeaaa,subscribetimehlr,subscribetimehss,subscribetimepcrf,firstactivetime,userstatus,atrbprovince,userprovince, crt_time" +
-          "  from " + userPartTable + "  where dayid='" + yesterday + "'")
         System.exit(1)
       }
     }

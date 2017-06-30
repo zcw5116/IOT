@@ -9,7 +9,7 @@ import java.util.{Calendar, Date}
 object DateUtil {
   def getNowTime():String={
     var now:Date = new Date()
-    var  dateFormat:SimpleDateFormat = new SimpleDateFormat("yyyyMMddHHmms")
+    var  dateFormat:SimpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss")
     var timeid = dateFormat.format( now )
     timeid
   }

@@ -11,6 +11,7 @@ import org.apache.spark.sql.SQLContext
 import org.apache.spark.{SparkConf, SparkContext}
 import utils.ConfigProperties
 import utils.DateUtil.timeCalcWithFormatConvert
+import utils.HbaseUtil
 /**
   * Created by slview on 17-6-28.
   */
@@ -95,8 +96,8 @@ object AuthBaseData {
 
     val authdf = sqlContext.sql(avgsql)
 
-    val conf = HBaseConfiguration.create()
 
+    val conf = HBaseConfiguration.create()
     conf.set("hbase.zookeeper.quorum","EPC-LOG-NM-15,EPC-LOG-NM-17,EPC-LOG-NM-16")
     //设置zookeeper连接端口，默认2181
     conf.set("hbase.zookeeper.property.clientPort", "2181")
@@ -134,6 +135,5 @@ object AuthBaseData {
     val df2 = sqlContext.sql(avgsql).collect().foreach(println)
 
     //df2.foreach(println)
-
   }
 }

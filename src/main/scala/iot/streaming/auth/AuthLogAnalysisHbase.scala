@@ -3,6 +3,7 @@ package iot.streaming.auth
 import java.text.SimpleDateFormat
 import java.util.Date
 
+import iot.streaming.auth.AuthService.registerRDD
 import org.apache.hadoop.hbase.HBaseConfiguration
 import org.apache.hadoop.hbase.client.Put
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
@@ -38,7 +39,9 @@ object AuthLogAnalysisHbase {
       System.exit(1)
     }
 
-    val starttimeid = args(0) + "00"
+    val startminu = args(0)
+    val starttimeid = startminu + "00"
+
     val partitiondayid = starttimeid.substring(0, 8)
     println(partitiondayid)
     //val starttimeid = "20170523091500"
@@ -125,9 +128,11 @@ object AuthLogAnalysisHbase {
     println(authSql)
     val authdf = sqlContext.sql(authSql)
 
+    val htable = "iot_userauth_day_" + partitiondayid
+
     val authJobConf = new JobConf(conf, this.getClass)
     authJobConf.setOutputFormat(classOf[TableOutputFormat])
-    authJobConf.set(TableOutputFormat.OUTPUT_TABLE, "iot_userauth_day_" + partitiondayid)
+    authJobConf.set(TableOutputFormat.OUTPUT_TABLE, htable)
     val startminuteid = starttimeid.substring(8,12)
     val endminuteid = endtimeid.substring(8,12)
 
@@ -165,7 +170,7 @@ object AuthLogAnalysisHbase {
 
     val nextJobConf = new JobConf(conf, this.getClass)
     nextJobConf.setOutputFormat(classOf[TableOutputFormat])
-    nextJobConf.set(TableOutputFormat.OUTPUT_TABLE, "iot_userauth_day_" + nextdayid)
+    nextJobConf.set(TableOutputFormat.OUTPUT_TABLE, htable)
     val authnextrdd = hbaserdd.map { arr => {
       /*一个Put对象就是一行记录，在构造方法中指定主键
        * 所有插入的数据必须用org.apache.hadoop.hbase.util.Bytes.toBytes方法转换
@@ -225,7 +230,7 @@ object AuthLogAnalysisHbase {
       val currentPut = new Put(Bytes.toBytes(arr._2.toString + "-" + startminuteid.toString))
       currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("c_" + arr._1 + "_" + arr._3.toString + "_cnt" ), Bytes.toBytes(arr._4.toString))
       //currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("rank_" + arr._1 + "_" + arr._3.toString), Bytes.toBytes(arr._5.toString))
-      currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("b_" + arr._1 + "_" + arr._3.toString + "_cnt"), Bytes.toBytes(((arr._4+5)*(arr._4-7)/(arr._4+1)).toString))
+      //currentPut.addColumn(Bytes.toBytes("authfailed"), Bytes.toBytes("b_" + arr._1 + "_" + arr._3.toString + "_cnt"), Bytes.toBytes(((arr._4+5)*(arr._4-7)/(arr._4+1)).toString))
 
       //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
       (new ImmutableBytesWritable, currentPut)
@@ -249,6 +254,71 @@ object AuthLogAnalysisHbase {
     }
 
     nextRdd.saveAsHadoopDataset(nextJobConf)
+
+
+    // 将数据写入预警表
+    import sqlContext.implicits._
+    val hbaseRdd = registerRDD(sc,htable).toDF()
+    val alarmHtable = "analyze_rst_tab"
+    val hDFtable = "htable"
+    hbaseRdd.registerTempTable(hDFtable)
+
+    val alarmSql = "select companycode, nvl(c_3g_auth_cnt,0), nvl(c_3g_success_cnt,0), nvl(b_3g_auth_cnt,0), " +
+      "nvl(b_3g_success_cnt,0),nvl(p_3g_auth_cnt,0), nvl(p_3g_success_cnt,0), nvl(c_4g_auth_cnt,0), nvl(c_4g_success_cnt,0), " +
+      "nvl(b_4g_auth_cnt,0), nvl(b_4g_success_cnt,0),nvl(p_4g_auth_cnt,0), nvl(p_4g_success_cnt,0),nvl(c_vpdn_auth_cnt,0), " +
+      "nvl(c_vpdn_success_cnt,0), nvl(b_vpdn_auth_cnt,0), nvl(b_vpdn_success_cnt,0), nvl(p_vpdn_auth_cnt,0), nvl(p_vpdn_success_cnt,0)  " +
+      " from " + hDFtable + "  where time='" + startminuteid + "' "
+
+    println(alarmSql)
+
+    val alarmJobConf = new JobConf(conf, this.getClass)
+    alarmJobConf.setOutputFormat(classOf[TableOutputFormat])
+    alarmJobConf.set(TableOutputFormat.OUTPUT_TABLE, alarmHtable)
+
+    val alarmdf = sqlContext.sql(alarmSql)
+
+    // type, vpdncompanycode, authcnt, successcnt, failedcnt, authmdnct, authfaieldcnt
+    val alarmrdd = alarmdf.rdd.map(x => (x.getString(0), x.getString(1), x.getString(2), x.getString(3),
+      x.getString(4), x.getString(5), x.getString(6), x.getString(7), x.getString(8), x.getString(9), x.getString(10),
+      x.getString(11), x.getString(12), x.getString(13), x.getString(14), x.getString(15), x.getString(16), x.getString(17), x.getString(18)))
+
+
+    val alarmhbaserdd = alarmrdd.map { arr => {
+      /*一个Put对象就是一行记录，在构造方法中指定主键
+       * 所有插入的数据必须用org.apache.hadoop.hbase.util.Bytes.toBytes方法转换
+       * Put.add方法接收三个参数：列族，列名，数据
+       */
+      val currentPut = new Put(Bytes.toBytes(arr._1))
+
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_3g_time"), Bytes.toBytes(startminu.toString))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_3g_request_cnt"), Bytes.toBytes(arr._2))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_3g_success_cnt"), Bytes.toBytes(arr._3))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_b_3g_request_cnt"), Bytes.toBytes(arr._4))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_b_3g_success_cnt"), Bytes.toBytes(arr._5))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_p_3g_request_cnt"), Bytes.toBytes(arr._6))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_p_3g_success_cnt"), Bytes.toBytes(arr._7))
+
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_4g_time"), Bytes.toBytes(startminu.toString))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_4g_request_cnt"), Bytes.toBytes(arr._8))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_4g_success_cnt"), Bytes.toBytes(arr._9))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_b_4g_request_cnt"), Bytes.toBytes(arr._10))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_b_4g_success_cnt"), Bytes.toBytes(arr._11))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_p_4g_request_cnt"), Bytes.toBytes(arr._12))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_p_4g_success_cnt"), Bytes.toBytes(arr._13))
+
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_vpdn_time"), Bytes.toBytes(startminu.toString))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_vpdn_request_cnt"), Bytes.toBytes(arr._14))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_c_vpdn_success_cnt"), Bytes.toBytes(arr._15))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_b_vpdn_request_cnt"), Bytes.toBytes(arr._16))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_b_vpdn_success_cnt"), Bytes.toBytes(arr._17))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_p_vpdn_request_cnt"), Bytes.toBytes(arr._18))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("auth_p_vpdn_success_cnt"), Bytes.toBytes(arr._19))
+      //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
+      (new ImmutableBytesWritable, currentPut)
+    }
+    }
+
+    alarmhbaserdd.saveAsHadoopDataset(alarmJobConf)
 
    sc.stop()
   }
