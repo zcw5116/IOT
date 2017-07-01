@@ -33,28 +33,29 @@ object OperalogAnalysis {
     val operaresultTable = "iot_user_opera_result"
     val monthid = dayid.substring(0,6)
     val cachedUserinfoTable = "iot_user_basic_info_cached"
-    sqlContext.sql("CACHE LAZY TABLE " + cachedUserinfoTable + "  as select u.mdn, u.vpdncompanycode " +
-      "from iot_user_basic_info u ")
+    sqlContext.sql("CACHE LAZY TABLE " + cachedUserinfoTable + "  as select u.mdn, " +
+      "case when length(u.vpdncompanycode)=0 then 'N999999999' else u.vpdncompanycode end  as vpdncompanycode " +
+      "from iot_user_basic_info u ").coalesce(1)
 
     // sqlContext.sql("insert into " + operaresultTable + "  partition(monthid=" + monthid + ")  " +
-    val operaDF = sqlContext.sql( " select 'pcrf' as operatype, u.vpdncompanycode,(case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
+    val operaDF = sqlContext.sql( " select 'pcrf' as operatype, u.vpdncompanycode, (case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
       " from " + prcftable + " l, " + cachedUserinfoTable + " u " +
       " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn " +
       "  group by  u.vpdncompanycode,l.opertype " +
       "union all" +
-      " select 'hss' as operatype, u.vpdncompanycode,(case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
+      " select 'hss' as operatype, u.vpdncompanycode, (case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
       " from " + hsstable + " l, " + cachedUserinfoTable + " u " +
       " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn " +
       "  group by  u.vpdncompanycode,l.opertype " +
       "union all" +
-      " select 'hlr' as operatype, u.vpdncompanycode,(case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
+      " select 'hlr' as operatype, u.vpdncompanycode, (case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
       " from " + hlrtable + " l, " + cachedUserinfoTable + " u " +
       " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn " +
       "  group by  u.vpdncompanycode,l.opertype "
     )
+    operaDF.registerTempTable("test111")
 
-
-    val tableName = "iot_operalog_day_" + dayid
+    val tableName = "iot_operalog_day" // + dayid
 
     val conf = HBaseConfiguration.create()
     conf.set("hbase.zookeeper.quorum","EPC-LOG-NM-15,EPC-LOG-NM-17,EPC-LOG-NM-16")
@@ -77,7 +78,7 @@ object OperalogAnalysis {
     val operaRDD = operaDF.rdd.map(x => (x.getString(0), x.getString(1), x.getString(2), x.getLong(3)))
 
     val operaHbaseRdd = operaRDD.map { arr => {
-        val currentPut = new Put(Bytes.toBytes(arr._2))
+        val currentPut = new Put(Bytes.toBytes(arr._2 + "-" + dayid.toString))
         currentPut.addColumn(Bytes.toBytes("operainfo"), Bytes.toBytes(arr._1 + "_"+arr._3+"_cnt"), Bytes.toBytes(arr._4.toString))
         //currentPut.addColumn(Bytes.toBytes("operainfo"), Bytes.toBytes(arr._1 + "_"+arr._3+"_cnt"), Bytes.toBytes(arr._4.toString))
       //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset

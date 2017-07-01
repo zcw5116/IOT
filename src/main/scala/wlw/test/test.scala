@@ -1,6 +1,6 @@
 package wlw.test
 
-import java.text.SimpleDateFormat
+import java.text.{DecimalFormat, SimpleDateFormat}
 import java.util.{Calendar, Date}
 
 import iot.users.UsersInfoIncETL.getNextTimeStr
@@ -75,9 +75,22 @@ object test {
     }
   }
 
+  def divOpera(numerator:String, denominator:String ):String = {
+    try {
+      val ratio = if (denominator.toInt > 0) numerator.toFloat / denominator.toInt else if (numerator.toInt > denominator.toInt) 1 else 0
+      f"$ratio%1.4f"
+    } catch {
+      case e => {
+        println(e.getMessage)
+        "0"
+      }
+    }
+  }
+
+
 
   def main(args: Array[String]): Unit = {
-    val starttimeid = "20170523091500"
+    /*val starttimeid = "20170523091500"
     val parthourid = starttimeid.substring(8,12)
     println(parthourid)
 
@@ -94,7 +107,14 @@ object test {
    // createHTable(connection, "blog2",familys)
 
     val yesterday = getNextTimeStr("20170630", -24 * 60 * 60)
-    println(yesterday)
+    println(yesterday)*/
+
+   //println(divOpera("ab","10"))
+
+    val a = "-ba"
+    val b = a.split("-")(0)
+
+
 
   }
 

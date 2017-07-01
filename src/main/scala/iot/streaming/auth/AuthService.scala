@@ -1,5 +1,7 @@
 package iot.streaming.auth
 
+import java.text.DecimalFormat
+
 import org.apache.hadoop.hbase.HBaseConfiguration
 import org.apache.hadoop.hbase.client.Result
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
@@ -41,7 +43,6 @@ object AuthService {
       Bytes.toString(r._2.getValue(Bytes.toBytes("authresult"),Bytes.toBytes("p_4g_auth_cnt"))),
       Bytes.toString(r._2.getValue(Bytes.toBytes("authresult"),Bytes.toBytes("p_4g_success_cnt"))),
 
-
       Bytes.toString(r._2.getValue(Bytes.toBytes("authresult"),Bytes.toBytes("c_vpdn_auth_cnt"))),
       Bytes.toString(r._2.getValue(Bytes.toBytes("authresult"),Bytes.toBytes("c_vpdn_success_cnt"))),
       Bytes.toString(r._2.getValue(Bytes.toBytes("authresult"),Bytes.toBytes("b_vpdn_auth_cnt"))),
@@ -51,4 +52,17 @@ object AuthService {
     ))
     authRDD
   }
+
+  def divOpera(numerator:String, denominator:String ):String = {
+    try {
+      val ratio = if (denominator.toInt <=0 ) 0 else  if(denominator.toInt > numerator.toInt)  numerator.toFloat / denominator.toInt else 1
+      f"$ratio%1.4f"
+    } catch {
+      case e => {
+        println(e.getMessage)
+        "0"
+      }
+    }
+  }
+
 }
