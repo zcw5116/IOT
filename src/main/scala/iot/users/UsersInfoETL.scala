@@ -24,7 +24,7 @@ object UsersInfoETL {
     def tryGetBoolean = Try(s.trim.toBoolean).toOption
   }
 
-  case class companyinfo(companyid: String, companyname: String)
+  case class UserInfo(mdn:String, imsicdma:String, imsilte:String, iccid:String, imei:String, company:String, vpdncompanycode:String, nettype:String, vpdndomain:String, isvpdn:String, subscribetimeaaa:String, subscribetimehlr:String, subscribetimehss:String, subscribetimepcrf:String, firstactivetime:String, userstatus:String, atrbprovince:String, userprovince:String)
 
   def getNowDayid(): String = {
     var now: Date = new Date()
@@ -52,11 +52,16 @@ object UsersInfoETL {
     import sqlContext.implicits._
 
     val tmpTable = "tmpuserinfo"
-    val userDF = sc.textFile(dirpath+"/all*"+dayid+"*[0-9]").map(_.split("\\|",18)).filter(_.length == 18)
+ /*   val userDF = sc.textFile(dirpath+"/all*"+dayid+"*[0-9]").map(_.split("\\|",18))
       .map(u => new UsersInfo(u(0).tryGetString,u(1).tryGetString,u(2).tryGetString,u(3).tryGetString,
         u(4).tryGetString,u(5).tryGetString,u(6).tryGetString,u(7).tryGetString,u(8).tryGetString,
         u(9).tryGetString,u(10).tryGetString,u(11).tryGetString,u(12).tryGetString,u(13).tryGetString,
-        u(14).tryGetString,u(15).tryGetString,u(16).tryGetString,u(17).tryGetString )).toDF().repartition(4)
+        u(14).tryGetString,u(15).tryGetString,u(16).tryGetString,u(17).tryGetString )).toDF().repartition(4)*/
+
+    val userDF = sc.textFile(dirpath+"/all*"+dayid+"*[0-9]").map(_.split("\\|",18))
+      .map(u => UserInfo(u(0),u(1),u(2),u(3),u(4),u(5),u(6),u(7),u(8),u(9),u(10),u(11),u(12),u(13),u(14),u(15),u(16),u(17) )).toDF()
+
+
     userDF.registerTempTable(tmpTable)
 
     // hiveContext.sql("select * from "+tmpTable+" limit 11").collect().foreach(println)

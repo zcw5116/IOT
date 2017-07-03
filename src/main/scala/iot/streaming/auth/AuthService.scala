@@ -9,6 +9,7 @@ import org.apache.hadoop.hbase.mapreduce.TableInputFormat
 import org.apache.hadoop.hbase.util.Bytes
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
+import utils.ConfigProperties
 
 
 /**
@@ -18,9 +19,11 @@ object AuthService {
   def registerRDD(sc:SparkContext, htable:String):RDD[hbase_auth_log] = {
     // 创建hbase configuration
     val hBaseConf = HBaseConfiguration.create()
-    hBaseConf.set("hbase.zookeeper.quorum","EPC-LOG-NM-15,EPC-LOG-NM-17,EPC-LOG-NM-16")
+    //hBaseConf.set("hbase.zookeeper.quorum","EPC-LOG-NM-15,EPC-LOG-NM-17,EPC-LOG-NM-16")
+    hBaseConf.set("hbase.zookeeper.quorum",ConfigProperties.IOT_ZOOKEEPER_QUORUM)
     //设置zookeeper连接端口，默认2181
-    hBaseConf.set("hbase.zookeeper.property.clientPort", "2181")
+    //hBaseConf.set("hbase.zookeeper.property.clientPort", "2181")
+    hBaseConf.set("hbase.zookeeper.property.clientPort", ConfigProperties.IOT_ZOOKEEPER_CLIENTPORT)
 
     hBaseConf.set(TableInputFormat.INPUT_TABLE,htable)
 

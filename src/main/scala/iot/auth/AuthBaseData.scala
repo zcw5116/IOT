@@ -23,9 +23,11 @@ object AuthBaseData {
   def registerRDD(sc:SparkContext, htable:String):RDD[hbase_auth_base_log] = {
     // 创建hbase configuration
     val hBaseConf = HBaseConfiguration.create()
-    hBaseConf.set("hbase.zookeeper.quorum","EPC-LOG-NM-15,EPC-LOG-NM-17,EPC-LOG-NM-16")
+    //hBaseConf.set("hbase.zookeeper.quorum","EPC-LOG-NM-15,EPC-LOG-NM-17,EPC-LOG-NM-16")
+    hBaseConf.set("hbase.zookeeper.quorum",ConfigProperties.IOT_ZOOKEEPER_QUORUM)
     //设置zookeeper连接端口，默认2181
-    hBaseConf.set("hbase.zookeeper.property.clientPort", "2181")
+    //hBaseConf.set("hbase.zookeeper.property.clientPort", "2181")
+    hBaseConf.set("hbase.zookeeper.property.clientPort", ConfigProperties.IOT_ZOOKEEPER_CLIENTPORT)
 
     hBaseConf.set(TableInputFormat.INPUT_TABLE,htable)
 
@@ -113,7 +115,7 @@ object AuthBaseData {
     conf.set("hbase.zookeeper.quorum", ConfigProperties.IOT_ZOOKEEPER_QUORUM)
 
     val targetHtable = "iot_userauth_day_" + targetdayid
-    val families = new Array[String](1)
+    val families = new Array[String](2)
     families(0) = "authresult"
     families(1) = "authfailed"
     createIfNotExists(targetHtable,families)
@@ -145,5 +147,9 @@ object AuthBaseData {
     }
 
     authcurrentrdd.saveAsHadoopDataset(authJobConf)
+
+
+
+
   }
 }

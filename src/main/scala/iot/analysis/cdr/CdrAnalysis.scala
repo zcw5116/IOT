@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 import iot.streaming.auth.AuthLogAnalysisHbase.getNextTimeStr
+import utils.MathUtil._
+import iot.analysis.cdr.CDRService._
 import org.apache.hadoop.hbase.HBaseConfiguration
 import org.apache.hadoop.hbase.client.{ConnectionFactory, Put}
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
@@ -36,8 +38,8 @@ object CdrAnalysis {
       System.err.println("Usage: <yyyyMMddHH>")
       System.exit(1)
     }
-
-    val starttimeid = args(0) + "00"
+    val startminu = args(0)
+    val starttimeid = startminu + "00"
     val partitiondayid = starttimeid.substring(0, 8)
     val parthourid = starttimeid.substring(8, 10)
 
@@ -132,6 +134,66 @@ object CdrAnalysis {
     }
     cdrnextrdd.saveAsHadoopDataset(cdrJobConf)
 
+
+
+    // 将数据写入预警表
+    import sqlContext.implicits._
+    val hbaseRdd = registerCdrRDD(sc,hbasetable).toDF()
+    val alarmHtable = "analyze_rst_tab"
+    val hDFtable = "htable"
+    hbaseRdd.registerTempTable(hDFtable)
+
+    val alarmSql = "select  case when length(companycode)=0 then 'N999999999' else companycode end as companycode, " +
+      " nvl(c_haccg_upflow,0), nvl(c_haccg_downflow,0), nvl(p_haccg_upflow,0), nvl(p_haccg_downflow,0), nvl(b_haccg_upflow,0), nvl(b_haccg_downflow,0), " +
+      " nvl(c_pgw_upflow,0), nvl(c_pgw_downflow,0), nvl(p_pgw_upflow,0), nvl(p_pgw_downflow,0), nvl(b_pgw_upflow,0), nvl(b_pgw_downflow,0) " +
+      " from " + hDFtable + "  where time='" + startminuteid + "' "
+
+    println(alarmSql)
+
+    val alarmJobConf = new JobConf(conf, this.getClass)
+    alarmJobConf.setOutputFormat(classOf[TableOutputFormat])
+    alarmJobConf.set(TableOutputFormat.OUTPUT_TABLE, alarmHtable)
+
+    val alarmdf = sqlContext.sql(alarmSql).coalesce(1)
+
+    // type, vpdncompanycode, authcnt, successcnt, failedcnt, authmdnct, authfaieldcnt
+    val alarmrdd = alarmdf.rdd.map(x => (x.getString(0),
+      x.getString(1),x.getString(2), x.getString(3) , x.getString(4),
+      x.getString(5),x.getString(6),x.getString(7),x.getString(8),
+      x.getString(9),x.getString(10),x.getString(11),x.getString(12)))
+
+
+    val alarmhbaserdd = alarmrdd.map { arr => {
+      /*一个Put对象就是一行记录，在构造方法中指定主键
+       * 所有插入的数据必须用org.apache.hadoop.hbase.util.Bytes.toBytes方法转换
+       * Put.add方法接收三个参数：列族，列名，数据
+       */
+      val currentPut = new Put(Bytes.toBytes(arr._1))
+
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_c_haccg_time"), Bytes.toBytes(startminu.toString))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_c_haccg_up"), Bytes.toBytes(arr._2))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_c_haccg_down"), Bytes.toBytes(arr._3))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_p_haccg_up"), Bytes.toBytes(arr._4))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_p_haccg_down"), Bytes.toBytes(arr._5))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_b_haccg_up"), Bytes.toBytes(arr._6))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_b_haccg_down"), Bytes.toBytes(arr._7))
+
+
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_c_pgw_time"), Bytes.toBytes(startminu.toString))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_c_pgw_up"), Bytes.toBytes(arr._8))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_c_pgw_down"), Bytes.toBytes(arr._9))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_p_pgw_up"), Bytes.toBytes(arr._10))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_p_pgw_down"), Bytes.toBytes(arr._11))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_b_pgw_up"), Bytes.toBytes(arr._12))
+      currentPut.addColumn(Bytes.toBytes("alarmChk"), Bytes.toBytes("flow_b_pgw_down"), Bytes.toBytes(arr._13))
+
+
+      //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
+      (new ImmutableBytesWritable, currentPut)
+    }
+    }
+
+    alarmhbaserdd.saveAsHadoopDataset(alarmJobConf)
     sc.stop()
   }
 }

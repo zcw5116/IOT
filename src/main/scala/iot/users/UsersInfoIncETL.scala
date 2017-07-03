@@ -47,7 +47,7 @@ object UsersInfoIncETL {
   }
 
 
-  case class IOTUserInfo(mdn:String, imsicdma:String, imsilte:String, iccid:String, imei:String, company:String, vpdncompanycode:String, nettype:String, vpdndomain:String, isvpdn:String, subscribetimeaaa:String, subscribetimehlr:String, subscribetimehss:String, subscribetimepcrf:String, firstactivetime:String, userstatus:String, atrbprovince:String, userprovince:String)
+  case class UserInfo(mdn:String, imsicdma:String, imsilte:String, iccid:String, imei:String, company:String, vpdncompanycode:String, nettype:String, vpdndomain:String, isvpdn:String, subscribetimeaaa:String, subscribetimehlr:String, subscribetimehss:String, subscribetimepcrf:String, firstactivetime:String, userstatus:String, atrbprovince:String, userprovince:String)
 
   def main(args: Array[String]): Unit = {
 
@@ -59,9 +59,11 @@ object UsersInfoIncETL {
     val dayid = args(0)
     val dirpath = args(1)
 
+    // lastday
+    val lastday = getNextTimeStr(dayid, -24 * 60 * 60)
+
     val curdayid = getNowDayid()
-    // yesterday
-    val yesterday = getNextTimeStr(dayid, -24 * 60 * 60)
+
 
     val hiveDatabase = HiveProperties.HIVE_DATABASE
 
@@ -92,7 +94,7 @@ object UsersInfoIncETL {
           u(14).tryGetString, u(15).tryGetString, u(16).tryGetString, u(17).tryGetString)).toDF().repartition(4)*/
 
 
-      val userDF = sc.textFile(dirpath + "/incr*" + dayid + "*[0-9]").map(_.split("\\|", 18)).filter(_.length == 18).map(u => IOTUserInfo(u(0), u(1), u(2), u(3),u(4), u(5), u(6), u(7), u(8),u(9), u(10), u(11), u(12), u(13),u(14), u(15), u(16), u(17))).toDF().repartition(4)
+      val userDF = sc.textFile(dirpath + "/incr*" + dayid + "*[0-9]").map(_.split("\\|", 18)).filter(_.length == 18).map(u => UserInfo(u(0), u(1), u(2), u(3),u(4), u(5), u(6), u(7), u(8),u(9), u(10), u(11), u(12), u(13),u(14), u(15), u(16), u(17))).toDF().repartition(4)
 
       userDF.registerTempTable(tmpTable)
 
@@ -119,7 +121,7 @@ object UsersInfoIncETL {
       sqlContext.sql("select u.mdn, u.imsicdma, u.imsilte, u.iccid, u.imei, u.company, u.vpdncompanycode, u.nettype, u.vpdndomain, " +
         "    u.isvpdn, u.subscribetimeaaa, u.subscribetimehlr, u.subscribetimehss, u.subscribetimepcrf, u.firstactivetime, " +
         "    u.userstatus, u.atrbprovince, u.userprovince, u.crt_time " +
-        "    from  iot_user_basic_info_part u where u.dayid='20170629'").coalesce(2).registerTempTable(tmppartuser)
+        "    from  iot_user_basic_info_part u where u.dayid='"+lastday+"'").coalesce(2).registerTempTable(tmppartuser)
 
 
 

@@ -1,5 +1,6 @@
 package iot.users
 
+import org.apache.spark.sql.SaveMode
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.hive.HiveContext
 import utils.ConfigProperties
@@ -36,8 +37,20 @@ object UserOnLine {
     val mydayid = "20170627"
     val pgwsql = "select '"+mydayid+"' as dayid, o.vpdncompanycode, count(*) as onlinecnt from ( SELECT u.mdn, u.vpdncompanycode FROM iot_user_basic_info u LEFT SEMI JOIN iot_cdr_pgw_ticket t ON  (u.mdn = t.mdn and t.dayid='"+dayid+"' and t.l_timeoffirstusage < '"+curtimestr+"' )) o group by o.vpdncompanycode"
 
+   // haccg用户在线计算逻辑
+//    create table t1 as
+//      select t.mdn, t.account_session_id from iot_cdr_haccg_ticket t where t.acct_status_type<>'2' and t.dayid='20170701' and t.hourid=23;
+//    create table t2 as
+//      select t.mdn, t.account_session_id from iot_cdr_haccg_ticket t where t.acct_status_type='2' and t.dayid='20170702' and t.hourid=00;
+//
+//    create table t3 as
+//      select t1.mdn from t1, t2 where t1.mdn=t2.mdn and t1.account_session_id=t2.account_session_id;
+//
+//    create table t4 as
+//      select u.vpdncompanycode,count(*) from t3 t, iot_user_basic_info u where t.mdn=u.mdn group by u.vpdncompanycode;
 
-    sqlContext.sql(pgwsql).coalesce(1).write.format("orc").save("/hadoop/IOT/ANALY_PLATFORM/UserOnline/" + mydayid)
+
+    sqlContext.sql(pgwsql).coalesce(1).write.mode(SaveMode.Overwrite).format("orc").save("/hadoop/IOT/ANALY_PLATFORM/UserOnline/" + mydayid)
 
   }
 

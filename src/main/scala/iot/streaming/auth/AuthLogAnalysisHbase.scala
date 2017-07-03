@@ -94,8 +94,8 @@ object AuthLogAnalysisHbase {
       "group by u.vpdncompanycode, u.mdn, a.auth_result  " +
       "union all  " +
       "select 'vpdn' type, u.vpdncompanycode, u.mdn, a.auth_result, count(*) as authcnt,  " +
-      "sum(case when a.auth_result=0 then 1 else 0 end) as authsucess,  " +
-      "sum(case when a.auth_result=0 then 0 else 1 end) as authfails   " +
+      "sum(case when a.auth_result=1 then 1 else 0 end) as authsucess,  " +
+      "sum(case when a.auth_result=1 then 0 else 1 end) as authfails   " +
       "from iot_userauth_vpdn a, "+cachedUserinfoTable+" u   " +
       "where a.mdn = u.mdn  and a.auth_time>='" + starttimestr + "'  " +
       "and a.auth_time<'" + endtimestr + "'  and a.dayid=" + partitiondayid + "  and a.hourid="+ parthourid + "  " +
@@ -107,7 +107,8 @@ object AuthLogAnalysisHbase {
     val tmp_table = "auth_3gaaa_streaming_tmp"
     sqlContext.sql( "drop table if exists " + tmp_table)
     sqlContext.sql("create table if not exists " + tmp_table + " as " +
-    "select type, vpdncompanycode, mdn, auth_result, authcnt, authsucess, authfails from " + authdftb)
+      "select type, vpdncompanycode, mdn, auth_result,case when type in('3g','4g') and auth_result=0 then 'success' " +
+      "when  type='vpdn' and auth_result=1 then 'success' else auth_result end as auth_flag, authcnt, authsucess, authfails from " + authdftb)
 
     sqlContext.cacheTable(tmp_table)
 
@@ -120,8 +121,8 @@ object AuthLogAnalysisHbase {
       " sum(case when a.failedcnt=0 then 0 else 1 end) as mdnfaieldcnt, " + partitiondayid + " as dayid  " +
       "from (" +
       " select t.type, t.vpdncompanycode, t.mdn,sum(t.authcnt) authcnt, " +
-      "  sum(case when t.auth_result=0 then t.authcnt else 0 end ) as successcnt, " +
-      "  sum(case when t.auth_result=0 then 0 else t.authcnt end ) as failedcnt  " +
+      "  sum(case when t.auth_flag='success' then t.authcnt else 0 end ) as successcnt, " +
+      "  sum(case when t.auth_flag='success' then 0 else t.authcnt end ) as failedcnt  " +
       " from  " + tmp_table + " t " +
       " group by t.type, t.vpdncompanycode, t.mdn)  a " +
       "group by a.type, a.vpdncompanycode"
@@ -164,7 +165,7 @@ object AuthLogAnalysisHbase {
 
       //currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_auth_cnt"), Bytes.toBytes(((arr._3-4)*(arr._3-4)/(arr._3+1)).toString))
       //currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_success_cnt"), Bytes.toBytes(((arr._4-4)*(arr._4+4)/(arr._4+1)).toString))
-     // currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_failed_cnt"), Bytes.toBytes(((arr._5+2)*(arr._5-4)/(arr._5+1)).toString))
+      // currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_failed_cnt"), Bytes.toBytes(((arr._5+2)*(arr._5-4)/(arr._5+1)).toString))
       //currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_authmdn_cnt"), Bytes.toBytes(((arr._6+1)*(arr._6-2)/(arr._6+1)).toString))
       //currentPut.addColumn(Bytes.toBytes("authresult"), Bytes.toBytes("b_"+arr._1+"_mdnfaield_cnt"), Bytes.toBytes(((arr._7+4)*(arr._7-6)/(arr._7+1)).toString))
 
@@ -200,33 +201,33 @@ object AuthLogAnalysisHbase {
 
 
     // val authFailedSql = "insert into auth_streaming_result_failed partition(dayid)  " +
-/*    val authFailedSql = "select " + starttimeid + " as starttime, " + endtimeid + " as endtime, b.type, b.vpdncompanycode, b.auth_result, " +
-      "       b.authcnt, b.authrank, " + partitiondayid + " as dayid " +
-      "from ( " +
-      "      select a.type, a.vpdncompanycode, a.auth_result, authcnt," +
-      "             row_number() over(partition by a.type, a.vpdncompanycode order by a.authcnt desc) as authrank " +
-      "      from (" +
-      "            select t.type, t.vpdncompanycode, t.auth_result, sum(t.authcnt) as authcnt " +
-      "            from  " + tmp_table + " t " +
-      "            where t.auth_result=0  " +
-      "            group by t.type, t.vpdncompanycode, t.auth_result" +
-      "           ) a" +
-      ")  b where b.authrank<2"*/
+    /*    val authFailedSql = "select " + starttimeid + " as starttime, " + endtimeid + " as endtime, b.type, b.vpdncompanycode, b.auth_result, " +
+          "       b.authcnt, b.authrank, " + partitiondayid + " as dayid " +
+          "from ( " +
+          "      select a.type, a.vpdncompanycode, a.auth_result, authcnt," +
+          "             row_number() over(partition by a.type, a.vpdncompanycode order by a.authcnt desc) as authrank " +
+          "      from (" +
+          "            select t.type, t.vpdncompanycode, t.auth_result, sum(t.authcnt) as authcnt " +
+          "            from  " + tmp_table + " t " +
+          "            where t.auth_result=0  " +
+          "            group by t.type, t.vpdncompanycode, t.auth_result" +
+          "           ) a" +
+          ")  b where b.authrank<2"*/
 
- /*   val authFailedSql = " select a.type, a.vpdncompanycode, a.auth_result, authcnt," +
-      " row_number() over(partition by a.type, a.vpdncompanycode order by a.authcnt desc) as authrank " +
-      " from (" +
-      "         select t.type, t.vpdncompanycode, t.auth_result, sum(t.authcnt) as authcnt " +
-      "         from  " + tmp_table + " t " +
-      "         where t.auth_result<>0  " +
-      "         group by t.type, t.vpdncompanycode, t.auth_result" +
-      " ) a"*/
+    /*   val authFailedSql = " select a.type, a.vpdncompanycode, a.auth_result, authcnt," +
+         " row_number() over(partition by a.type, a.vpdncompanycode order by a.authcnt desc) as authrank " +
+         " from (" +
+         "         select t.type, t.vpdncompanycode, t.auth_result, sum(t.authcnt) as authcnt " +
+         "         from  " + tmp_table + " t " +
+         "         where t.auth_result<>0  " +
+         "         group by t.type, t.vpdncompanycode, t.auth_result" +
+         " ) a"*/
 
 
     val authFailedSql = "select t.type, t.vpdncompanycode, t.auth_result, sum(t.authcnt) as authcnt " +
-               "  from  " + tmp_table + " t " +
-               "  where t.auth_result<>0  " +
-               "  group by t.type, t.vpdncompanycode, t.auth_result"
+      "  from  " + tmp_table + " t " +
+      "  where t.auth_result<>'success'  " +
+      "  group by t.type, t.vpdncompanycode, t.auth_result"
 
 
 
@@ -337,6 +338,6 @@ object AuthLogAnalysisHbase {
 
     alarmhbaserdd.saveAsHadoopDataset(alarmJobConf)
 
-   sc.stop()
+    sc.stop()
   }
 }

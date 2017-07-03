@@ -40,20 +40,20 @@ object OperalogAnalysis {
     // sqlContext.sql("insert into " + operaresultTable + "  partition(monthid=" + monthid + ")  " +
     val operaDF = sqlContext.sql( " select 'pcrf' as operatype, u.vpdncompanycode, (case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
       " from " + prcftable + " l, " + cachedUserinfoTable + " u " +
-      " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn " +
+      " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn and l.dayid='"+dayid+"'  " +
       "  group by  u.vpdncompanycode,l.opertype " +
       "union all" +
       " select 'hss' as operatype, u.vpdncompanycode, (case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
       " from " + hsstable + " l, " + cachedUserinfoTable + " u " +
-      " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn " +
+      " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn and l.dayid='"+dayid+"' " +
       "  group by  u.vpdncompanycode,l.opertype " +
       "union all" +
       " select 'hlr' as operatype, u.vpdncompanycode, (case when l.opertype='开户' then 'open' else 'close' end) as  opertype, count(*) as operacnt " +
       " from " + hlrtable + " l, " + cachedUserinfoTable + " u " +
-      " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn " +
+      " where l.opertype in('开户','销户')  and l.oper_result='成功'  and  l.mdn = u.mdn  and l.dayid='"+dayid+"'  " +
       "  group by  u.vpdncompanycode,l.opertype "
-    )
-    operaDF.registerTempTable("test111")
+    ).coalesce(1)
+    // operaDF.registerTempTable("test111")
 
     val tableName = "iot_operalog_day" // + dayid
 

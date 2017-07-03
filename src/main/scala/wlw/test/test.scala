@@ -7,6 +7,7 @@ import iot.users.UsersInfoIncETL.getNextTimeStr
 import org.apache.hadoop.hbase.{HBaseConfiguration, HColumnDescriptor, HTableDescriptor, TableName}
 import org.apache.hadoop.hbase.client.ConnectionFactory
 import org.apache.hadoop.hbase.client.Connection
+import utils.DateUtil.timeCalcWithFormatConvert
 
 
 /**
@@ -111,8 +112,7 @@ object test {
 
    //println(divOpera("ab","10"))
 
-    val a = "-ba"
-    val b = a.split("-")(0)
+    println(timeCalcWithFormatConvert("20170701"+"000000","yyyyMMddHHmmss",0,"yyyy-MM-dd HH:mm:ss"))
 
 
 

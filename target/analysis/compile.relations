@@ -29,11 +29,37 @@ products:
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/pgtableCase.class
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/topnCase$.class
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/topnCase.class
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$$anonfun$1.class
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$$anonfun$2.class
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$.class
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis.class
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming$$anonfun$1.class
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming$$anonfun$2.class
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming$$anonfun$main$1.class
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming$.class
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming.class
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> target/classes/iot/analysis/cdr/CDRBaseData$$anonfun$1.class
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> target/classes/iot/analysis/cdr/CDRBaseData$$anonfun$2.class
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> target/classes/iot/analysis/cdr/CDRBaseData$$anonfun$3.class
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> target/classes/iot/analysis/cdr/CDRBaseData$$typecreator1$1.class
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> target/classes/iot/analysis/cdr/CDRBaseData$$typecreator2$1.class
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> target/classes/iot/analysis/cdr/CDRBaseData$.class
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> target/classes/iot/analysis/cdr/CDRBaseData.class
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> target/classes/iot/analysis/cdr/CDRService$$anonfun$1.class
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> target/classes/iot/analysis/cdr/CDRService$.class
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> target/classes/iot/analysis/cdr/CDRService.class
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> target/classes/iot/analysis/cdr/CdrAnalysis$$anonfun$1.class
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> target/classes/iot/analysis/cdr/CdrAnalysis$$anonfun$2.class
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> target/classes/iot/analysis/cdr/CdrAnalysis$$anonfun$3.class
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> target/classes/iot/analysis/cdr/CdrAnalysis$$anonfun$4.class
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> target/classes/iot/analysis/cdr/CdrAnalysis$$anonfun$5.class
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> target/classes/iot/analysis/cdr/CdrAnalysis$$typecreator1$1.class
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> target/classes/iot/analysis/cdr/CdrAnalysis$.class
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> target/classes/iot/analysis/cdr/CdrAnalysis.class
+   src/main/scala/iot/analysis/cdr/HbaseCDRBaseLog.scala -> target/classes/iot/analysis/cdr/HbaseCDRBaseLog$.class
+   src/main/scala/iot/analysis/cdr/HbaseCDRBaseLog.scala -> target/classes/iot/analysis/cdr/HbaseCDRBaseLog.class
+   src/main/scala/iot/analysis/cdr/HbaseCdrLog.scala -> target/classes/iot/analysis/cdr/HbaseCdrLog$.class
+   src/main/scala/iot/analysis/cdr/HbaseCdrLog.scala -> target/classes/iot/analysis/cdr/HbaseCdrLog.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$anonfun$1.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$anonfun$2.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$anonfun$3.class
@@ -68,16 +94,6 @@ products:
    src/main/scala/iot/operalog/OperalogAnalysis.scala -> target/classes/iot/operalog/OperalogAnalysis.class
    src/main/scala/iot/operalog/OperalogETL.scala -> target/classes/iot/operalog/OperalogETL$.class
    src/main/scala/iot/operalog/OperalogETL.scala -> target/classes/iot/operalog/OperalogETL.class
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog3GStreaming$$anonfun$1.class
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog3GStreaming$$anonfun$2.class
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog3GStreaming$$anonfun$main$1.class
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog3GStreaming$.class
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog3GStreaming.class
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog4GStreaming$$anonfun$1.class
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog4GStreaming$$anonfun$2.class
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog4GStreaming$$anonfun$main$1.class
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog4GStreaming$.class
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> target/classes/iot/streaming/auth/AuthLog4GStreaming.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> target/classes/iot/streaming/auth/AuthLogAnalysis$.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> target/classes/iot/streaming/auth/AuthLogAnalysis.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$anonfun$1.class
@@ -90,28 +106,15 @@ products:
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$$typecreator1$1.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase$.class
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisHbase.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$$anonfun$1.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$$anonfun$2.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase$.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbase.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseCommon$$anonfun$main$1$$anonfun$apply$1.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseCommon$$anonfun$main$1.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseCommon$.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$$anonfun$1.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$$anonfun$2.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew$.class
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNew.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI$$anonfun$1.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI$$anonfun$2.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI$.class
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> target/classes/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$1.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$2.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$$anonfun$main$1.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming$.class
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> target/classes/iot/streaming/auth/AuthLogStreaming.class
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> target/classes/iot/streaming/auth/AuthLogVPDNStreaming$$anonfun$1.class
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> target/classes/iot/streaming/auth/AuthLogVPDNStreaming$$anonfun$2.class
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> target/classes/iot/streaming/auth/AuthLogVPDNStreaming$$anonfun$main$1.class
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> target/classes/iot/streaming/auth/AuthLogVPDNStreaming$.class
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> target/classes/iot/streaming/auth/AuthLogVPDNStreaming.class
    src/main/scala/iot/streaming/auth/AuthService.scala -> target/classes/iot/streaming/auth/AuthService$$anonfun$1.class
    src/main/scala/iot/streaming/auth/AuthService.scala -> target/classes/iot/streaming/auth/AuthService$.class
    src/main/scala/iot/streaming/auth/AuthService.scala -> target/classes/iot/streaming/auth/AuthService.class
@@ -119,21 +122,6 @@ products:
    src/main/scala/iot/streaming/auth/hbase_auth_base_log.scala -> target/classes/iot/streaming/auth/hbase_auth_base_log.class
    src/main/scala/iot/streaming/auth/hbase_auth_log.scala -> target/classes/iot/streaming/auth/hbase_auth_log$.class
    src/main/scala/iot/streaming/auth/hbase_auth_log.scala -> target/classes/iot/streaming/auth/hbase_auth_log.class
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> target/classes/iot/streaming/cdr/CDR3GaaaStreaming$$anonfun$1.class
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> target/classes/iot/streaming/cdr/CDR3GaaaStreaming$$anonfun$2.class
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> target/classes/iot/streaming/cdr/CDR3GaaaStreaming$$anonfun$main$1.class
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> target/classes/iot/streaming/cdr/CDR3GaaaStreaming$.class
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> target/classes/iot/streaming/cdr/CDR3GaaaStreaming.class
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> target/classes/iot/streaming/cdr/CDRHaccgStreaming$$anonfun$1.class
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> target/classes/iot/streaming/cdr/CDRHaccgStreaming$$anonfun$2.class
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> target/classes/iot/streaming/cdr/CDRHaccgStreaming$$anonfun$main$1.class
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> target/classes/iot/streaming/cdr/CDRHaccgStreaming$.class
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> target/classes/iot/streaming/cdr/CDRHaccgStreaming.class
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> target/classes/iot/streaming/cdr/CDRPgwStreaming$$anonfun$1.class
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> target/classes/iot/streaming/cdr/CDRPgwStreaming$$anonfun$2.class
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> target/classes/iot/streaming/cdr/CDRPgwStreaming$$anonfun$main$1.class
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> target/classes/iot/streaming/cdr/CDRPgwStreaming$.class
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> target/classes/iot/streaming/cdr/CDRPgwStreaming.class
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$1.class
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$2.class
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> target/classes/iot/streaming/cdr/CDRStreaming$$anonfun$main$1.class
@@ -146,7 +134,6 @@ products:
    src/main/scala/iot/users/UsersInfo.scala -> target/classes/iot/users/UsersInfo.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$anonfun$1.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$anonfun$2.class
-   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$anonfun$3.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$$typecreator1$1.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter$$anonfun$tryGetBoolean$extension$1.class
@@ -154,21 +141,21 @@ products:
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter$$anonfun$tryGetString$extension$1.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter$.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$StringConverter.class
-   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$companyinfo$.class
-   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$companyinfo.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$UserInfo$.class
+   src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL$UserInfo.class
    src/main/scala/iot/users/UsersInfoETL.scala -> target/classes/iot/users/UsersInfoETL.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$$anonfun$1.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$$anonfun$2.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$$anonfun$3.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$$typecreator1$1.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$.class
-   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$IOTUserInfo$.class
-   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$IOTUserInfo.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter$$anonfun$tryGetBoolean$extension$1.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter$$anonfun$tryGetInt$extension$1.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter$$anonfun$tryGetString$extension$1.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter$.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$StringConverter.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$UserInfo$.class
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$UserInfo.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$companyinfo$.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL$companyinfo.class
    src/main/scala/iot/users/UsersInfoIncETL.scala -> target/classes/iot/users/UsersInfoIncETL.class
@@ -211,6 +198,8 @@ products:
    src/main/scala/utils/HbaseUtil.scala -> target/classes/utils/HbaseUtil.class
    src/main/scala/utils/HiveProperties.scala -> target/classes/utils/HiveProperties$.class
    src/main/scala/utils/HiveProperties.scala -> target/classes/utils/HiveProperties.class
+   src/main/scala/utils/MathUtil.scala -> target/classes/utils/MathUtil$.class
+   src/main/scala/utils/MathUtil.scala -> target/classes/utils/MathUtil.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anon$1.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$$anonfun$1.class
    src/main/scala/utils/RedisClient.scala -> target/classes/utils/RedisClient$.class
@@ -323,6 +312,42 @@ binary dependencies:
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
@@ -333,7 +358,12 @@ binary dependencies:
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/analysis/cdr/HbaseCDRBaseLog.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/analysis/cdr/HbaseCDRBaseLog.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/analysis/cdr/HbaseCdrLog.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/analysis/cdr/HbaseCdrLog.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
@@ -393,20 +423,6 @@ binary dependencies:
    src/main/scala/iot/operalog/OperalogETL.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/operalog/OperalogETL.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/operalog/OperalogETL.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -424,37 +440,17 @@ binary dependencies:
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
@@ -462,13 +458,6 @@ binary dependencies:
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/auth/AuthService.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthService.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/auth/AuthService.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
@@ -480,24 +469,6 @@ binary dependencies:
    src/main/scala/iot/streaming/auth/hbase_auth_base_log.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/auth/hbase_auth_log.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/streaming/auth/hbase_auth_log.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
@@ -562,6 +533,8 @@ binary dependencies:
    src/main/scala/utils/HbaseUtil.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/HiveProperties.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/HiveProperties.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/utils/MathUtil.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/utils/MathUtil.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/utils/RedisClient.scala -> /home/slview/.m2/repository/redis/clients/jedis/2.8.2/jedis-2.8.2.jar
@@ -664,9 +637,23 @@ binary dependencies:
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
 source dependencies:
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> src/main/scala/utils/ConfigProperties.scala
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> src/main/scala/utils/DateUtil.scala
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> src/main/scala/utils/HbaseUtil.scala
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> src/main/scala/utils/ConfigProperties.scala
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> src/main/scala/iot/analysis/cdr/HbaseCDRBaseLog.scala
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> src/main/scala/utils/ConfigProperties.scala
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> src/main/scala/utils/DateUtil.scala
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> src/main/scala/utils/HbaseUtil.scala
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> src/main/scala/iot/analysis/cdr/HbaseCdrLog.scala
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> src/main/scala/utils/ConfigProperties.scala
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> src/main/scala/iot/analysis/cdr/CDRService.scala
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> src/main/scala/utils/HbaseUtil.scala
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> src/main/scala/utils/MathUtil.scala
    src/main/scala/iot/auth/AuthBaseData.scala -> src/main/scala/iot/streaming/auth/hbase_auth_base_log.scala
    src/main/scala/iot/auth/AuthBaseData.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/auth/AuthBaseData.scala -> src/main/scala/utils/DateUtil.scala
@@ -675,24 +662,18 @@ source dependencies:
    src/main/scala/iot/operalog/OperalogAnalysis.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/operalog/OperalogAnalysis.scala -> src/main/scala/utils/HbaseUtil.scala
    src/main/scala/iot/operalog/OperalogETL.scala -> src/main/scala/utils/CharacterEncodeConversion.scala
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> src/main/scala/iot/streaming/auth/AuthService.scala
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> src/main/scala/utils/DateUtil.scala
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> src/main/scala/utils/HbaseUtil.scala
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/streaming/auth/AuthService.scala -> src/main/scala/iot/streaming/auth/hbase_auth_log.scala
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> src/main/scala/iot/streaming/cdr/CDRStreamingTools.scala
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> src/main/scala/iot/streaming/cdr/CDRStreamingTools.scala
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> src/main/scala/iot/streaming/cdr/CDRStreamingTools.scala
+   src/main/scala/iot/streaming/auth/AuthService.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/streaming/cdr/CDRStreamingTools.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/streaming/cdr/CDRStreamingTools.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/users/UserOnLine.scala -> src/main/scala/utils/DateUtil.scala
-   src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/iot/users/UsersInfo.scala
    src/main/scala/iot/users/UsersInfoETL.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/iot/users/UsersInfoIncETL.scala -> src/main/scala/utils/HiveProperties.scala
    src/main/scala/qoe/CDNHour.scala -> src/main/scala/utils/HiveProperties.scala
@@ -702,6 +683,7 @@ source dependencies:
    src/main/scala/utils/RedisClient.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/wlw/test/TestCaseClassField.scala -> src/main/scala/wlw/test/AirTraffic.scala
    src/main/scala/wlw/test/test.scala -> src/main/scala/iot/users/UsersInfoIncETL.scala
+   src/main/scala/wlw/test/test.scala -> src/main/scala/utils/DateUtil.scala
 external dependencies:
 class names:
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.DealSourceFile
@@ -734,11 +716,37 @@ class names:
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.pgtableCase$
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.topnCase
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> com.zyuc.spark.topnCase$
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$1
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$2
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming$
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming$$anonfun$1
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming$$anonfun$2
+   src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming$$anonfun$main$1
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> iot.analysis.cdr.CDRBaseData
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> iot.analysis.cdr.CDRBaseData$
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> iot.analysis.cdr.CDRBaseData$$anonfun$1
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> iot.analysis.cdr.CDRBaseData$$anonfun$2
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> iot.analysis.cdr.CDRBaseData$$anonfun$3
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> iot.analysis.cdr.CDRBaseData$$typecreator1$1
+   src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> iot.analysis.cdr.CDRBaseData$$typecreator2$1
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> iot.analysis.cdr.CDRService
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> iot.analysis.cdr.CDRService$
+   src/main/scala/iot/analysis/cdr/CDRService.scala -> iot.analysis.cdr.CDRService$$anonfun$1
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> iot.analysis.cdr.CdrAnalysis
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> iot.analysis.cdr.CdrAnalysis$
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> iot.analysis.cdr.CdrAnalysis$$anonfun$1
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> iot.analysis.cdr.CdrAnalysis$$anonfun$2
    src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> iot.analysis.cdr.CdrAnalysis$$anonfun$3
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> iot.analysis.cdr.CdrAnalysis$$anonfun$4
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> iot.analysis.cdr.CdrAnalysis$$anonfun$5
+   src/main/scala/iot/analysis/cdr/CdrAnalysis.scala -> iot.analysis.cdr.CdrAnalysis$$typecreator1$1
+   src/main/scala/iot/analysis/cdr/HbaseCDRBaseLog.scala -> iot.analysis.cdr.HbaseCDRBaseLog
+   src/main/scala/iot/analysis/cdr/HbaseCDRBaseLog.scala -> iot.analysis.cdr.HbaseCDRBaseLog$
+   src/main/scala/iot/analysis/cdr/HbaseCdrLog.scala -> iot.analysis.cdr.HbaseCdrLog
+   src/main/scala/iot/analysis/cdr/HbaseCdrLog.scala -> iot.analysis.cdr.HbaseCdrLog$
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$anonfun$1
@@ -773,16 +781,6 @@ class names:
    src/main/scala/iot/operalog/OperalogAnalysis.scala -> iot.operalog.OperalogAnalysis$$anonfun$2
    src/main/scala/iot/operalog/OperalogETL.scala -> iot.operalog.OperalogETL
    src/main/scala/iot/operalog/OperalogETL.scala -> iot.operalog.OperalogETL$
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> iot.streaming.auth.AuthLog3GStreaming
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> iot.streaming.auth.AuthLog3GStreaming$
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> iot.streaming.auth.AuthLog3GStreaming$$anonfun$1
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> iot.streaming.auth.AuthLog3GStreaming$$anonfun$2
-   src/main/scala/iot/streaming/auth/AuthLog3GStreaming.scala -> iot.streaming.auth.AuthLog3GStreaming$$anonfun$main$1
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> iot.streaming.auth.AuthLog4GStreaming
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> iot.streaming.auth.AuthLog4GStreaming$
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> iot.streaming.auth.AuthLog4GStreaming$$anonfun$1
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> iot.streaming.auth.AuthLog4GStreaming$$anonfun$2
-   src/main/scala/iot/streaming/auth/AuthLog4GStreaming.scala -> iot.streaming.auth.AuthLog4GStreaming$$anonfun$main$1
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> iot.streaming.auth.AuthLogAnalysis
    src/main/scala/iot/streaming/auth/AuthLogAnalysis.scala -> iot.streaming.auth.AuthLogAnalysis$
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase
@@ -795,28 +793,15 @@ class names:
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$6
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$anonfun$7
    src/main/scala/iot/streaming/auth/AuthLogAnalysisHbase.scala -> iot.streaming.auth.AuthLogAnalysisHbase$$typecreator1$1
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$$anonfun$1
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbase.scala -> iot.streaming.auth.AuthLogAnalysisToHbase$$anonfun$2
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseCommon
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseCommon$
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseCommon$$anonfun$main$1
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseCommon.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseCommon$$anonfun$main$1$$anonfun$apply$1
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew$
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew$$anonfun$1
-   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNew.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNew$$anonfun$2
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNewAPI
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNewAPI$
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNewAPI$$anonfun$1
+   src/main/scala/iot/streaming/auth/AuthLogAnalysisToHbaseNewAPI.scala -> iot.streaming.auth.AuthLogAnalysisToHbaseNewAPI$$anonfun$2
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$$anonfun$1
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$$anonfun$2
    src/main/scala/iot/streaming/auth/AuthLogStreaming.scala -> iot.streaming.auth.AuthLogStreaming$$anonfun$main$1
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> iot.streaming.auth.AuthLogVPDNStreaming
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> iot.streaming.auth.AuthLogVPDNStreaming$
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> iot.streaming.auth.AuthLogVPDNStreaming$$anonfun$1
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> iot.streaming.auth.AuthLogVPDNStreaming$$anonfun$2
-   src/main/scala/iot/streaming/auth/AuthLogVPDNStreaming.scala -> iot.streaming.auth.AuthLogVPDNStreaming$$anonfun$main$1
    src/main/scala/iot/streaming/auth/AuthService.scala -> iot.streaming.auth.AuthService
    src/main/scala/iot/streaming/auth/AuthService.scala -> iot.streaming.auth.AuthService$
    src/main/scala/iot/streaming/auth/AuthService.scala -> iot.streaming.auth.AuthService$$anonfun$1
@@ -824,21 +809,6 @@ class names:
    src/main/scala/iot/streaming/auth/hbase_auth_base_log.scala -> iot.streaming.auth.hbase_auth_base_log$
    src/main/scala/iot/streaming/auth/hbase_auth_log.scala -> iot.streaming.auth.hbase_auth_log
    src/main/scala/iot/streaming/auth/hbase_auth_log.scala -> iot.streaming.auth.hbase_auth_log$
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> iot.streaming.cdr.CDR3GaaaStreaming
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> iot.streaming.cdr.CDR3GaaaStreaming$
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> iot.streaming.cdr.CDR3GaaaStreaming$$anonfun$1
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> iot.streaming.cdr.CDR3GaaaStreaming$$anonfun$2
-   src/main/scala/iot/streaming/cdr/CDR3GaaaStreaming.scala -> iot.streaming.cdr.CDR3GaaaStreaming$$anonfun$main$1
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> iot.streaming.cdr.CDRHaccgStreaming
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> iot.streaming.cdr.CDRHaccgStreaming$
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> iot.streaming.cdr.CDRHaccgStreaming$$anonfun$1
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> iot.streaming.cdr.CDRHaccgStreaming$$anonfun$2
-   src/main/scala/iot/streaming/cdr/CDRHaccgStreaming.scala -> iot.streaming.cdr.CDRHaccgStreaming$$anonfun$main$1
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> iot.streaming.cdr.CDRPgwStreaming
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> iot.streaming.cdr.CDRPgwStreaming$
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> iot.streaming.cdr.CDRPgwStreaming$$anonfun$1
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> iot.streaming.cdr.CDRPgwStreaming$$anonfun$2
-   src/main/scala/iot/streaming/cdr/CDRPgwStreaming.scala -> iot.streaming.cdr.CDRPgwStreaming$$anonfun$main$1
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming$
    src/main/scala/iot/streaming/cdr/CDRStreaming.scala -> iot.streaming.cdr.CDRStreaming$$anonfun$1
@@ -853,28 +823,27 @@ class names:
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$anonfun$1
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$anonfun$2
-   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$anonfun$3
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$$typecreator1$1
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$$anonfun$tryGetBoolean$extension$1
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$$anonfun$tryGetInt$extension$1
    src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$StringConverter$$anonfun$tryGetString$extension$1
-   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$companyinfo
-   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$companyinfo$
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$UserInfo
+   src/main/scala/iot/users/UsersInfoETL.scala -> iot.users.UsersInfoETL$UserInfo$
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$$anonfun$1
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$$anonfun$2
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$$anonfun$3
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$$typecreator1$1
-   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$IOTUserInfo
-   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$IOTUserInfo$
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter$
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter$$anonfun$tryGetBoolean$extension$1
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter$$anonfun$tryGetInt$extension$1
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$StringConverter$$anonfun$tryGetString$extension$1
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$UserInfo
+   src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$UserInfo$
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$companyinfo
    src/main/scala/iot/users/UsersInfoIncETL.scala -> iot.users.UsersInfoIncETL$companyinfo$
    src/main/scala/qoe/CDNHour.scala -> qoe.CDNHour
@@ -916,6 +885,8 @@ class names:
    src/main/scala/utils/HbaseUtil.scala -> utils.HbaseUtil$$anonfun$createIfNotExists$1
    src/main/scala/utils/HiveProperties.scala -> utils.HiveProperties
    src/main/scala/utils/HiveProperties.scala -> utils.HiveProperties$
+   src/main/scala/utils/MathUtil.scala -> utils.MathUtil
+   src/main/scala/utils/MathUtil.scala -> utils.MathUtil$
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient$
    src/main/scala/utils/RedisClient.scala -> utils.RedisClient$$anon$1

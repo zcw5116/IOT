@@ -16,7 +16,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 /**
   * Created by slview on 17-6-14.
   */
-object AuthLogAnalysisToHbaseNew {
+object AuthLogAnalysisToHbaseNewAPI {
 
   //根据起始时间和间隔， 计算出下个时间到字符串，精确到秒
   def getNextTimeStr(start_time:String, stepSeconds:Long)={
