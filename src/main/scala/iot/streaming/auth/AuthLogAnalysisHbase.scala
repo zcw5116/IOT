@@ -104,7 +104,7 @@ object AuthLogAnalysisHbase {
     val authdftb = "authdftmp"
     sqlContext.sql(authtmpsql).repartition(1).registerTempTable(authdftb)
 
-    val tmp_table = "auth_3gaaa_streaming_tmp"
+    val tmp_table = "auth_3gaaa_streaming_tmp1"
     sqlContext.sql( "drop table if exists " + tmp_table)
     sqlContext.sql("create table if not exists " + tmp_table + " as " +
       "select type, vpdncompanycode, mdn, auth_result,case when type in('3g','4g') and auth_result=0 then 'success' " +
@@ -226,7 +226,7 @@ object AuthLogAnalysisHbase {
 
     val authFailedSql = "select t.type, t.vpdncompanycode, t.auth_result, sum(t.authcnt) as authcnt " +
       "  from  " + tmp_table + " t " +
-      "  where t.auth_result<>'success'  " +
+      "  where t.auth_flag<>'success'  " +
       "  group by t.type, t.vpdncompanycode, t.auth_result"
 
 

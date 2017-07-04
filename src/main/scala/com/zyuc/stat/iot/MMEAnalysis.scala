@@ -169,6 +169,28 @@ object MMEAnalysis {
     curfailedRdd.saveAsHadoopDataset(authJobConf)
 
 
+    val failedmmesql= "select m.msisdn as mdn, ngummegi, count(*) as req_cnt, sum(case when pcause='0x0000' then 1 else 0 end ) as reqsucess_cnt " +
+      " from iot_mme_mm_hw m " +
+      " where m.dayid='" + partitiondayid + "' and m.hourid='"+ parthourid +"'  and  m.pcause<>'0x0000'  " +
+      " group by m.msisdn, m.pcause  " +
+      "union all " +
+      "select m.msisdn as mdn, case when m.pcause not in('0x0000','0xFFFF') then 'success' else m.pcause end as pcause, count(*) as req_cnt, sum(case when pcause in('0x0000','0xFFFF') then 1 else 0 end ) as reqsucess_cnt  " +
+      " from iot_mme_sm_hw m " +
+      " where m.dayid='" + partitiondayid + "'  and m.hourid='"+ parthourid +"'  " +
+      " group by m.msisdn, m.pcause  " +
+      "union all " +
+      "select m.msisdn as mdn, case when m.pcause<>'4294967295' then 'success' else m.pcause end as pcause, count(*) as req_cnt, sum(case when pcause='4294967295' then 1 else 0 end ) as reqsucess_cnt " +
+      " from iot_mme_mm_zt m " +
+      " where m.dayid='" + partitiondayid + "' and m.hourid='"+ parthourid +"'  and m.pcause<>'4294967295'  " +
+      " group by m.msisdn, m.pcause  " +
+      "union all " +
+      "select m.msisdn as mdn, case when m.pcause<>'4294967295' then 'success' else m.pcause end as pcause, count(*) as req_cnt,sum(case when pcause='4294967295' then 1 else 0 end ) as reqsucess_cnt " +
+      " from iot_mme_sm_zt m " +
+      " where m.dayid='" + partitiondayid + "' and m.hourid='"+ parthourid +"'  and m.pcause<>'4294967295'  " +
+      " group by m.msisdn, m.pcause  "
+
+
+
 
   }
 

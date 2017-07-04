@@ -31,6 +31,8 @@ products:
    src/main/scala/com/zyuc/spark/GetBlackBandFile.scala -> target/classes/com/zyuc/spark/topnCase.class
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$$anonfun$1.class
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$$anonfun$2.class
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$$anonfun$3.class
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$$anonfun$4.class
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$.class
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis.class
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming$$anonfun$1.class
@@ -65,7 +67,6 @@ products:
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$anonfun$3.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$typecreator1$1.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$typecreator2$1.class
-   src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$typecreator3$1.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$$anonfun$main$1.class
@@ -720,6 +721,8 @@ class names:
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$1
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$2
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$3
+   src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$4
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming$
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming$$anonfun$1
@@ -754,7 +757,6 @@ class names:
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$anonfun$3
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$typecreator1$1
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$typecreator2$1
-   src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$typecreator3$1
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$$anonfun$main$1

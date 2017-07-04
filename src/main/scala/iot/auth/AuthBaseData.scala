@@ -55,7 +55,7 @@ object AuthBaseData {
     val sc = new SparkContext(sparkConf)
     val sqlContext = new SQLContext(sc)
     val endtime = args(0)
-    val starttime = timeCalcWithFormatConvert(endtime,"yyyyMMddHHmm",-7*24*60*60,"yyyyMMddHHmm")  //args(0)
+    val starttime = timeCalcWithFormatConvert(endtime,"yyyyMMddHHmm",-3*24*60*60,"yyyyMMddHHmm")  //args(0)
     val startminu =  starttime.substring(8,12)
     val endminu = endtime.substring(8,12)
     // 写入到目标表+8小时
@@ -64,16 +64,16 @@ object AuthBaseData {
     sqlContext.sql("use " + ConfigProperties.IOT_HIVE_DATABASE)
 
     import sqlContext.implicits._
-    val hbaseRdd1 = registerRDD(sc,"iot_userauth_day_20170628").toDF()
-    val hbaseRdd2 = registerRDD(sc,"iot_userauth_day_20170629").toDF()
-    val hbaseRdd3 = registerRDD(sc,"iot_userauth_day_20170630").toDF()
+    val hbaseRdd1 = registerRDD(sc,"iot_userauth_day_20170701").toDF()
+    val hbaseRdd2 = registerRDD(sc,"iot_userauth_day_20170702").toDF()
+    // val hbaseRdd3 = registerRDD(sc,"iot_userauth_day_20170703").toDF()
     val htable1 = "htable1"
     val htable2 = "htable2"
     val htable3 = "htable3"
 
     hbaseRdd1.registerTempTable(htable1)
     hbaseRdd2.registerTempTable(htable2)
-    hbaseRdd3.registerTempTable(htable3)
+    //hbaseRdd3.registerTempTable(htable3)
 
     val authsql = "select company_time, " +
       "  nvl(c_3g_auth_cnt,0) as c_3g_auth_cnt, nvl(c_3g_success_cnt,0) as c_3g_success_cnt, " +
@@ -108,6 +108,8 @@ object AuthBaseData {
       "  from  " + tmpauthbasic + " o group by company_time"
 
     val authdf = sqlContext.sql(avgsql)
+
+    authdf.registerTempTable("tmp1")
 
 
     val conf = HBaseConfiguration.create()
