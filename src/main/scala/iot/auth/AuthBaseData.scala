@@ -66,14 +66,14 @@ object AuthBaseData {
     import sqlContext.implicits._
     val hbaseRdd1 = registerRDD(sc,"iot_userauth_day_20170701").toDF()
     val hbaseRdd2 = registerRDD(sc,"iot_userauth_day_20170702").toDF()
-    // val hbaseRdd3 = registerRDD(sc,"iot_userauth_day_20170703").toDF()
+    val hbaseRdd3 = registerRDD(sc,"iot_userauth_day_20170703").toDF()
     val htable1 = "htable1"
     val htable2 = "htable2"
     val htable3 = "htable3"
 
     hbaseRdd1.registerTempTable(htable1)
     hbaseRdd2.registerTempTable(htable2)
-    //hbaseRdd3.registerTempTable(htable3)
+    hbaseRdd3.registerTempTable(htable3)
 
     val authsql = "select company_time, " +
       "  nvl(c_3g_auth_cnt,0) as c_3g_auth_cnt, nvl(c_3g_success_cnt,0) as c_3g_success_cnt, " +
@@ -107,9 +107,9 @@ object AuthBaseData {
       "  avg(c_vpdn_auth_cnt) as c_vpdn_auth_cnt, avg(c_vpdn_success_cnt) as c_vpdn_success_cnt  " +
       "  from  " + tmpauthbasic + " o group by company_time"
 
-    val authdf = sqlContext.sql(avgsql)
+    val authdf = sqlContext.sql(avgsql).coalesce(1)
 
-    authdf.registerTempTable("tmp1")
+
 
 
     val conf = HBaseConfiguration.create()

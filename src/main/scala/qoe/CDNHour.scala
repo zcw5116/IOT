@@ -2,12 +2,10 @@ package qoe
 
 import java.text.SimpleDateFormat
 import java.util.Date
-
-import org.apache.hadoop.fs.Path
 import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.{SparkConf, SparkContext}
 import redis.clients.jedis.Jedis
-import utils.{HiveProperties, RedisClient, RedisProperties}
+import utils.{HiveProperties, RedisProperties}
 
 
 case class cdnnodeinfo(tag_node: String, node: String, node_addr: String, node_capacity: Long, node_flow: Long)
