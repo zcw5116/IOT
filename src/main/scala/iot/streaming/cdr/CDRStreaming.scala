@@ -52,7 +52,6 @@ object CDRStreaming {
     sqlContext.sql("use  " + hivedatabase)
     sqlContext.sql("set hive.exec.dynamic.partition.mode=nonstrict")
 
-
     val tmptable = tableName + "_tmp"
     val df = sqlContext.read.json(rdd).coalesce(1)
     df.registerTempTable(tmptable)

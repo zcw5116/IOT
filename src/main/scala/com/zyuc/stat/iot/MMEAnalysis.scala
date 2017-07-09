@@ -1,8 +1,5 @@
 package com.zyuc.stat.iot
 
-import java.text.SimpleDateFormat
-import java.util.Date
-
 import org.apache.hadoop.hbase.HBaseConfiguration
 import org.apache.hadoop.hbase.client.{ConnectionFactory, Put}
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
@@ -48,17 +45,17 @@ object MMEAnalysis {
     // 获取当前时间
     val curtimeid =getNowTime()
 
-    val sparkConf = new SparkConf().setAppName("MMEAnalysis").setMaster("local[4]")
+    val sparkConf = new SparkConf()//.setAppName("MMEAnalysis").setMaster("local[4]")
 
     val sc = new SparkContext(sparkConf)
     val sqlContext = new HiveContext(sc)
 
     // hbase配置
     val conf = HBaseConfiguration.create()
-   // conf.set("hbase.zookeeper.property.clientPort", ConfigProperties.IOT_ZOOKEEPER_CLIENTPORT)
-   // conf.set("hbase.zookeeper.quorum", ConfigProperties.IOT_ZOOKEEPER_QUORUM)
     conf.set("hbase.zookeeper.property.clientPort", ConfigProperties.IOT_ZOOKEEPER_CLIENTPORT)
-    conf.set("hbase.zookeeper.quorum", "cdh-nn1,cdh-dn1,cdh-yarn1")
+    conf.set("hbase.zookeeper.quorum", ConfigProperties.IOT_ZOOKEEPER_QUORUM)
+    //conf.set("hbase.zookeeper.property.clientPort", ConfigProperties.IOT_ZOOKEEPER_CLIENTPORT)
+    //conf.set("hbase.zookeeper.quorum", "cdh-nn1,cdh-dn1,cdh-yarn1")
 
     val hivedb = ConfigProperties.IOT_HIVE_DATABASE
     sqlContext.sql("use " + hivedb)
@@ -178,7 +175,7 @@ object MMEAnalysis {
 
       val currentPut = new Put(Bytes.toBytes(arr._1 + "-" + startminuteid.toString))
       currentPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("c_req_cnt" ), Bytes.toBytes(arr._2.toString))
-      currentPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("c_reqsucess_cnt"), Bytes.toBytes(arr._3.toString))
+      currentPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("c_req_sucesscnt"), Bytes.toBytes(arr._3.toString))
       currentPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("c_req_mdncnt"), Bytes.toBytes(arr._4.toString))
       currentPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("c_req_mdnfailedcnt"), Bytes.toBytes(arr._5.toString))
       //转化成RDD[(ImmutableBytesWritable,Put)]类型才能调用saveAsHadoopDataset
@@ -191,7 +188,7 @@ object MMEAnalysis {
     val mmenextrdd = hbaserdd.map { arr => {
       val nextPut = new Put(Bytes.toBytes(arr._1 + "-" + startminuteid.toString))
       nextPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("p_req_cnt" ), Bytes.toBytes(arr._2.toString))
-      nextPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("p_reqsucess_cnt"), Bytes.toBytes(arr._3.toString))
+      nextPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("p_req_sucesscnt"), Bytes.toBytes(arr._3.toString))
       nextPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("p_req_mdncnt"), Bytes.toBytes(arr._4.toString))
       nextPut.addColumn(Bytes.toBytes("mmeinfo"), Bytes.toBytes("p_req_mdnfailedcnt"), Bytes.toBytes(arr._5.toString))
       (new ImmutableBytesWritable, nextPut)
@@ -305,6 +302,7 @@ object MMEAnalysis {
     }
     hbaseFailedsite.saveAsHadoopDataset(failedsiteJobConf)
 
+    sc.stop()
 
   }
 
