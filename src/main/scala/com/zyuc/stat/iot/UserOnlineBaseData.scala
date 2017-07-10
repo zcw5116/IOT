@@ -9,7 +9,7 @@ import utils.DateUtil._
 /**
   * Created by slview on 17-7-9.
   */
-object CDRBaseData {
+object UserOnlineBaseData {
 
   def main(args: Array[String]): Unit = {
       if (args.length < 1) {
@@ -42,7 +42,7 @@ object CDRBaseData {
 
 
     // 0点在线的用户
-    val g3usersql =
+/*    val g3usersql =
       s"""select t1.mdn from
          |    (select t.mdn, t.account_session_id
          |     from iot_cdr_haccg_ticket t
@@ -54,7 +54,24 @@ object CDRBaseData {
          |    ) t2
          |where t1.mdn=t2.mdn and t1.account_session_id=t2.account_session_id
          |
+       """.stripMargin*/
+    val g3usersql =
+      s"""select o.mdn1 as mdn
+         |from (
+         | select t1.mdn as mdn1, t2.mdn as mdn2 from
+         |    ( select t.mdn, t.account_session_id
+         |      from iot_cdr_haccg_ticket t
+         |      where t.acct_status_type<>'2' and t.dayid='${lastdayid}' and t.hourid=23
+         |    ) t1
+         |  left join
+         |  (   select t.mdn, t.account_session_id
+         |      from iot_cdr_haccg_ticket t
+         |      where t.acct_status_type='2' and t.dayid='${lastdayid}' and t.hourid=23
+         |   ) t2
+         |   on(t1.mdn=t2.mdn and t1.account_session_id=t2.account_session_id)
+         | ) o where o.mdn2 is null
        """.stripMargin
+
 
     val g3tmpuser  = "g3tmpuser" + dayid
     sqlContext.sql(g3usersql).registerTempTable(g3tmpuser)
@@ -63,7 +80,7 @@ object CDRBaseData {
 
     val g3onlinecompsql =
       s"""CACHE TABLE ${g3onlinecomptable} as select u.vpdncompanycode,count(*) as g3cnt from ${g3tmpuser} t, ${cachedUserinfoTable} u
-         |  where t.mdn=u.mdn group by u.vpdncompanycode;
+         |  where t.mdn=u.mdn group by u.vpdncompanycode
        """.stripMargin
     sqlContext.sql(g3onlinecompsql).coalesce(1)
 
@@ -77,6 +94,7 @@ object CDRBaseData {
         |     ) o
         |group by o.vpdncompanycode
       """.stripMargin
+    sqlContext.sql(pgwcompsql).coalesce(1)
 
     val companyonlinesum =
       s"""select c.vpdncompanycode, nvl(t1.g3cnt,0) as g3cnt, nvl(t2.pgwcnt,0) as pgwcnt
@@ -85,8 +103,17 @@ object CDRBaseData {
          |left join ${pgwonlinecomptable} t2 on(c.vpdncompanycode=t2.vpdncompanycode)
        """.stripMargin
 
-    sqlContext.sql(companyonlinesum).coalesce(1).write.mode(SaveMode.Overwrite).format("orc").save(s"/hadoop/IOT/ANALY_PLATFORM/UserOnline/${dayid}")
 
+    // 外部分区表
+    // create table iot_external_useronline_base (vpdncompanycode string, g3cnt int, pgwcnt int) partitioned by (dayid string)
+    //  row format delimited
+    //  fields terminated by '\t'
+    //  location 'hdfs://hadoop11:9000/dir2';
+
+
+    sqlContext.sql(companyonlinesum).coalesce(1).write.mode(SaveMode.Overwrite).format("orc").save(s"/hadoop/IOT/ANALY_PLATFORM/UserOnline/${dayid}")
+    //sqlContext.read.format("orc").load("/hadoop/IOT/ANALY_PLATFORM/UserOnline/20170710").registerTempTable("tttt")
+    //sqlContext.sql("select vpdncompanycode, g3cnt, pgwcnt from tttt where vpdncompanycode='C000000517'").collect().foreach(println)
     sc.stop()
 
     }

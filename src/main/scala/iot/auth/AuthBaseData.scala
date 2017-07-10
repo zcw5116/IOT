@@ -64,8 +64,8 @@ object AuthBaseData {
     sqlContext.sql("use " + ConfigProperties.IOT_HIVE_DATABASE)
 
     import sqlContext.implicits._
-    val hbaseRdd1 = registerRDD(sc,"iot_userauth_day_20170701").toDF()
-    val hbaseRdd2 = registerRDD(sc,"iot_userauth_day_20170702").toDF()
+    val hbaseRdd1 = registerRDD(sc,"iot_userauth_day_20170708").toDF()
+    val hbaseRdd2 = registerRDD(sc,"iot_userauth_day_20170709").toDF()
     val hbaseRdd3 = registerRDD(sc,"iot_userauth_day_20170703").toDF()
     val htable1 = "htable1"
     val htable2 = "htable2"

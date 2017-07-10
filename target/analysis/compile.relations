@@ -38,6 +38,8 @@ products:
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$$anonfun$7.class
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis$.class
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> target/classes/com/zyuc/stat/iot/MMEAnalysis.class
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> target/classes/com/zyuc/stat/iot/UserOnlineBaseData$.class
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> target/classes/com/zyuc/stat/iot/UserOnlineBaseData.class
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming$$anonfun$1.class
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming$$anonfun$2.class
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> target/classes/com/zyuc/streaming/iot/MMEStreaming$$anonfun$main$1.class
@@ -328,6 +330,11 @@ binary dependencies:
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
@@ -646,6 +653,8 @@ source dependencies:
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> src/main/scala/utils/DateUtil.scala
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> src/main/scala/utils/HbaseUtil.scala
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> src/main/scala/utils/ConfigProperties.scala
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> src/main/scala/utils/DateUtil.scala
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> src/main/scala/utils/SQLContextSingleton.scala
    src/main/scala/iot/analysis/cdr/CDRBaseData.scala -> src/main/scala/iot/analysis/cdr/HbaseCDRBaseLog.scala
@@ -730,6 +739,8 @@ class names:
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$5
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$6
    src/main/scala/com/zyuc/stat/iot/MMEAnalysis.scala -> com.zyuc.stat.iot.MMEAnalysis$$anonfun$7
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> com.zyuc.stat.iot.UserOnlineBaseData
+   src/main/scala/com/zyuc/stat/iot/UserOnlineBaseData.scala -> com.zyuc.stat.iot.UserOnlineBaseData$
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming$
    src/main/scala/com/zyuc/streaming/iot/MMEStreaming.scala -> com.zyuc.streaming.iot.MMEStreaming$$anonfun$1
