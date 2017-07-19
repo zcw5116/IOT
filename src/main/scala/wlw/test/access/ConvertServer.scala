@@ -5,7 +5,7 @@ package wlw.test.access
   */
 import java.io.OutputStream
 import java.net.InetSocketAddress
-import java.util
+import com.alibaba.fastjson.JSON
 import java.util.concurrent.Executors
 
 import com.sun.net.httpserver.{Headers, HttpExchange, HttpHandler, HttpServer}
@@ -43,7 +43,9 @@ object ConvertServer {
         val data = new Array[Byte](contentLength)
         val length = inputStream.read(data)
         System.out.println("data:" + new String(data))
+        val data1 = JSON.parseObject(new String(data))
 
+        println("phone:" + data1.getString("phone"))
         val responseHeaders: Headers = httpExchange.getResponseHeaders
 
         responseHeaders.set("Content-Type", "text/html;charset=utf-8")
