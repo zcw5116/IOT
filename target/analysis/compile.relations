@@ -72,7 +72,6 @@ products:
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$anonfun$3.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$typecreator1$1.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$typecreator2$1.class
-   src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$$typecreator3$1.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData$.class
    src/main/scala/iot/auth/AuthBaseData.scala -> target/classes/iot/auth/AuthBaseData.class
    src/main/scala/iot/auth/AuthLog.scala -> target/classes/iot/auth/AuthLog$$anonfun$main$1.class
@@ -291,10 +290,27 @@ products:
    src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$$typecreator1$1.class
    src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField$.class
    src/main/scala/wlw/test/TestCaseClassField.scala -> target/classes/wlw/test/TestCaseClassField.class
+   src/main/scala/wlw/test/TestHDFS.scala -> target/classes/wlw/test/TestHDFS$.class
+   src/main/scala/wlw/test/TestHDFS.scala -> target/classes/wlw/test/TestHDFS.class
    src/main/scala/wlw/test/TestHbase.scala -> target/classes/wlw/test/TestHbase$$anonfun$1.class
    src/main/scala/wlw/test/TestHbase.scala -> target/classes/wlw/test/TestHbase$$anonfun$2.class
    src/main/scala/wlw/test/TestHbase.scala -> target/classes/wlw/test/TestHbase$.class
    src/main/scala/wlw/test/TestHbase.scala -> target/classes/wlw/test/TestHbase.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/MDN$.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/MDN.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/PDSN$.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/PDSN.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$anonfun$1.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$anonfun$2.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$anonfun$3.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$anonfun$4.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$anonfun$5.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$anonfun$6.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$anonfun$7.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$typecreator1$1.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$$typecreator2$1.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile$.class
+   src/main/scala/wlw/test/TestReadFile.scala -> target/classes/wlw/test/TestReadFile.class
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> target/classes/wlw/test/TestSQLtoHbase$$anonfun$1.class
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> target/classes/wlw/test/TestSQLtoHbase$$anonfun$2.class
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> target/classes/wlw/test/TestSQLtoHbase$.class
@@ -304,9 +320,73 @@ products:
    src/main/scala/wlw/test/WordCount.scala -> target/classes/wlw/test/WordCount$$anonfun$3.class
    src/main/scala/wlw/test/WordCount.scala -> target/classes/wlw/test/WordCount$.class
    src/main/scala/wlw/test/WordCount.scala -> target/classes/wlw/test/WordCount.class
+   src/main/scala/wlw/test/access/AccessConverUtil.scala -> target/classes/wlw/test/access/AccessConverUtil$.class
+   src/main/scala/wlw/test/access/AccessConverUtil.scala -> target/classes/wlw/test/access/AccessConverUtil.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$getTemplate$1$1.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$1.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$10.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$11.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$12.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$13.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$2.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$3.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$4.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$5.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$6.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$7.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$8.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$9$$anonfun$apply$1.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$9$$anonfun$apply$2.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$$anonfun$main$9.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol$.class
+   src/main/scala/wlw/test/access/CdnCol.scala -> target/classes/wlw/test/access/CdnCol.class
+   src/main/scala/wlw/test/access/ConvertServer.scala -> target/classes/wlw/test/access/ConvertServer$$anon$1$$anon$2.class
+   src/main/scala/wlw/test/access/ConvertServer.scala -> target/classes/wlw/test/access/ConvertServer$$anon$1$$anon$3.class
+   src/main/scala/wlw/test/access/ConvertServer.scala -> target/classes/wlw/test/access/ConvertServer$$anon$1.class
+   src/main/scala/wlw/test/access/ConvertServer.scala -> target/classes/wlw/test/access/ConvertServer$.class
+   src/main/scala/wlw/test/access/ConvertServer.scala -> target/classes/wlw/test/access/ConvertServer.class
+   src/main/scala/wlw/test/access/DateUtils.scala -> target/classes/wlw/test/access/DateUtils$.class
+   src/main/scala/wlw/test/access/DateUtils.scala -> target/classes/wlw/test/access/DateUtils.class
+   src/main/scala/wlw/test/access/FirstJob.scala -> target/classes/wlw/test/access/FirstJob$$anonfun$main$1.class
+   src/main/scala/wlw/test/access/FirstJob.scala -> target/classes/wlw/test/access/FirstJob$.class
+   src/main/scala/wlw/test/access/FirstJob.scala -> target/classes/wlw/test/access/FirstJob.class
+   src/main/scala/wlw/test/access/LoadProperties.scala -> target/classes/wlw/test/access/LoadProperties$.class
+   src/main/scala/wlw/test/access/LoadProperties.scala -> target/classes/wlw/test/access/LoadProperties.class
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> target/classes/wlw/test/access/SparkStatCleanJob$$anonfun$1.class
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> target/classes/wlw/test/access/SparkStatCleanJob$.class
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> target/classes/wlw/test/access/SparkStatCleanJob.class
+   src/main/scala/wlw/test/access/Test.scala -> target/classes/wlw/test/access/Test$$anonfun$getTemplate$1$1.class
+   src/main/scala/wlw/test/access/Test.scala -> target/classes/wlw/test/access/Test$$anonfun$main$1.class
+   src/main/scala/wlw/test/access/Test.scala -> target/classes/wlw/test/access/Test$$anonfun$main$2$$anonfun$apply$1.class
+   src/main/scala/wlw/test/access/Test.scala -> target/classes/wlw/test/access/Test$$anonfun$main$2.class
+   src/main/scala/wlw/test/access/Test.scala -> target/classes/wlw/test/access/Test$.class
+   src/main/scala/wlw/test/access/Test.scala -> target/classes/wlw/test/access/Test.class
+   src/main/scala/wlw/test/access/TestHDFS.scala -> target/classes/wlw/test/access/TestHDFS$.class
+   src/main/scala/wlw/test/access/TestHDFS.scala -> target/classes/wlw/test/access/TestHDFS.class
+   src/main/scala/wlw/test/access/TopNStatJob.scala -> target/classes/wlw/test/access/TopNStatJob$.class
+   src/main/scala/wlw/test/access/TopNStatJob.scala -> target/classes/wlw/test/access/TopNStatJob.class
+   src/main/scala/wlw/test/access/WordCountJob.scala -> target/classes/wlw/test/access/WordCountJob$$anonfun$doJob$1.class
+   src/main/scala/wlw/test/access/WordCountJob.scala -> target/classes/wlw/test/access/WordCountJob$$anonfun$doJob$2.class
+   src/main/scala/wlw/test/access/WordCountJob.scala -> target/classes/wlw/test/access/WordCountJob$$anonfun$doJob$3.class
+   src/main/scala/wlw/test/access/WordCountJob.scala -> target/classes/wlw/test/access/WordCountJob$$anonfun$doJob$4.class
+   src/main/scala/wlw/test/access/WordCountJob.scala -> target/classes/wlw/test/access/WordCountJob$.class
+   src/main/scala/wlw/test/access/WordCountJob.scala -> target/classes/wlw/test/access/WordCountJob.class
+   src/main/scala/wlw/test/access/util/DateUtils.scala -> target/classes/wlw/test/access/util/DateUtils$.class
+   src/main/scala/wlw/test/access/util/DateUtils.scala -> target/classes/wlw/test/access/util/DateUtils.class
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> target/classes/wlw/test/access/util/FileUtils$$anonfun$moveTempFiles$1.class
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> target/classes/wlw/test/access/util/FileUtils$$anonfun$moveTempFiles$2.class
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> target/classes/wlw/test/access/util/FileUtils$.class
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> target/classes/wlw/test/access/util/FileUtils.class
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> target/classes/wlw/test/access/util/LogConvertUtils$$anonfun$parseLog$1.class
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> target/classes/wlw/test/access/util/LogConvertUtils$.class
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> target/classes/wlw/test/access/util/LogConvertUtils.class
+   src/main/scala/wlw/test/access/util/ValueUtils.scala -> target/classes/wlw/test/access/util/ValueUtils$.class
+   src/main/scala/wlw/test/access/util/ValueUtils.scala -> target/classes/wlw/test/access/util/ValueUtils.class
    src/main/scala/wlw/test/test.scala -> target/classes/wlw/test/test$$anonfun$createHTable$1.class
    src/main/scala/wlw/test/test.scala -> target/classes/wlw/test/test$.class
    src/main/scala/wlw/test/test.scala -> target/classes/wlw/test/test.class
+   src/main/scala/wlw/test/test1.scala -> target/classes/wlw/test/test1$.class
+   src/main/scala/wlw/test/test1.scala -> target/classes/wlw/test/test1.class
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> target/classes/wlw/test/testHiveDynamicPartition$$anonfun$main$1.class
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> target/classes/wlw/test/testHiveDynamicPartition$.class
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> target/classes/wlw/test/testHiveDynamicPartition.class
@@ -383,6 +463,7 @@ binary dependencies:
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-server/1.2.0-cdh5.7.0/hbase-server-1.2.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/iot/auth/AuthBaseData.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
@@ -617,6 +698,9 @@ binary dependencies:
    src/main/scala/wlw/test/TestCaseClassField.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/test/TestCaseClassField.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
    src/main/scala/wlw/test/TestCaseClassField.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/TestHDFS.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestHDFS.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/TestHDFS.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
@@ -625,6 +709,13 @@ binary dependencies:
    src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/test/TestHbase.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/test/TestHbase.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/TestReadFile.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestReadFile.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestReadFile.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestReadFile.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/TestReadFile.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/TestReadFile.scala -> /home/slview/.m2/repository/org/scala-lang/scala-reflect/2.10.5/scala-reflect-2.10.5.jar
+   src/main/scala/wlw/test/TestReadFile.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.6.0-cdh5.7.0/hadoop-mapreduce-client-core-2.6.0-cdh5.7.0.jar
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
@@ -640,10 +731,71 @@ binary dependencies:
    src/main/scala/wlw/test/WordCount.scala -> /home/slview/.m2/repository/org/apache/spark/spark-streaming_2.10/1.6.0-cdh5.7.0/spark-streaming_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/test/WordCount.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/test/WordCount.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/AccessConverUtil.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/AccessConverUtil.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/AccessConverUtil.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/CdnCol.scala -> /home/slview/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar
+   src/main/scala/wlw/test/access/CdnCol.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/CdnCol.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/CdnCol.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/CdnCol.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/CdnCol.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/CdnCol.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/CdnCol.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/ConvertServer.scala -> /home/slview/.m2/repository/com/alibaba/fastjson/1.2.14/fastjson-1.2.14.jar
+   src/main/scala/wlw/test/access/ConvertServer.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/ConvertServer.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/ConvertServer.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/ConvertServer.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/ConvertServer.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/DateUtils.scala -> /home/slview/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar
+   src/main/scala/wlw/test/access/DateUtils.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/DateUtils.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/FirstJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/FirstJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/FirstJob.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/FirstJob.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/LoadProperties.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/LoadProperties.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/Test.scala -> /home/slview/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar
+   src/main/scala/wlw/test/access/Test.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/Test.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/Test.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/Test.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/Test.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/TestHDFS.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/TestHDFS.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/TopNStatJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/TopNStatJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/TopNStatJob.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/TopNStatJob.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/WordCountJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/WordCountJob.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/WordCountJob.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/WordCountJob.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/util/DateUtils.scala -> /home/slview/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar
+   src/main/scala/wlw/test/access/util/DateUtils.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/util/DateUtils.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> /home/slview/.m2/repository/org/apache/hadoop/hadoop-common/2.6.0-cdh5.7.0/hadoop-common-2.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> /home/slview/.m2/repository/org/apache/spark/spark-catalyst_2.10/1.6.0-cdh5.7.0/spark-catalyst_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/access/util/ValueUtils.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/access/util/ValueUtils.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/test/test.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-client/1.2.0-cdh5.7.0/hbase-client-1.2.0-cdh5.7.0.jar
    src/main/scala/wlw/test/test.scala -> /home/slview/.m2/repository/org/apache/hbase/hbase-common/1.2.0-cdh5.7.0/hbase-common-1.2.0-cdh5.7.0.jar
    src/main/scala/wlw/test/test.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
    src/main/scala/wlw/test/test.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
+   src/main/scala/wlw/test/test1.scala -> /home/slview/.m2/repository/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar
+   src/main/scala/wlw/test/test1.scala -> /usr/local/java/jdk1.7.0_79/jre/lib/rt.jar
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-core_2.10/1.6.0-cdh5.7.0/spark-core_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-hive_2.10/1.6.0-cdh5.7.0/spark-hive_2.10-1.6.0-cdh5.7.0.jar
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> /home/slview/.m2/repository/org/apache/spark/spark-sql_2.10/1.6.0-cdh5.7.0/spark-sql_2.10-1.6.0-cdh5.7.0.jar
@@ -696,6 +848,15 @@ source dependencies:
    src/main/scala/utils/HbaseUtil.scala -> src/main/scala/utils/ConfigProperties.scala
    src/main/scala/utils/RedisClient.scala -> src/main/scala/utils/RedisProperties.scala
    src/main/scala/wlw/test/TestCaseClassField.scala -> src/main/scala/wlw/test/AirTraffic.scala
+   src/main/scala/wlw/test/TestReadFile.scala -> src/main/scala/utils/ConfigProperties.scala
+   src/main/scala/wlw/test/access/CdnCol.scala -> src/main/scala/wlw/test/access/util/FileUtils.scala
+   src/main/scala/wlw/test/access/CdnCol.scala -> src/main/scala/wlw/test/access/util/LogConvertUtils.scala
+   src/main/scala/wlw/test/access/ConvertServer.scala -> src/main/scala/wlw/test/access/WordCountJob.scala
+   src/main/scala/wlw/test/access/FirstJob.scala -> src/main/scala/wlw/test/access/DateUtils.scala
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> src/main/scala/wlw/test/access/AccessConverUtil.scala
+   src/main/scala/wlw/test/access/Test.scala -> src/main/scala/wlw/test/access/util/FileUtils.scala
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> src/main/scala/wlw/test/access/util/DateUtils.scala
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> src/main/scala/wlw/test/access/util/ValueUtils.scala
    src/main/scala/wlw/test/test.scala -> src/main/scala/iot/users/UsersInfoIncETL.scala
    src/main/scala/wlw/test/test.scala -> src/main/scala/utils/DateUtil.scala
 external dependencies:
@@ -775,7 +936,6 @@ class names:
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$anonfun$3
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$typecreator1$1
    src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$typecreator2$1
-   src/main/scala/iot/auth/AuthBaseData.scala -> iot.auth.AuthBaseData$$typecreator3$1
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$
    src/main/scala/iot/auth/AuthLog.scala -> iot.auth.AuthLog$$anonfun$main$1
@@ -992,10 +1152,27 @@ class names:
    src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$2$$anonfun$apply$9
    src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$anonfun$main$1
    src/main/scala/wlw/test/TestCaseClassField.scala -> wlw.test.TestCaseClassField$$typecreator1$1
+   src/main/scala/wlw/test/TestHDFS.scala -> wlw.test.TestHDFS
+   src/main/scala/wlw/test/TestHDFS.scala -> wlw.test.TestHDFS$
    src/main/scala/wlw/test/TestHbase.scala -> wlw.test.TestHbase
    src/main/scala/wlw/test/TestHbase.scala -> wlw.test.TestHbase$
    src/main/scala/wlw/test/TestHbase.scala -> wlw.test.TestHbase$$anonfun$1
    src/main/scala/wlw/test/TestHbase.scala -> wlw.test.TestHbase$$anonfun$2
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.MDN
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.MDN$
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.PDSN
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.PDSN$
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$anonfun$1
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$anonfun$2
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$anonfun$3
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$anonfun$4
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$anonfun$5
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$anonfun$6
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$anonfun$7
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$typecreator1$1
+   src/main/scala/wlw/test/TestReadFile.scala -> wlw.test.TestReadFile$$typecreator2$1
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> wlw.test.TestSQLtoHbase
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> wlw.test.TestSQLtoHbase$
    src/main/scala/wlw/test/TestSQLtoHbase.scala -> wlw.test.TestSQLtoHbase$$anonfun$1
@@ -1005,9 +1182,73 @@ class names:
    src/main/scala/wlw/test/WordCount.scala -> wlw.test.WordCount$$anonfun$1
    src/main/scala/wlw/test/WordCount.scala -> wlw.test.WordCount$$anonfun$2
    src/main/scala/wlw/test/WordCount.scala -> wlw.test.WordCount$$anonfun$3
+   src/main/scala/wlw/test/access/AccessConverUtil.scala -> wlw.test.access.AccessConverUtil
+   src/main/scala/wlw/test/access/AccessConverUtil.scala -> wlw.test.access.AccessConverUtil$
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$getTemplate$1$1
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$1
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$10
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$11
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$12
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$13
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$2
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$3
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$4
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$5
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$6
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$7
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$8
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$9
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$9$$anonfun$apply$1
+   src/main/scala/wlw/test/access/CdnCol.scala -> wlw.test.access.CdnCol$$anonfun$main$9$$anonfun$apply$2
+   src/main/scala/wlw/test/access/ConvertServer.scala -> wlw.test.access.ConvertServer
+   src/main/scala/wlw/test/access/ConvertServer.scala -> wlw.test.access.ConvertServer$
+   src/main/scala/wlw/test/access/ConvertServer.scala -> wlw.test.access.ConvertServer$$anon$1
+   src/main/scala/wlw/test/access/ConvertServer.scala -> wlw.test.access.ConvertServer$$anon$1$$anon$2
+   src/main/scala/wlw/test/access/ConvertServer.scala -> wlw.test.access.ConvertServer$$anon$1$$anon$3
+   src/main/scala/wlw/test/access/DateUtils.scala -> wlw.test.access.DateUtils
+   src/main/scala/wlw/test/access/DateUtils.scala -> wlw.test.access.DateUtils$
+   src/main/scala/wlw/test/access/FirstJob.scala -> wlw.test.access.FirstJob
+   src/main/scala/wlw/test/access/FirstJob.scala -> wlw.test.access.FirstJob$
+   src/main/scala/wlw/test/access/FirstJob.scala -> wlw.test.access.FirstJob$$anonfun$main$1
+   src/main/scala/wlw/test/access/LoadProperties.scala -> wlw.test.access.LoadProperties
+   src/main/scala/wlw/test/access/LoadProperties.scala -> wlw.test.access.LoadProperties$
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> wlw.test.access.SparkStatCleanJob
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> wlw.test.access.SparkStatCleanJob$
+   src/main/scala/wlw/test/access/SparkStatCleanJob.scala -> wlw.test.access.SparkStatCleanJob$$anonfun$1
+   src/main/scala/wlw/test/access/Test.scala -> wlw.test.access.Test
+   src/main/scala/wlw/test/access/Test.scala -> wlw.test.access.Test$
+   src/main/scala/wlw/test/access/Test.scala -> wlw.test.access.Test$$anonfun$getTemplate$1$1
+   src/main/scala/wlw/test/access/Test.scala -> wlw.test.access.Test$$anonfun$main$1
+   src/main/scala/wlw/test/access/Test.scala -> wlw.test.access.Test$$anonfun$main$2
+   src/main/scala/wlw/test/access/Test.scala -> wlw.test.access.Test$$anonfun$main$2$$anonfun$apply$1
+   src/main/scala/wlw/test/access/TestHDFS.scala -> wlw.test.access.TestHDFS
+   src/main/scala/wlw/test/access/TestHDFS.scala -> wlw.test.access.TestHDFS$
+   src/main/scala/wlw/test/access/TopNStatJob.scala -> wlw.test.access.TopNStatJob
+   src/main/scala/wlw/test/access/TopNStatJob.scala -> wlw.test.access.TopNStatJob$
+   src/main/scala/wlw/test/access/WordCountJob.scala -> wlw.test.access.WordCountJob
+   src/main/scala/wlw/test/access/WordCountJob.scala -> wlw.test.access.WordCountJob$
+   src/main/scala/wlw/test/access/WordCountJob.scala -> wlw.test.access.WordCountJob$$anonfun$doJob$1
+   src/main/scala/wlw/test/access/WordCountJob.scala -> wlw.test.access.WordCountJob$$anonfun$doJob$2
+   src/main/scala/wlw/test/access/WordCountJob.scala -> wlw.test.access.WordCountJob$$anonfun$doJob$3
+   src/main/scala/wlw/test/access/WordCountJob.scala -> wlw.test.access.WordCountJob$$anonfun$doJob$4
+   src/main/scala/wlw/test/access/util/DateUtils.scala -> wlw.test.access.util.DateUtils
+   src/main/scala/wlw/test/access/util/DateUtils.scala -> wlw.test.access.util.DateUtils$
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> wlw.test.access.util.FileUtils
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> wlw.test.access.util.FileUtils$
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> wlw.test.access.util.FileUtils$$anonfun$moveTempFiles$1
+   src/main/scala/wlw/test/access/util/FileUtils.scala -> wlw.test.access.util.FileUtils$$anonfun$moveTempFiles$2
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> wlw.test.access.util.LogConvertUtils
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> wlw.test.access.util.LogConvertUtils$
+   src/main/scala/wlw/test/access/util/LogConvertUtils.scala -> wlw.test.access.util.LogConvertUtils$$anonfun$parseLog$1
+   src/main/scala/wlw/test/access/util/ValueUtils.scala -> wlw.test.access.util.ValueUtils
+   src/main/scala/wlw/test/access/util/ValueUtils.scala -> wlw.test.access.util.ValueUtils$
    src/main/scala/wlw/test/test.scala -> wlw.test.test
    src/main/scala/wlw/test/test.scala -> wlw.test.test$
    src/main/scala/wlw/test/test.scala -> wlw.test.test$$anonfun$createHTable$1
+   src/main/scala/wlw/test/test1.scala -> wlw.test.test1
+   src/main/scala/wlw/test/test1.scala -> wlw.test.test1$
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> wlw.test.testHiveDynamicPartition
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> wlw.test.testHiveDynamicPartition$
    src/main/scala/wlw/test/testHiveDynamicPartition.scala -> wlw.test.testHiveDynamicPartition$$anonfun$main$1

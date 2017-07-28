@@ -73,7 +73,7 @@ object MMEStreaming {
     // 监控目录中文件名包含指定字符串的文件
     val filenameContainStr =
       mmetype match {
-        case "hw_sm" => "HuaweiUDN"
+        case "hw_sm" => "HuaweiUDN-SM"
         case "hw_mm" => "HuaweiUDN-MM"
         case "zt_mm" => "sgsnmme_mm"
         case "zt_sm" => "sgsnmme_sm"

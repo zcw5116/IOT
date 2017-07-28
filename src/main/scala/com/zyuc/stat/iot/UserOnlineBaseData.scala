@@ -12,17 +12,19 @@ import utils.DateUtil._
 object UserOnlineBaseData {
 
   def main(args: Array[String]): Unit = {
-      if (args.length < 1) {
-        System.err.println("Usage: <yyyyMMdd>")
+      if (args.length < 2) {
+        System.err.println("Usage: <yyyyMMdd> <iot_cdr_haccg_ticket>")
         System.exit(1)
       }
 
       val dayid = args(0)
+      val g3cdrsourcetable = args(1)
+
       val lastdayid = timeCalcWithFormatConvertSafe(dayid,"yyyyMMdd", -1*24*60*60,"yyyyMMdd")
       println(lastdayid)
 
 
-    val sparkConf = new SparkConf().setAppName("MMEAnalysis").setMaster("local[4]")
+    val sparkConf = new SparkConf()//.setAppName("UserOnlineBaseData").setMaster("local[4]")
     val sc = new SparkContext(sparkConf)
     val sqlContext = new HiveContext(sc)
     val hivedb = ConfigProperties.IOT_HIVE_DATABASE
@@ -55,17 +57,19 @@ object UserOnlineBaseData {
          |where t1.mdn=t2.mdn and t1.account_session_id=t2.account_session_id
          |
        """.stripMargin*/
+
+
     val g3usersql =
       s"""select o.mdn1 as mdn
          |from (
          | select t1.mdn as mdn1, t2.mdn as mdn2 from
          |    ( select t.mdn, t.account_session_id
-         |      from iot_cdr_haccg_ticket t
+         |      from ${g3cdrsourcetable} t
          |      where t.acct_status_type<>'2' and t.dayid='${lastdayid}' and t.hourid=23
          |    ) t1
          |  left join
          |  (   select t.mdn, t.account_session_id
-         |      from iot_cdr_haccg_ticket t
+         |      from ${g3cdrsourcetable} t
          |      where t.acct_status_type='2' and t.dayid='${lastdayid}' and t.hourid=23
          |   ) t2
          |   on(t1.mdn=t2.mdn and t1.account_session_id=t2.account_session_id)

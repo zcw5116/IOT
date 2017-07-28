@@ -9,9 +9,10 @@ import org.apache.hadoop.hbase.util.Bytes
 import org.apache.hadoop.mapred.JobConf
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.{SparkConf, SparkContext}
 import utils.ConfigProperties
-import utils.DateUtil.timeCalcWithFormatConvert
+import utils.DateUtil.timeCalcWithFormatConvertSafe
 import utils.HbaseUtil._
 /**
   * Created by slview on 17-6-28.
@@ -53,45 +54,70 @@ object AuthBaseData {
     val sparkConf = new SparkConf()
     // 创建 spark context
     val sc = new SparkContext(sparkConf)
-    val sqlContext = new SQLContext(sc)
-    val endtime = args(0)
-    val starttime = timeCalcWithFormatConvert(endtime,"yyyyMMddHHmm",-3*24*60*60,"yyyyMMddHHmm")  //args(0)
-    val startminu =  starttime.substring(8,12)
-    val endminu = endtime.substring(8,12)
+    val sqlContext = new HiveContext(sc)
+    val targetdayid = args(0)
+
+    if (args.length < 1) {
+      System.err.println("Usage: <targetdayid,yyyyMMdd>")
+      System.exit(1)
+    }
+
+    val day1 = timeCalcWithFormatConvertSafe(targetdayid,"yyyyMMdd",-2*24*60*60,"yyyyMMdd")
+    val day2 = timeCalcWithFormatConvertSafe(targetdayid,"yyyyMMdd",-3*24*60*60,"yyyyMMdd")
+
+
+    //val startminu =  starttime.substring(8,12)
+    //val endminu = endtime.substring(8,12)
     // 写入到目标表+8小时
-    val targetdayid = timeCalcWithFormatConvert(endtime,"yyyyMMddHHmm",12*60*60,"yyyyMMdd")
+    // val targetdayid = timeCalcWithFormatConvert(endtime,"yyyyMMddHHmm",12*60*60,"yyyyMMdd")
 
     sqlContext.sql("use " + ConfigProperties.IOT_HIVE_DATABASE)
 
     import sqlContext.implicits._
-    val hbaseRdd1 = registerRDD(sc,"iot_userauth_day_20170708").toDF()
-    val hbaseRdd2 = registerRDD(sc,"iot_userauth_day_20170709").toDF()
-    val hbaseRdd3 = registerRDD(sc,"iot_userauth_day_20170703").toDF()
+    val hbaseRdd1 = registerRDD(sc,"iot_userauth_day_"+day1).toDF()
+    val hbaseRdd2 = registerRDD(sc,"iot_userauth_day_"+day2).toDF()
+    //val hbaseRdd3 = registerRDD(sc,"iot_userauth_day_20170710").toDF()
     val htable1 = "htable1"
     val htable2 = "htable2"
-    val htable3 = "htable3"
+    //val htable3 = "htable3"
 
     hbaseRdd1.registerTempTable(htable1)
     hbaseRdd2.registerTempTable(htable2)
-    hbaseRdd3.registerTempTable(htable3)
+   // hbaseRdd3.registerTempTable(htable3)
+
+  /*  val commonsql =
+      s"""
+         |select company_time,
+         |nvl(c_3g_auth_cnt,0) as c_3g_auth_cnt, nvl(c_3g_success_cnt,0) as c_3g_success_cnt,
+         |nvl(c_4g_auth_cnt,0) as c_4g_auth_cnt, nvl(c_4g_success_cnt,0) as c_4g_success_cnt,
+         |nvl(c_vpdn_auth_cnt,0) as c_vpdn_auth_cnt, nvl(c_vpdn_success_cnt,0) as c_vpdn_success_cnt
+         |from
+       """.stripMargin
+
+    val unionsql =
+      s"""
+         |${commonsql}  ${htable1}  where time>'${startminu}'
+         |union all
+       """.stripMargin
+
+    for (dayelem <- args) {
+      println(dayelem)
+    }*/
+
+
+
 
     val authsql = "select company_time, " +
       "  nvl(c_3g_auth_cnt,0) as c_3g_auth_cnt, nvl(c_3g_success_cnt,0) as c_3g_success_cnt, " +
       "  nvl(c_4g_auth_cnt,0) as c_4g_auth_cnt, nvl(c_4g_success_cnt,0) as c_4g_success_cnt, " +
       "  nvl(c_vpdn_auth_cnt,0) as c_vpdn_auth_cnt, nvl(c_vpdn_success_cnt,0) as c_vpdn_success_cnt " +
-      " from " + htable1 + "  where time>'" + startminu + "'  " +
+      " from " + htable1 +
       " union all  " +
       "select company_time, " +
       "  nvl(c_3g_auth_cnt,0) as c_3g_auth_cnt, nvl(c_3g_success_cnt,0) as c_3g_success_cnt, " +
       "  nvl(c_4g_auth_cnt,0) as c_4g_auth_cnt, nvl(c_4g_success_cnt,0) as c_4g_success_cnt, " +
       "  nvl(c_vpdn_auth_cnt,0) as c_vpdn_auth_cnt, nvl(c_vpdn_success_cnt,0) as c_vpdn_success_cnt " +
-      " from " + htable2 +
-      " union all  " +
-      "select company_time, " +
-      "  nvl(c_3g_auth_cnt,0) as c_3g_auth_cnt, nvl(c_3g_success_cnt,0) as c_3g_success_cnt, " +
-      "  nvl(c_4g_auth_cnt,0) as c_4g_auth_cnt, nvl(c_4g_success_cnt,0) as c_4g_success_cnt, " +
-      "  nvl(c_vpdn_auth_cnt,0) as c_vpdn_auth_cnt, nvl(c_vpdn_success_cnt,0) as c_vpdn_success_cnt " +
-      " from " + htable3 + " where time<'" + endminu + "'"
+      " from " + htable2
 
     println(authsql)
     val tmpauthbasic = "tmpauthbasic"

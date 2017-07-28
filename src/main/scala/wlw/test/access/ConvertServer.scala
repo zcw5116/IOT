@@ -43,18 +43,24 @@ object ConvertServer {
         val data = new Array[Byte](contentLength)
         val length = inputStream.read(data)
         System.out.println("data:" + new String(data))
-        val data1 = JSON.parseObject(new String(data))
-
-        println("phone:" + data1.getString("phone"))
+        val Params = JSON.parseObject(new String(data))
+        val serverLine = Params.getString("serverLine")
+        println("serverLine:" + serverLine)
         val responseHeaders: Headers = httpExchange.getResponseHeaders
 
         responseHeaders.set("Content-Type", "text/html;charset=utf-8")
 
         // 调用SparkSQL的方法进行测试
         try {
+          if(serverLine == "test"){
+            sqlContext.read.format("json").load("/hadoop/zcw/tmp/zips.json").show
+          }
+          else if(serverLine == "wc")(
+            WordCountJob.doJob(sqlContext)
+          )else{
+            System.out.println("go")
+          }
 
-          sqlContext.read.format("json").load("/hadoop/zcw/tmp/zips.json").show
-          WordCountJob.doJob(sqlContext)
         } catch {
           case e: Exception =>
             e.printStackTrace()

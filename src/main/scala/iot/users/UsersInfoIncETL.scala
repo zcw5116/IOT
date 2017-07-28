@@ -167,7 +167,6 @@ object UsersInfoIncETL {
       sqlContext.sql(resultSql)
 
 
-
       sqlContext.sql("ALTER TABLE " + userPartTable + " DROP IF EXISTS PARTITION (dayid=" + dayid + ")")
       sqlContext.sql("insert into " + userPartTable + " partition(dayid=" + dayid + ")  " +
         " select mdn,imsicdma,imsilte,iccid,imei,company,vpdncompanycode,nettype,vpdndomain,isvpdn,subscribetimeaaa,subscribetimehlr,subscribetimehss,subscribetimepcrf,firstactivetime,userstatus,atrbprovince,userprovince, crt_time" +

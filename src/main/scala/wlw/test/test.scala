@@ -112,7 +112,11 @@ object test {
 
    //println(divOpera("ab","10"))
 
-    println(timeCalcWithFormatConvert("20170701"+"000000","yyyyMMddHHmmss",0,"yyyy-MM-dd HH:mm:ss"))
+    //println(timeCalcWithFormatConvert("20170701"+"000000","yyyyMMddHHmmss",0,"yyyy-MM-dd HH:mm:ss"))
+    val url = "-"
+    val domain = "http://www.imooc.com/"
+    val cms = url.substring(url.indexOf(domain) + domain.length)
+    val cmsTypeId = cms.split("/")
 
 
 

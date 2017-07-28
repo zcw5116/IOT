@@ -13,7 +13,7 @@ object WordCount {
 
     val ssc = new StreamingContext(sparkConf, Seconds(20))
 
-    val lines = ssc.textFileStream("/home/slview/data/test/word/")
+    val lines = ssc.textFileStream("file:///home/slview/data/test/word/")
     val words = lines.flatMap(_.split(" "))
 
     val wordCounts = words.map(x => (x, 1)).reduceByKey(_ + _)
